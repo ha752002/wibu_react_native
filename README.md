@@ -6,7 +6,7 @@
 # MANGA READER !
 
 
-This is an Mobile Application project for a **Manga** reading app written in Typescript language using the **React Native framework**, incorporating technologies such as **Redux**, **MUI Material**,...
+This is a Mobile Application project for a **Manga** reading app written in Typescript language using the **React Native framework**, incorporating technologies such as **Redux**, **MUI Material**,...
 
 
 
