@@ -1,3 +1,10 @@
-import StorybookUIRoot from '../.ondevice/Storybook';
+import * as React from 'react';
+import {Text, View} from 'react-native';
 
-export {StorybookUIRoot as default};
+export function App() {
+  return (
+    <View>
+      <Text>Ha hihi</Text>
+    </View>
+  );
+}

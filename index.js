@@ -1,9 +1,12 @@
-/**
- * @format
- */
-
 import {AppRegistry} from 'react-native';
-import App from './src/App';
 import {name as appName} from './app.json';
+import {App} from './src/App';
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => {
+  console.log(process.env.STORYBOOK_ENABLED);
+  if (process.env.STORYBOOK_ENABLED === 'true') {
+    return require('./.ondevice').default;
+  } else {
+    return App;
+  }
+});
