@@ -8,9 +8,9 @@
     "start": "react-native start --reset-cache",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "update-stories": "sb-rn-get-stories --config-path .ondevice",
-    "storybook-watcher": "sb-rn-watcher --config-path .ondevice",
-    "storybook": "sb-rn-get-stories --config-path .ondevice && cross-env STORYBOOK_ENABLED='true'  react-native start --reset-cache",
+    "update-stories": "sb-rn-get-stories --config-path storybook",
+    "storybook-watcher": "sb-rn-watcher --config-path storybook",
+    "storybook": "sb-rn-get-stories --config-path storybook && cross-env STORYBOOK_ENABLED='true'  react-native start --reset-cache",
     "build-storybook": "build-storybook"
   },
   "dependencies": {

@@ -5,7 +5,7 @@ import {App} from './src/App';
 AppRegistry.registerComponent(appName, () => {
   console.log(process.env.STORYBOOK_ENABLED);
   if (process.env.STORYBOOK_ENABLED === 'true') {
-    return require('./.ondevice').default;
+    return require('./storybook').default;
   } else {
     return App;
   }
