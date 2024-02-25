@@ -19,6 +19,12 @@ export const styleCreator: StyleCreator = (theme, props: ButtonProps) => {
         underlayColor: Colors.bgDangerSolidFocus,
         borderColor: Colors.bgDangerSolidDefault,
       },
+      warning: {
+        backgroundColor: Colors.bgDangerSolidDefault,
+        color: Colors.bgWhite,
+        underlayColor: Colors.bgDangerSolidFocus,
+        borderColor: Colors.bgDangerSolidDefault,
+      },
     },
     outline: {
       primary: {
