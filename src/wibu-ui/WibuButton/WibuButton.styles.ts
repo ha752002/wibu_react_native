@@ -13,14 +13,20 @@ export const styleCreator: StyleCreator = (theme, props: ButtonProps) => {
         underlayColor: Colors.bgPrimaryFocus,
         borderColor: Colors.bgPrimary,
       },
-      danger: {
-        backgroundColor: Colors.bgDangerSolidDefault,
+      success: {
+        backgroundColor: Colors.bgSuccess,
         color: Colors.bgWhite,
-        underlayColor: Colors.bgDangerSolidFocus,
-        borderColor: Colors.bgDangerSolidDefault,
+        underlayColor: Colors.bgSuccessFocus,
+        borderColor: Colors.bgSuccessOutlineFocus,
       },
       warning: {
-        backgroundColor: Colors.bgDangerSolidDefault,
+        backgroundColor: Colors.bgWarning,
+        color: Colors.bgWhite,
+        underlayColor: Colors.bgWarningFocus,
+        borderColor: Colors.bgWarningOutlineFocus,
+      },
+      danger: {
+        backgroundColor: Colors.bgDanger,
         color: Colors.bgWhite,
         underlayColor: Colors.bgDangerSolidFocus,
         borderColor: Colors.bgDangerSolidDefault,
@@ -31,17 +37,67 @@ export const styleCreator: StyleCreator = (theme, props: ButtonProps) => {
         backgroundColor: Colors.transparent,
         borderColor: Colors.bgPrimary,
         color: Colors.bgPrimary,
-        underlayColor: Colors.bgPrimaryOutlineFocus,
+        underlayColor: Colors.bgPrimaryTonalDefault,
+      },
+      success: {
+        backgroundColor: Colors.transparent,
+        borderColor: Colors.borderOutlineDanger,
+        color: Colors.bgSuccess,
+        underlayColor: Colors.bgSuccessTonalDefault,
       },
       warning: {
         backgroundColor: Colors.transparent,
         borderColor: Colors.borderOutlineDanger,
+        color: Colors.bgWarning,
+        underlayColor: Colors.bgWarningTonalDefault,
+      },
+      danger: {
+        backgroundColor: Colors.transparent,
+        borderColor: Colors.borderOutlineDanger,
         color: Colors.fgDanger,
+        underlayColor: Colors.bgDangerTonalDefault,
+      },
+    },
+    text: {
+      primary: {
+        color: Colors.bgPrimary,
+        underlayColor: Colors.bgPrimaryTonalDefault,
+      },
+      success: {
+        color: Colors.bgSuccess,
+        underlayColor: Colors.bgSuccessTonalDefault,
+      },
+      warning: {
+        color: Colors.bgWarning,
+        underlayColor: Colors.bgWarningTonalDefault,
+      },
+      danger: {
+        color: Colors.bgDanger,
+        underlayColor: Colors.bgDangerTonalDefault,
+      },
+    },
+    tonal: {
+      primary: {
+        backgroundColor: Colors.bgPrimaryTonalDefault,
+        color: Colors.bgPrimary,
+        underlayColor: Colors.bgPrimaryFocus,
+      },
+      success: {
+        backgroundColor: Colors.bgSuccessTonalDefault,
+        color: Colors.bgSuccess,
+        underlayColor: Colors.bgSuccessFocus,
+      },
+      warning: {
+        backgroundColor: Colors.bgWarningTonalDefault,
+        color: Colors.bgWarning,
+        underlayColor: Colors.bgWarningFocus,
+      },
+      danger: {
+        backgroundColor: Colors.bgDangerTonalDefault,
+        color: Colors.bgDanger,
         underlayColor: Colors.bgDangerTonalFocus,
       },
     },
-    text: {},
-    tonal: {},
   };
 
   const buttonStyle = buttonAppearance[appearance][variant];
