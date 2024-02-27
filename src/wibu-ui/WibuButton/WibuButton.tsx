@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, TouchableHighlight, View} from 'react-native';
 import {styleCreator} from './WibuButton.styles.ts';
-import {ButtonProps} from './WibuButton.type.ts';
+import {ButtonProps} from './WibuButton.types.ts';
 import {useThemeStyles} from '../../hooks/useThemeStyles.ts';
 
 export const WibuButton = (props: ButtonProps) => {

@@ -79,7 +79,7 @@ export const Fonts = () =>
       color: Colors.fgSuccess,
     },
     textPrimary: {
-      color: Colors.bgBase,
+      color: Colors.fgWhite,
     },
     textLight: {
       color: Colors.bgFocus,
