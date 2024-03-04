@@ -71,6 +71,7 @@ export const Colors = {
   bgPrimaryOutlineFocus: BaseColors.pink0,
 
   bgPrimaryTonalDefault: BaseColors.pink0,
+  bgPrimarySolidDefault: BaseColors.pink100,
 
   /*success*/
   bgSuccess: BaseColors.green600,
@@ -78,6 +79,7 @@ export const Colors = {
   bgSuccessOutlineFocus: BaseColors.green500,
 
   bgSuccessTonalDefault: BaseColors.green200,
+  bgSuccessSolidDefault: BaseColors.green600,
 
   /*Warning*/
   bgWarning: BaseColors.yellow700,
@@ -85,6 +87,7 @@ export const Colors = {
   bgWarningOutlineFocus: BaseColors.yellow600,
 
   bgWarningTonalDefault: BaseColors.yellow200,
+  bgWarningSolidDefault: BaseColors.yellow700,
 
   /* danger */
   bgDanger: BaseColors.red500,

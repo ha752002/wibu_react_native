@@ -8,25 +8,25 @@ export const styleCreator: StyleCreator = (theme, props: ButtonProps) => {
   const buttonAppearance: IButtonAppearance = {
     filled: {
       primary: {
-        backgroundColor: Colors.bgPrimary,
+        backgroundColor: Colors.bgPrimarySolidDefault,
         color: Colors.fgWhite,
         underlayColor: Colors.bgPrimaryFocus,
         borderColor: Colors.bgPrimary,
       },
       success: {
-        backgroundColor: Colors.bgSuccess,
+        backgroundColor: Colors.bgSuccessSolidDefault,
         color: Colors.bgWhite,
         underlayColor: Colors.bgSuccessFocus,
         borderColor: Colors.bgSuccessOutlineFocus,
       },
       warning: {
-        backgroundColor: Colors.bgWarning,
+        backgroundColor: Colors.bgWarningSolidDefault,
         color: Colors.bgWhite,
         underlayColor: Colors.bgWarningFocus,
         borderColor: Colors.bgWarningOutlineFocus,
       },
       danger: {
-        backgroundColor: Colors.bgDanger,
+        backgroundColor: Colors.bgDangerSolidDefault,
         color: Colors.bgWhite,
         underlayColor: Colors.bgDangerSolidFocus,
         borderColor: Colors.bgDangerSolidDefault,
