@@ -1,10 +1,11 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
+import {WibuText} from './wibu-ui/WibuText/WibuText.tsx';
 
 function App() {
   return (
     <View>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <WibuText>Open up App.tsx to start working on your app!</WibuText>
     </View>
   );
 }

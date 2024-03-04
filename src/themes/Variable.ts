@@ -82,7 +82,7 @@ const FontSize: Record<keyof typeof EFontsSize, number> = {
   tripleExtraLarge: 24,
 };
 
-export enum EFontWeight {
+export enum EFontsWeight {
   Thin = '100',
   ExtraLight = '200',
   Light = '300',
@@ -127,7 +127,7 @@ export default {
   Colors,
   FontsFamily: EFontsFamily,
   BaseColors,
-  FontWeight: EFontWeight,
+  FontWeight: EFontsWeight,
   FontSize,
   NavigationColors,
   MetricsSizes,

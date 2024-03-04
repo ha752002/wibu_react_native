@@ -1,10 +1,13 @@
 import * as React from 'react';
+import {FC} from 'react';
 import {Text, View} from 'react-native';
+import {WibuTextProps} from './WibuText.types.ts';
 
-export function WibuText() {
+export const WibuText: FC<WibuTextProps> = ({...props}: WibuTextProps) => {
+  const {children} = props;
   return (
     <View>
-      <Text>WibuText</Text>
+      <Text {...props}>{children}</Text>
     </View>
   );
-}
+};
