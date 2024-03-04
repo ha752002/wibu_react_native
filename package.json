@@ -8,9 +8,9 @@
     "start": "react-native start --reset-cache",
     "test": "jest",
     "lint": "eslint .",
-    "storybook": "cross-env STORYBOOK_ENABLED=true react-native start",
+    "storybook": "cross-env STORYBOOK_ENABLED=true react-native start --reset-cache",
     "storybook:ios": "cross-env STORYBOOK_ENABLED=true react-native run-ios",
-    "storybook:android": "cross-env STORYBOOK_ENABLED=true react-native run-android",
+    "storybook:android": "cross-env STORYBOOK_ENABLED=true react-native run-android --reset-cache",
     "storybook-generate": "sb-rn-get-stories --config-path .ondevice",
     "storybook:web": "storybook dev -p 6006",
     "build-storybook": "storybook build"
