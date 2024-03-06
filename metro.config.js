@@ -1,10 +1,10 @@
-const { getDefaultConfig, mergeConfig } = require("@react-native/metro-config");
-const path = require("path");
+import {getDefaultConfig, mergeConfig} from '@react-native/metro-config';
+import {resolve} from 'path';
 
-const { generate } = require("@storybook/react-native/scripts/generate");
+import {generate} from '@storybook/react-native/scripts/generate';
 
 generate({
-  configPath: path.resolve(__dirname, "./.ondevice"),
+  configPath: resolve(__dirname, './.ondevice'),
 });
 
 /**
@@ -22,15 +22,15 @@ const config = {
       const defaultResolveResult = context.resolveRequest(
         context,
         moduleName,
-        platform
+        platform,
       );
 
       if (
-        process.env.STORYBOOK_ENABLED !== "true" &&
-        defaultResolveResult?.filePath?.includes?.(".ondevice/")
+        process.env.STORYBOOK_ENABLED !== 'true' &&
+        defaultResolveResult?.filePath?.includes?.('.ondevice/')
       ) {
         return {
-          type: "empty",
+          type: 'empty',
         };
       }
 
@@ -39,4 +39,4 @@ const config = {
   },
 };
 
-module.exports = mergeConfig(getDefaultConfig(__dirname), config);
+export default mergeConfig(getDefaultConfig(__dirname), config);
