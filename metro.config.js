@@ -3,7 +3,7 @@ const path = require('path');
 
 const {generate} = require('@storybook/react-native/scripts/generate');
 generate({
-  configPath: resolve(__dirname, './.ondevice'),
+  configPath: path.resolve(__dirname, './.ondevice'),
 });
 
 /**
@@ -38,4 +38,4 @@ const config = {
   },
 };
 
-export default mergeConfig(getDefaultConfig(__dirname), config);
+module.exports = mergeConfig(getDefaultConfig(__dirname), config);
