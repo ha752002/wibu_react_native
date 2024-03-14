@@ -3,7 +3,16 @@ import {EFontsSize} from '../enums/font.enum.ts';
 
 const BaseColors = {
   white: '#FFFFFF',
-  black: '#000000',
+
+  pink0: '#ffc0c4',
+  pink01: '#FC7A82',
+  pink02: '#FF5E68',
+  pink100: '#FF737D',
+  pink200: '#fc6069',
+  pink300: '#FF5963',
+  pink400: '#FF414B',
+  pink500: '#FF3540',
+  pink600: '#FF2934',
 
   gray50: '#F2F5F7',
   gray100: '#E7EAED',
@@ -15,40 +24,8 @@ const BaseColors = {
   gray600: '#3D3D3D',
   gray700: '#202020',
 
-  blue50: '#E3F2FD',
-  blue100: '#BBDEFB',
-  blue200: '#90CAF9',
-  blue300: '#64B5F6',
-  blue400: '#42A5F5',
-  blue500: '#2196F3',
-  blue600: '#1E88E5',
-  blue700: '#1976D2',
-
-  green50: '#E8F5E9',
-  green100: '#C8E6C9',
-  green200: '#A5D6A7',
-  green300: '#81C784',
-  green400: '#66BB6A',
-  green500: '#4CAF50',
-  green600: '#43A047',
-  green700: '#388E3C',
-
-  yellow50: '#FFFDE7',
-  yellow100: '#FFF9C4',
-  yellow200: '#FFF59D',
-  yellow300: '#FFF176',
-  yellow400: '#FFEE58',
-  yellow500: '#FFEB3B',
-  yellow600: '#FDD835',
-  yellow700: '#FBC02D',
-
-  pink0: '#ffc0c4',
-  pink100: '#FF737D',
-  pink200: '#fc6069',
-  pink300: '#FF5963',
-  pink400: '#FF414B',
-  pink500: '#FF3540',
-  pink600: '#FF2934',
+  blue500: '#4A7CE0',
+  green500: '#40C174',
 
   red100: '#FFE1E7',
   red200: '#FFC8D6',
@@ -69,34 +46,17 @@ export const Colors = {
   bgPrimary: BaseColors.pink100,
   bgPrimaryFocus: BaseColors.pink200,
   bgPrimaryOutlineFocus: BaseColors.pink0,
+  fgPrimaryNeutralFocus: BaseColors.pink01,
+  fgPrimaryNeutral: BaseColors.pink01,
 
-  bgPrimaryTonalDefault: BaseColors.pink0,
-  bgPrimarySolidDefault: BaseColors.pink100,
-
-  /*success*/
-  bgSuccess: BaseColors.green600,
-  bgSuccessFocus: BaseColors.green400,
-  bgSuccessOutlineFocus: BaseColors.green500,
-
-  bgSuccessTonalDefault: BaseColors.green200,
-  bgSuccessSolidDefault: BaseColors.green600,
-
-  /*Warning*/
-  bgWarning: BaseColors.yellow700,
-  bgWarningFocus: BaseColors.yellow500,
-  bgWarningOutlineFocus: BaseColors.yellow600,
-
-  bgWarningTonalDefault: BaseColors.yellow200,
-  bgWarningSolidDefault: BaseColors.yellow700,
+  /**Warning*/
 
   /* danger */
-  bgDanger: BaseColors.red500,
-  bgDangerFocus: BaseColors.red400,
-  bgDangerOutlineFocus: BaseColors.red600,
+  bgDangerTonalDefault: BaseColors.red100,
+  bgDangerTonalHover: BaseColors.red200,
+  bgDangerTonalFocus: BaseColors.red300,
 
-  bgDangerTonalDefault: BaseColors.red200,
-  bgDangerTonalHover: BaseColors.red300,
-  bgDangerTonalFocus: BaseColors.red400,
+  bgPrimaryTonalFocus: BaseColors.pink02,
 
   bgDangerSolidDefault: BaseColors.red500,
   bgDangerSolidHover: BaseColors.red400,

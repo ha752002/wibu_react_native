@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {StyleCreator} from '../../hooks/useThemeStyles.ts';
-import {ButtonProps, IButtonAppearance} from './WibuButton.type.ts';
+import {ButtonProps, IButtonAppearance} from './WibuButton.types.ts';
 
 export const styleCreator: StyleCreator = (theme, props: ButtonProps) => {
   const {appearance, variant} = props;
@@ -8,24 +8,12 @@ export const styleCreator: StyleCreator = (theme, props: ButtonProps) => {
   const buttonAppearance: IButtonAppearance = {
     filled: {
       primary: {
-        backgroundColor: Colors.bgPrimarySolidDefault,
+        backgroundColor: Colors.fgPrimaryNeutral,
         color: Colors.fgWhite,
-        underlayColor: Colors.bgPrimaryFocus,
-        borderColor: Colors.bgPrimary,
-      },
-      success: {
-        backgroundColor: Colors.bgSuccessSolidDefault,
-        color: Colors.bgWhite,
-        underlayColor: Colors.bgSuccessFocus,
-        borderColor: Colors.bgSuccessOutlineFocus,
+        underlayColor: Colors.fgPrimaryNeutralFocus,
+        borderColor: Colors.fgPrimaryNeutral,
       },
       warning: {
-        backgroundColor: Colors.bgWarningSolidDefault,
-        color: Colors.bgWhite,
-        underlayColor: Colors.bgWarningFocus,
-        borderColor: Colors.bgWarningOutlineFocus,
-      },
-      danger: {
         backgroundColor: Colors.bgDangerSolidDefault,
         color: Colors.bgWhite,
         underlayColor: Colors.bgDangerSolidFocus,
@@ -34,67 +22,43 @@ export const styleCreator: StyleCreator = (theme, props: ButtonProps) => {
     },
     outline: {
       primary: {
-        backgroundColor: Colors.transparent,
-        borderColor: Colors.bgPrimary,
+        backgroundColor: Colors.fgPrimaryNeutralFocus,
+        borderColor: Colors.fgPrimaryNeutralFocus,
         color: Colors.bgPrimary,
-        underlayColor: Colors.bgPrimaryTonalDefault,
-      },
-      success: {
-        backgroundColor: Colors.transparent,
-        borderColor: Colors.borderOutlineDanger,
-        color: Colors.bgSuccess,
-        underlayColor: Colors.bgSuccessTonalDefault,
+        underlayColor: Colors.fgPrimaryNeutral,
       },
       warning: {
         backgroundColor: Colors.transparent,
         borderColor: Colors.borderOutlineDanger,
-        color: Colors.bgWarning,
-        underlayColor: Colors.bgWarningTonalDefault,
-      },
-      danger: {
-        backgroundColor: Colors.transparent,
-        borderColor: Colors.borderOutlineDanger,
         color: Colors.fgDanger,
-        underlayColor: Colors.bgDangerTonalDefault,
+        underlayColor: Colors.bgDangerTonalFocus,
       },
     },
     text: {
       primary: {
-        color: Colors.bgPrimary,
-        underlayColor: Colors.bgPrimaryTonalDefault,
-      },
-      success: {
-        color: Colors.bgSuccess,
-        underlayColor: Colors.bgSuccessTonalDefault,
+        backgroundColor: Colors.transparent,
+        borderColor: Colors.transparent,
+        color: Colors.fgPrimaryNeutralFocus,
+        underlayColor: Colors.fgPrimaryNeutral,
       },
       warning: {
-        color: Colors.bgWarning,
-        underlayColor: Colors.bgWarningTonalDefault,
-      },
-      danger: {
-        color: Colors.bgDanger,
-        underlayColor: Colors.bgDangerTonalDefault,
+        backgroundColor: Colors.transparent,
+        borderColor: Colors.transparent,
+        color: Colors.fgDanger,
+        underlayColor: Colors.bgDangerTonalFocus,
       },
     },
     tonal: {
       primary: {
-        backgroundColor: Colors.bgPrimaryTonalDefault,
-        color: Colors.bgPrimary,
-        underlayColor: Colors.bgPrimaryFocus,
-      },
-      success: {
-        backgroundColor: Colors.bgSuccessTonalDefault,
-        color: Colors.bgSuccess,
-        underlayColor: Colors.bgSuccessFocus,
+        backgroundColor: Colors.fgPrimaryNeutral,
+        borderColor: Colors.transparent,
+        color: Colors.fgPrimaryNeutralFocus,
+        underlayColor: Colors.bgPrimaryTonalFocus,
       },
       warning: {
-        backgroundColor: Colors.bgWarningTonalDefault,
-        color: Colors.bgWarning,
-        underlayColor: Colors.bgWarningFocus,
-      },
-      danger: {
         backgroundColor: Colors.bgDangerTonalDefault,
-        color: Colors.bgDanger,
+        borderColor: Colors.transparent,
+        color: Colors.fgDanger,
         underlayColor: Colors.bgDangerTonalFocus,
       },
     },
