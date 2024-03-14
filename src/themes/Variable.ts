@@ -5,6 +5,7 @@ const BaseColors = {
   white: '#FFFFFF',
 
   pink0: '#ffc0c4',
+  pink01: '#FC7A82',
   pink100: '#FF737D',
   pink200: '#fc6069',
   pink300: '#FF5963',
@@ -44,7 +45,7 @@ export const Colors = {
   bgPrimary: BaseColors.pink100,
   bgPrimaryFocus: BaseColors.pink200,
   bgPrimaryOutlineFocus: BaseColors.pink0,
-
+  fgPrimaryNeutralFocus: BaseColors.pink01,
   /**Warning*/
 
   /* danger */
