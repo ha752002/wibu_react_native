@@ -1,17 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Text, View} from 'react-native';
-import {WibuButton} from './wibu-ui/WibuButton/WibuButton.tsx';
+import SplashScreen from 'react-native-splash-screen';
 
 function App() {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
   return (
     <View>
       <Text>Open up App.tsx to start working on your app!</Text>
-      <WibuButton
-        onPress={() => {}}
-        appearance={'filled'}
-        text={'assas'}
-        variant={'warning'}
-      />
     </View>
   );
 }
