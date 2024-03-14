@@ -1,8 +1,7 @@
-import {getDefaultConfig, mergeConfig} from '@react-native/metro-config';
-import {resolve} from 'path';
+const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
+const path = require('path');
 
-import {generate} from '@storybook/react-native/scripts/generate';
-
+const {generate} = require('@storybook/react-native/scripts/generate');
 generate({
   configPath: resolve(__dirname, './.ondevice'),
 });
