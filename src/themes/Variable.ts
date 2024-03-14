@@ -31,6 +31,9 @@ const BaseColors = {
   red400: '#FF2E68',
   red500: '#E1024F',
   red600: '#D1003F',
+
+  lightPink: '#F071FB',
+  lightPink100: '#FFC0C4',
 };
 
 export const Colors = {
@@ -39,6 +42,9 @@ export const Colors = {
   /* background color: specially for link button */
   bgWhite: BaseColors.white,
   bgFocus: BaseColors.gray200,
+
+  fgSecondary: BaseColors.lightPink,
+  fgPrimaryNeutral: BaseColors.lightPink100,
 
   /*Primary*/
   bgPrimary: BaseColors.pink100,
