@@ -6,6 +6,7 @@ const BaseColors = {
 
   pink0: '#ffc0c4',
   pink01: '#FC7A82',
+  pink02: '#FF5E68',
   pink100: '#FF737D',
   pink200: '#fc6069',
   pink300: '#FF5963',
@@ -46,12 +47,16 @@ export const Colors = {
   bgPrimaryFocus: BaseColors.pink200,
   bgPrimaryOutlineFocus: BaseColors.pink0,
   fgPrimaryNeutralFocus: BaseColors.pink01,
+  fgPrimaryNeutral: BaseColors.pink01,
+
   /**Warning*/
 
   /* danger */
   bgDangerTonalDefault: BaseColors.red100,
   bgDangerTonalHover: BaseColors.red200,
   bgDangerTonalFocus: BaseColors.red300,
+
+  bgPrimaryTonalFocus: BaseColors.pink02,
 
   bgDangerSolidDefault: BaseColors.red500,
   bgDangerSolidHover: BaseColors.red400,
