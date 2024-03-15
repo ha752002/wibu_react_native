@@ -3,9 +3,10 @@ import {ReactNode} from 'react';
 import {ESize} from '../../enums/size.enum.ts';
 
 export interface ITextProps extends TextProps {
-  onPress: () => void;
+  onPress?: () => void;
   children: string | ReactNode;
-  style: TextStyle | TextStyle[];
+  style?: TextStyle | TextStyle[];
+  size?: ESize;
 }
 
 export type WibuTextSize =
@@ -16,4 +17,4 @@ export type WibuTextSize =
   | ESize.XXL
   | ESize.XXXL;
 
-export type WibuTextSizeType = Record<WibuTextSize, TextStyle>;
+export type WibuTextStyleType = Record<WibuTextSize, TextStyle>;

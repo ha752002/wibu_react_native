@@ -1,30 +1,17 @@
 import type {Meta, StoryObj} from '@storybook/react';
 
 import {WibuText} from './WibuText.tsx';
+import {ESize} from '../../enums/size.enum.ts';
 
 const meta = {
   title: 'wibu-ui/WibuText',
   component: WibuText,
   argTypes: {
-    variant: {
+    size: {
       control: {
         type: 'radio',
       },
-      options: [
-        'title',
-        'textXXL',
-        'textXL',
-        'textL',
-        'textM',
-        'textS',
-        'textXS',
-      ],
-    },
-    appearance: {
-      control: {
-        type: 'radio',
-      },
-      options: ['semibold', 'medium', 'regular', 'regularItalic'],
+      options: [ESize.S, ESize.M, ESize.L, ESize.XL, ESize.XXL, ESize.XXXL],
     },
   },
 } satisfies Meta<typeof WibuText>;
@@ -35,8 +22,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Basic: Story = {
   args: {
-    text: 'Wibu Text',
-    variant: 'medium',
-    appearance: 'textXXL',
+    children: 'Wibu Text',
+    size: ESize.S,
   },
 };
