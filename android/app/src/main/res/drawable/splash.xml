@@ -1,0 +1,11 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="@color/splash_background_color"/>
+    </item>
+    <item>
+        <bitmap
+                android:src="@drawable/splashscreen_image"
+                android:tileMode="disabled"
+                android:scaleType="fitCenter"/>
+    </item>
+</layer-list>

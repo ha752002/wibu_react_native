@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {StyleCreator} from '../../hooks/useThemeStyles.ts';
-import {ButtonProps, IButtonAppearance} from './WibuButton.type.ts';
+import {ButtonProps, IButtonAppearance} from './WibuButton.types.ts';
 
 export const styleCreator: StyleCreator = (theme, props: ButtonProps) => {
   const {appearance, variant} = props;
@@ -8,12 +8,12 @@ export const styleCreator: StyleCreator = (theme, props: ButtonProps) => {
   const buttonAppearance: IButtonAppearance = {
     filled: {
       primary: {
-        backgroundColor: Colors.bgPrimary,
+        backgroundColor: Colors.fgPrimaryNeutral,
         color: Colors.fgWhite,
-        underlayColor: Colors.bgPrimaryFocus,
-        borderColor: Colors.bgPrimary,
+        underlayColor: Colors.fgPrimaryNeutralFocus,
+        borderColor: Colors.fgPrimaryNeutral,
       },
-      danger: {
+      warning: {
         backgroundColor: Colors.bgDangerSolidDefault,
         color: Colors.bgWhite,
         underlayColor: Colors.bgDangerSolidFocus,
@@ -22,10 +22,10 @@ export const styleCreator: StyleCreator = (theme, props: ButtonProps) => {
     },
     outline: {
       primary: {
-        backgroundColor: Colors.transparent,
-        borderColor: Colors.bgPrimary,
+        backgroundColor: Colors.fgPrimaryNeutralFocus,
+        borderColor: Colors.fgPrimaryNeutralFocus,
         color: Colors.bgPrimary,
-        underlayColor: Colors.bgPrimaryOutlineFocus,
+        underlayColor: Colors.fgPrimaryNeutral,
       },
       warning: {
         backgroundColor: Colors.transparent,
@@ -34,8 +34,34 @@ export const styleCreator: StyleCreator = (theme, props: ButtonProps) => {
         underlayColor: Colors.bgDangerTonalFocus,
       },
     },
-    text: {},
-    tonal: {},
+    text: {
+      primary: {
+        backgroundColor: Colors.transparent,
+        borderColor: Colors.transparent,
+        color: Colors.fgPrimaryNeutralFocus,
+        underlayColor: Colors.fgPrimaryNeutral,
+      },
+      warning: {
+        backgroundColor: Colors.transparent,
+        borderColor: Colors.transparent,
+        color: Colors.fgDanger,
+        underlayColor: Colors.bgDangerTonalFocus,
+      },
+    },
+    tonal: {
+      primary: {
+        backgroundColor: Colors.fgPrimaryNeutral,
+        borderColor: Colors.transparent,
+        color: Colors.fgPrimaryNeutralFocus,
+        underlayColor: Colors.bgPrimaryTonalFocus,
+      },
+      warning: {
+        backgroundColor: Colors.bgDangerTonalDefault,
+        borderColor: Colors.transparent,
+        color: Colors.fgDanger,
+        underlayColor: Colors.bgDangerTonalFocus,
+      },
+    },
   };
 
   const buttonStyle = buttonAppearance[appearance][variant];
