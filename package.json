@@ -7,7 +7,7 @@
     "ios": "react-native run-ios --reset-cache",
     "start": "react-native start --reset-cache",
     "test": "jest",
-    "lint": "./node_modules/.bin/eslint *.js",
+    "lint": "eslint .",
     "prepush": "lint",
     "storybook": "cross-env STORYBOOK_ENABLED=true react-native start --reset-cache",
     "storybook:ios": "cross-env STORYBOOK_ENABLED=true react-native run-ios",
