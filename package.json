@@ -7,11 +7,12 @@
     "ios": "react-native run-ios --reset-cache",
     "start": "react-native start --reset-cache",
     "test": "jest",
-    "lint": "eslint .",
+    "lint": "./node_modules/.bin/eslint *.js",
+    "prepush": "lint",
     "storybook": "cross-env STORYBOOK_ENABLED=true react-native start --reset-cache",
     "storybook:ios": "cross-env STORYBOOK_ENABLED=true react-native run-ios",
     "storybook:android": "cross-env STORYBOOK_ENABLED=true react-native run-android --reset-cache",
-    "storybook-generate": "sb-rn-get-stories --config-path .ondevice",
+    "storybook-generate": "sb-rn-get-stories --config-path .storybook",
     "storybook:web": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -22,6 +23,7 @@
     "@react-navigation/native": "^6.1.10",
     "cross-env": "^7.0.3",
     "global": "^4.4.0",
+    "husky": "^9.0.11",
     "react": "18.2.0",
     "react-devtools": "^5.0.0",
     "react-dom": "^18.2.0",
@@ -58,7 +60,6 @@
     "@types/react-test-renderer": "^18.0.7",
     "babel-jest": "^29.6.3",
     "babel-loader": "^8.2.4",
-    "babel-plugin-react-docgen-typescript": "^1.5.1",
     "babel-plugin-react-native-web": "^0.19.10",
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "eslint": "^8.19.0",
@@ -66,7 +67,7 @@
     "prettier": "2.8.8",
     "react-test-renderer": "18.2.0",
     "storybook": "^7.6.13",
-    "typescript": "5.0.4"
+    "typescript": "5.4.2"
   },
   "jest": {
     "preset": "react-native"
