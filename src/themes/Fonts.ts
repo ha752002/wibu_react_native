@@ -1,7 +1,7 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import Variable from './Variable.ts';
 
-const {Colors, FontWeight, FontSize, FontsFamily} = Variable;
+const { Colors, FontWeight, FontSize, FontsFamily } = Variable;
 export const Fonts = () =>
   StyleSheet.create({
     /** Font size */

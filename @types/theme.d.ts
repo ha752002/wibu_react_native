@@ -1,10 +1,10 @@
-import {Theme as ReactNavigationTheme} from '@react-navigation/native/src/types';
+import { Theme as ReactNavigationTheme } from '@react-navigation/native/src/types';
 import Variables from '../src/themes/Variable.ts';
-import {Fonts} from '../src/themes/Fonts.ts';
-import {Images} from '../src/themes/Images.ts';
-import {Layout} from '../src/themes/Layout.ts';
+import { Fonts } from '../src/themes/Fonts.ts';
+import { Images } from '../src/themes/Images.ts';
+import { Layout } from '../src/themes/Layout.ts';
 
-type NavigationColors<T> = T extends {colors: infer U} ? U : never;
+type NavigationColors<T> = T extends { colors: infer U } ? U : never;
 type ThemeNavigationColors = NavigationColors<ReactNavigationTheme>;
 
 export type ThemeVariables = {

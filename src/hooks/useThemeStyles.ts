@@ -1,6 +1,6 @@
-import {useTheme} from './useTheme.ts';
-import {useMemo} from 'react';
-import {Theme} from '../../@types/theme';
+import { useTheme } from './useTheme.ts';
+import { useMemo } from 'react';
+import { Theme } from '../../@types/theme';
 
 export interface Styles {
   [key: string]: any;

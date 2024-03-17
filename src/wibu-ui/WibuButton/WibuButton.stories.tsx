@@ -1,7 +1,7 @@
 // stories/MyButton.stories.tsx
-import type {Meta, StoryObj} from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
-import {WibuButton} from './WibuButton.tsx';
+import { WibuButton } from './WibuButton.tsx';
 
 const meta = {
   title: 'wibu-ui/WibuButton',

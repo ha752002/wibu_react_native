@@ -1,10 +1,10 @@
-import {StyleSheet} from 'react-native';
-import {StyleCreator} from '../../hooks/useThemeStyles.ts';
-import {ButtonProps, IButtonAppearance} from './WibuButton.types.ts';
+import { StyleSheet } from 'react-native';
+import { StyleCreator } from '../../hooks/useThemeStyles.ts';
+import { ButtonProps, IButtonAppearance } from './WibuButton.types.ts';
 
 export const styleCreator: StyleCreator = (theme, props: ButtonProps) => {
-  const {appearance, variant} = props;
-  const {Colors} = theme;
+  const { appearance, variant } = props;
+  const { Colors } = theme;
   const buttonAppearance: IButtonAppearance = {
     filled: {
       primary: {
