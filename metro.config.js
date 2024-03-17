@@ -3,7 +3,7 @@ const {resolve} = require('path');
 
 const {generate} = require('@storybook/react-native/scripts/generate');
 generate({
-  configPath: resolve(__dirname, './.ondevice'),
+  configPath: resolve(__dirname, './.storybook'),
 });
 
 /**
@@ -26,7 +26,7 @@ const config = {
 
       if (
         process.env.STORYBOOK_ENABLED !== 'true' &&
-        defaultResolveResult?.filePath?.includes?.('./ondevice')
+        defaultResolveResult?.filePath?.includes?.('./.storybook')
       ) {
         return {
           type: 'empty',

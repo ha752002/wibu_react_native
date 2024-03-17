@@ -8,7 +8,7 @@ function App() {
     SplashScreen.hide();
   }, []);
   if (STORYBOOK_ENABLED === 'true') {
-    const StoryBook = require('../.ondevice').default;
+    const StoryBook = require('../.storybook').default;
     return <StoryBook />;
   }
   return (
