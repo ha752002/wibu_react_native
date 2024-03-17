@@ -1,7 +1,7 @@
 // stories/MyButton.stories.tsx
-import type {Meta, StoryObj} from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
-import {WibuButton} from './WibuButton.tsx';
+import { WibuButton } from './WibuButton.tsx';
 
 const meta = {
   title: 'wibu-ui/WibuButton',
@@ -28,7 +28,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Basic: Story = {
   args: {
-    text: 'Hello World',
+    children: 'Hello World',
     variant: 'primary',
     appearance: 'filled',
   },

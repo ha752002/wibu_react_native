@@ -1,5 +1,5 @@
-import {ThemeNavigationColors} from '../../@types/theme';
-import {EFontsSize} from '../enums/font.enum.ts';
+import { ThemeNavigationColors } from '../../@types/theme';
+import { EFontsSize } from '../enums/font.enum.ts';
 
 const BaseColors = {
   white: '#FFFFFF',
@@ -46,7 +46,7 @@ export const Colors = {
   bgPrimary: BaseColors.pink100,
   bgPrimaryFocus: BaseColors.pink200,
   bgPrimaryOutlineFocus: BaseColors.pink0,
-  fgPrimaryNeutralFocus: BaseColors.pink01,
+  fgPrimaryNeutralFocus: BaseColors.pink200,
   fgPrimaryNeutral: BaseColors.pink01,
 
   /**Warning*/
@@ -72,6 +72,7 @@ export const Colors = {
   fgWhite: BaseColors.white,
 
   fgColorGray700: BaseColors.gray700,
+  fgTextColor: BaseColors.gray500,
 };
 
 export const NavigationColors: Partial<ThemeNavigationColors> = {
