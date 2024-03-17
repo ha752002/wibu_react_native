@@ -1,8 +1,12 @@
+import { ReactNode } from 'react';
+import { TextStyle } from 'react-native';
+
 export type ButtonProps = {
   onPress: () => void;
-  text: string;
+  children: string | ReactNode;
   appearance: ButtonAppearanceType;
   variant: ButtonVariantType;
+  textStyle?: TextStyle | TextStyle[];
 };
 
 interface IButtonStyle {
