@@ -13,7 +13,8 @@
     "storybook:android": "cross-env STORYBOOK_ENABLED=true react-native run-android --reset-cache",
     "storybook-generate": "sb-rn-get-stories --config-path .storybook",
     "storybook:web": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.21.0",
