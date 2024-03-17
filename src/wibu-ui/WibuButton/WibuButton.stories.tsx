@@ -28,7 +28,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Basic: Story = {
   args: {
-    text: 'Hello World',
+    children: 'Hello World',
     variant: 'primary',
     appearance: 'filled',
   },
