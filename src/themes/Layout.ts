@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 export const Layout = () => {
   return StyleSheet.create({
@@ -122,13 +122,13 @@ export const Layout = () => {
     },
     /* Operation Layout */
     mirror: {
-      transform: [{scaleX: -1}],
+      transform: [{ scaleX: -1 }],
     },
     rotate90: {
-      transform: [{rotate: '90deg'}],
+      transform: [{ rotate: '90deg' }],
     },
     rotate90Inverse: {
-      transform: [{rotate: '-90deg'}],
+      transform: [{ rotate: '-90deg' }],
     },
     // Position
     relative: {

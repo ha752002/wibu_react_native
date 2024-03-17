@@ -5,7 +5,7 @@ import { WibuTextProps, WibuTextSizeType } from './WibuText.types.ts';
 
 export const styleCreator: StyleCreator = (theme, props: WibuTextProps) => {
   const { Fonts, FontsFamily, Colors, FontWeight, FontStyle } = theme;
-  const { fontFamily, fontSize, fontWeight, fontStyle, color } = props;
+  const { fontSize, fontWeight, fontStyle, color } = props;
 
   const fontSizeStyle: Record<WibuTextSizeType, TextStyle> = {
     [ESize.S]: Fonts.textSizeSmall,

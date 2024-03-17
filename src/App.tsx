@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react';
-import {Text, View} from 'react-native';
+import React, { useEffect } from 'react';
+import { Text, View } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
-import {STORYBOOK_ENABLED} from '@env';
+import { STORYBOOK_ENABLED } from '@env';
 
 function App() {
   useEffect(() => {

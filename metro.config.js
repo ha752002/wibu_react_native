@@ -1,7 +1,7 @@
-const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
-const {resolve} = require('path');
+const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
+const { resolve } = require('path');
 
-const {generate} = require('@storybook/react-native/scripts/generate');
+const { generate } = require('@storybook/react-native/scripts/generate');
 generate({
   configPath: resolve(__dirname, './.storybook'),
 });
