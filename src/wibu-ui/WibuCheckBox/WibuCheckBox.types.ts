@@ -4,5 +4,4 @@ export type WibuCheckBoxProps = {
   checked?: string;
   disabled?: boolean;
   label: string | ReactNode;
-  numberOfLines?: number;
 };
