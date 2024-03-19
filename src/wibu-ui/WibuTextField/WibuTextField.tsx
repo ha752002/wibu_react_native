@@ -5,7 +5,7 @@ import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
 import { styleCreator } from './WibuTextField.styles.ts';
 
 const WibuTextField = (props: WibuTextFieldProps) => {
-  const { label, value, placeholder, disabled } = props;
+  const { label, value, placeholder, message, disabled } = props;
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (
@@ -19,6 +19,7 @@ const WibuTextField = (props: WibuTextFieldProps) => {
             placeholder={placeholder}
           />
         </View>
+        <Text style={[styles.label]}>{message}</Text>
       </View>
     </TouchableHighlight>
   );

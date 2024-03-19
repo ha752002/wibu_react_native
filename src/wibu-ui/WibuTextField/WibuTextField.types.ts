@@ -1,6 +1,15 @@
 import { ReactNode } from 'react';
 
-export type WibuTextSizeType = 'S' | 'M' | 'L' | 'XL';
+interface ITextFieldStyle {
+  backgroundColor?: string;
+  color?: string;
+  fontSize?: number;
+  paddingVertical?: number;
+  width?: number;
+  height?: number;
+}
+
+export type WibuTextFieldSizeType = 'S' | 'M' | 'L' | 'XL';
 
 export type WibuTextFieldProps = {
   value: string | undefined;
@@ -8,5 +17,9 @@ export type WibuTextFieldProps = {
   label: string | ReactNode;
   message: string | ReactNode;
   disabled?: boolean;
-  Size?: WibuTextSizeType;
+  Notification?: boolean;
+  Size?: WibuTextFieldSizeType;
 };
+
+export interface ITextFieldSize
+  extends Record<WibuTextFieldSizeType, ITextFieldStyle> {}

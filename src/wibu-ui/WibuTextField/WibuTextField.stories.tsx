@@ -10,6 +10,7 @@ const meta: Meta = {
     label: { control: 'text' },
     message: { control: 'text' },
     disabled: { control: 'boolean' },
+    Notification: { control: 'boolean' },
     Size: {
       control: {
         type: 'radio',
@@ -26,6 +27,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     value: 'textField',
-    label: 'textField',
+    label: 'label',
   },
 };
