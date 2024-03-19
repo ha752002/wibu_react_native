@@ -7,20 +7,24 @@ export const styleCreator: StyleCreator = (theme, props: WibuCheckBoxProps) => {
 
   return StyleSheet.create({
     checkBoxStyle: {
-      paddingVertical: 4,
-      paddingHorizontal: 4,
+      paddingVertical: 2,
+      paddingHorizontal: 2,
       // borderStyle: 'solid',
       borderRadius: 4,
-      backgroundColor: props.checked
-        ? Colors.fgPrimaryNeutralFocus
-        : Colors.bgWhite,
+      backgroundColor:
+        props.checked === 'selected' || props.checked === 'unselected'
+          ? Colors.fgPrimaryNeutralFocus
+          : Colors.bgWhite,
       marginRight: 8,
       aspectRatio: 1,
       textAlign: 'center',
       color: Colors.bgWhite,
     },
     label: {
-      color: props.checked ? Colors.bgPrimary : Colors.fgTextColor,
+      color:
+        props.checked === 'selected' || props.checked === 'unselected'
+          ? Colors.bgPrimary
+          : Colors.fgTextColor,
     },
 
     checkBoxContainer: {

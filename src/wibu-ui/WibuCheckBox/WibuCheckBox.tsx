@@ -9,8 +9,10 @@ const WibuCheckBox = (props: WibuCheckBoxProps) => {
   const styles = useThemeStyles(styleCreator, props, []);
 
   const renderCheckBox = () => {
-    if (checked) {
+    if (checked === 'selected') {
       return <Text style={styles.checkBoxStyle}>✓</Text>;
+    } else if (checked === 'unselected') {
+      return <Text style={styles.checkBoxStyle}>-</Text>;
     }
     return <Text style={styles.checkBoxStyle} />;
   };

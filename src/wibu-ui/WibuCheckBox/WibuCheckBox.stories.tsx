@@ -5,7 +5,12 @@ const meta: Meta = {
   title: 'wibu-checkBox',
   component: WibuCheckBox,
   argTypes: {
-    checked: { control: 'boolean' },
+    checked: {
+      control: {
+        type: 'radio',
+      },
+      options: ['default', 'selected', 'unselected'],
+    },
     disabled: { control: 'boolean' },
     label: { control: 'text' },
   },
@@ -17,7 +22,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    checked: false,
+    checked: 'default',
     disabled: false,
     label: 'Checkbox',
   },
