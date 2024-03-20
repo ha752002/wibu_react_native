@@ -17,7 +17,7 @@ export type WibuTextFieldProps = {
   label: string | ReactNode;
   message: string | ReactNode;
   disabled?: boolean;
-  Notification?: boolean;
+  // Notification?: boolean;
   Size?: WibuTextFieldSizeType;
 };
 

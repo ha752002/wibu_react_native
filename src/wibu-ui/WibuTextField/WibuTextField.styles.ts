@@ -11,6 +11,8 @@ export const styleCreator: StyleCreator = (
   const buttonAppearance: ITextFieldSize = {
     S: {
       fontSize: FontSize.small,
+      paddingVertical: 2,
+      height: 32,
     },
     M: {
       fontSize: FontSize.medium,
@@ -35,14 +37,13 @@ export const styleCreator: StyleCreator = (
       // borderStyle: 'solid',
     },
     textFieldStyle: {
-      paddingVertical: 2,
       paddingHorizontal: 12,
       width: 150,
-      height: 32,
       // textAlignVertical: 'center',
       // borderStyle: 'solid',
       borderRadius: 4,
       backgroundColor: Colors.bgWhite,
+      fontSize: FontSize.small,
       marginTop: 8,
       color: 'black',
       // textAlignVertical: 'center' as 'center',
@@ -50,6 +51,10 @@ export const styleCreator: StyleCreator = (
     },
     label: {
       color: Colors.fgTextColor,
+    },
+    message: {
+      color: Colors.fgDanger,
+      marginTop: 4,
     },
   });
 };

@@ -11,7 +11,7 @@ const WibuTextField = (props: WibuTextFieldProps) => {
   return (
     <TouchableHighlight disabled={disabled}>
       <View style={[styles.textFieldContainer]}>
-        <Text style={[styles.label]}>{label}</Text>
+        {label ? <Text style={[styles.label]}>{label}</Text> : null}
         <View>
           <TextInput
             style={[styles.textFieldStyle]}
@@ -19,7 +19,7 @@ const WibuTextField = (props: WibuTextFieldProps) => {
             placeholder={placeholder}
           />
         </View>
-        <Text style={[styles.label]}>{message}</Text>
+        {message ? <Text style={[styles.message]}>{message}</Text> : null}
       </View>
     </TouchableHighlight>
   );
