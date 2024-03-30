@@ -4,7 +4,7 @@ import { iconSize, IWibuIconProps } from '~/wibu-ui/WibuIcon/WibuIcon.types.ts';
 import { useTheme } from '~/hooks/useTheme.ts';
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
 import { styleCreator } from '~/wibu-ui/WibuIcon/WibuIcon.styles.ts';
-import Icon from 'react-native-vector-icons/feather';
+import Icon from 'react-native-vector-icons/Feather';
 
 const WibuIcon = (props: IWibuIconProps) => {
   const { name, iconStyle, size, color, backgroundColor, containerStyle } =
