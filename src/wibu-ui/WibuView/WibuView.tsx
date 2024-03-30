@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { View } from 'react-native';
+import { View, ViewStyle } from 'react-native';
 import { WibuViewTypes } from '~/wibu-ui/WibuView/WibuView.types.ts';
 
 const WibuView = (props: WibuViewTypes) => {
-  return <View children={props.children} style={{ ...props }} />;
+  const viewStyle: ViewStyle = { ...props };
+  return <View children={props.children} style={[viewStyle, props.style]} />;
 };
 
 export default WibuView;

@@ -1,11 +1,19 @@
 {
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
+    "typeRoots": [
+      "@types",
+      "./node_modules/@types"
+    ],
     "baseUrl": ".",
     "paths": {
       "~/*": [
         "./src/*"
+      ],
+      "types/*": [
+        "./@types/*"
       ]
-    }
+    },
+    "allowImportingTsExtensions": true
   }
 }

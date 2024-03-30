@@ -1,5 +1,5 @@
-import { ThemeNavigationColors } from '../../@types/theme';
-import { EFontsSize } from '../enums/font.enum.ts';
+import { ThemeNavigationColors } from 'types/theme';
+import { EFontsSize } from '~/enums/font.enum.ts';
 
 const BaseColors = {
   white: '#FFFFFF',

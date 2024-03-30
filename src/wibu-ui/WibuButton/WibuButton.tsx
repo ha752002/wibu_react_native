@@ -1,15 +1,16 @@
 import React from 'react';
-import { TouchableHighlight, View } from 'react-native';
+import { TouchableHighlight } from 'react-native';
 import { styleCreator } from './WibuButton.styles.ts';
 import { ButtonProps } from './WibuButton.types.ts';
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
 import WibuText from '../WibuText/WibuText.tsx';
+import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 
 export const WibuButton = (props: ButtonProps) => {
   const { children, onPress, textStyle } = props;
   const styles = useThemeStyles(styleCreator, props, []);
   return (
-    <View style={styles.buttonContainer}>
+    <WibuView style={styles.buttonContainer}>
       <TouchableHighlight
         style={[styles.buttonStyle]}
         onPress={onPress ?? (() => {})}
@@ -19,6 +20,6 @@ export const WibuButton = (props: ButtonProps) => {
           {children}
         </WibuText>
       </TouchableHighlight>
-    </View>
+    </WibuView>
   );
 };
