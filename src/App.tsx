@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import { STORYBOOK_ENABLED } from '@env';
-import WibuCheckBox from './wibu-ui/WibuCheckBox/WibuCheckBox.tsx';
+import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 
 function App() {
   useEffect(() => {
@@ -12,15 +12,10 @@ function App() {
     const StoryBook = require('../.storybook').default;
     return <StoryBook />;
   }
-
   return (
-    <View>
+    <WibuView>
       <Text>Open up App.tsx to start working on your app!</Text>
-      <WibuCheckBox checked={'selected'} label={'aaaaaaaa'} />
-      <WibuCheckBox checked={'selected'} label={'dsdsdsd'} />
-      <WibuCheckBox checked={'selected'} label={'asa'} />
-      <WibuCheckBox checked={'selected'} label={'sas'} />
-    </View>
+    </WibuView>
   );
 }
 
