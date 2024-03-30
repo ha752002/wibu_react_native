@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import { STORYBOOK_ENABLED } from '@env';
+import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 
 function App() {
   useEffect(() => {
@@ -12,9 +13,9 @@ function App() {
     return <StoryBook />;
   }
   return (
-    <View>
+    <WibuView>
       <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    </WibuView>
   );
 }
 
