@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
-import { Colors, EFontsFamily, EFontsStyle } from '../../themes/Variable.ts';
-import { ESize } from '../../enums/wibiSize.enums.ts';
-import { EFontsWeight } from '../../enums/font.enum.ts';
+import { Colors, EFontsFamily, EFontsStyle } from '~/themes/Variable.ts';
+import { ESize } from '~/enums/size.enums.ts';
+import { EFontsWeight } from '~/enums/font.enum.ts';
 import { TextStyle, ViewStyle } from 'react-native';
 
 export type WibuTextSizeType =

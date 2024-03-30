@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
 import { WibuTextProps } from './WibuText.types.ts';
-import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
+import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
 import { styleCreator } from './WibuText.styles.ts';
 
 const WibuText = (props: WibuTextProps) => {

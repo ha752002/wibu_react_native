@@ -12,6 +12,14 @@
         "allowUndefined": true,
         "verbose": false
       }
+    ],
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "~": "./src"
+        }
+      }
     ]
   ]
 }

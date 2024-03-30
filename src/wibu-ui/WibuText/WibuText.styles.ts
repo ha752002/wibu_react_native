@@ -1,6 +1,6 @@
 import { StyleSheet, TextStyle } from 'react-native';
-import { StyleCreator } from '../../hooks/useThemeStyles.ts';
-import { ESize } from '../../enums/wibiSize.enums.ts';
+import { StyleCreator } from '~/hooks/useThemeStyles.ts';
+import { ESize } from '~/enums/size.enums.ts';
 import { WibuTextProps, WibuTextSizeType } from './WibuText.types.ts';
 
 export const styleCreator: StyleCreator = (theme, props: WibuTextProps) => {
