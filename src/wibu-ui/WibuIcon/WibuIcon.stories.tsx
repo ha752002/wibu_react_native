@@ -32,7 +32,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    name: EIconName.ChevronDown,
+    name: EIconName.AIRPLAY,
     size: ESize.XXXL,
     color: Colors.fgTextColor,
   },
