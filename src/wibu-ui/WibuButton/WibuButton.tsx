@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableHighlight, View } from 'react-native';
 import { styleCreator } from './WibuButton.styles.ts';
 import { ButtonProps } from './WibuButton.types.ts';
-import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
+import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
 import WibuText from '../WibuText/WibuText.tsx';
 
 export const WibuButton = (props: ButtonProps) => {
