@@ -5,10 +5,10 @@ export const styleCreator: StyleCreator = theme => {
   const { MetricsSizes } = theme;
   return StyleSheet.create({
     container: {
-      padding: MetricsSizes.tiny,
+      padding: MetricsSizes.extraTiny,
     },
     iconStyle: {
-      padding: MetricsSizes.tiny,
+      // padding: MetricsSizes.tiny,
     },
   });
 };

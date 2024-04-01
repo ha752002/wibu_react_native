@@ -5,12 +5,7 @@ const meta: Meta = {
   title: 'wibu-checkBox',
   component: WibuCheckBox,
   argTypes: {
-    checked: {
-      control: {
-        type: 'radio',
-      },
-      options: ['default', 'selected', 'unselected'],
-    },
+    checked: { control: 'boolean' },
     disabled: { control: 'boolean' },
     label: { control: 'text' },
   },

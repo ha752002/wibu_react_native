@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 export type WibuCheckBoxProps = {
-  checked?: string;
+  checked?: boolean;
   disabled?: boolean;
   label: string | ReactNode;
 };
