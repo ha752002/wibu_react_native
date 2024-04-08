@@ -145,9 +145,9 @@ function App() {
     <WibuView display={'flex'} gap={4} flexDirection={'column'}>
       <FlatList
         data={list}
-        ItemSeparatorComponent={() => {
-          return <WibuView height={5} />;
-        }}
+        // ItemSeparatorComponent={() => {
+        //   return <WibuView height={5} />;
+        // }}
         renderItem={({ item }) => {
           return (
             <WibuView padding={10} backgroundColor={'green'}>
