@@ -2,8 +2,9 @@ import {
   createNavigationContainerRef,
   NavigationContainer,
 } from '@react-navigation/native';
-import { Colors } from '~/themes/Variable.ts';
+import React from 'react';
 import { StatusBar } from 'react-native';
+import { Colors } from '~/themes/Variable.ts';
 
 const navigationRef = createNavigationContainerRef();
 
