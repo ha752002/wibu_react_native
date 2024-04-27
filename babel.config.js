@@ -3,5 +3,6 @@ module.exports = {
   plugins: [
     'transform-inline-environment-variables',
     ['module:react-native-dotenv'],
+    ['react-native-paper/babel'],
   ],
 };
