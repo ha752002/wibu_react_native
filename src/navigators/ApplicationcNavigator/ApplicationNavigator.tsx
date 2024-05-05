@@ -4,7 +4,6 @@ import {
 } from '@react-navigation/native';
 import React, { useCallback } from 'react';
 import { ColorValue, StatusBar } from 'react-native';
-import { Colors } from '~/themes/Variable.ts';
 import {
   ApplicationStackParams,
   BottomTabParams,
@@ -90,6 +89,8 @@ const ApplicationNativeStackNavigator = () => {
 };
 
 const ApplicationNavigator = () => {
+  const { Colors } = useTheme();
+
   return (
     <NavigationContainer ref={navigationRef}>
       <StatusBar
