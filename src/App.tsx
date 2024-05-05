@@ -7,8 +7,6 @@ import { PaperProvider } from 'react-native-paper';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
 import { persistor, store } from '~/store';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { Test } from '~/Test.tsx';
 
 function App() {
   useEffect(() => {
