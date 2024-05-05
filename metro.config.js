@@ -17,6 +17,7 @@ const config = {
     unstable_allowRequireContext: true,
   },
   resolver: {
+    sourceExts: ['jsx', 'js', 'ts', 'tsx', 'cjs', 'json'], //add here
     resolveRequest: (context, moduleName, platform) => {
       const defaultResolveResult = context.resolveRequest(
         context,
