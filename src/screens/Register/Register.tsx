@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
+import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 
 const Register = () => {
   return (
-    <View>
+    <WibuView>
       <Text>Register</Text>
-    </View>
+    </WibuView>
   );
 };
 
