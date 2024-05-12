@@ -5,8 +5,8 @@ import {
 } from '@react-navigation/native';
 import Home from '~/screens/Home/Home.tsx';
 import { EIconName } from '~/enums/icon.enum.ts';
-import MySelf from '~/screens/MySelf/MySelf.tsx';
 import Trending from '~/screens/Trending/Trending.tsx';
+import MySelf from '~/screens/MySelf/MySelf.tsx';
 import Search from '~/screens/Search/Search.tsx';
 import React from 'react';
 
