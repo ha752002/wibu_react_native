@@ -73,7 +73,7 @@ const BottomTabNavigator = () => {
 const ApplicationNativeStackNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName={ScreenNames.LOGIN}
+      initialRouteName={ScreenNames.MAIN_BOTTOM_TAB_NAVIGATOR}
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name={ScreenNames.MANGA} component={Manga} />

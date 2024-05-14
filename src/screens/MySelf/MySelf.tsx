@@ -1,11 +1,27 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { ScrollView } from 'react-native';
 
-const MySelf = () => {
+import StoryList from '~/components/StoryList/StoryList';
+import { following } from '~/components/StoryListItem/StoryListItem.types';
+
+import UserInformation from '~/components/userInformation/UserInformation';
+import { userData } from '~/components/userInformation/UserInformation.types';
+import Otherinformation from './Otherinformation/Otherinformation.tsx';
+
+import { MySelfProps } from './MySelf.types.ts';
+
+import { styleCreator } from './MySelf.styles.ts';
+import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
+
+const MySelf = (props: MySelfProps) => {
+  const styles = useThemeStyles(styleCreator, props, []);
+
   return (
-    <View>
-      <Text>MySelf</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      <UserInformation {...userData} />
+      <Otherinformation {...userData} />
+      <StoryList {...following} />
+    </ScrollView>
   );
 };
 

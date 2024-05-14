@@ -21,7 +21,7 @@ export const styleCreator: StyleCreator = (theme, props: WibuTextProps) => {
       fontStyle: fontStyle ?? FontStyle.Normal,
       fontWeight: fontWeight ?? FontWeight.Medium,
       color: Colors[color ?? 'fgTextColor'],
-      textAlign: 'center',
+      // textAlign: 'center',
       fontFamily: FontsFamily.Inter,
       ...fontSizeStyle[fontSize ?? ESize.M],
     },
