@@ -1,4 +1,4 @@
-import { IStories } from '../StoryListItem/StoryListItem.types';
+import { IStories } from '../Story/Story.types';
 
 export type StoriesProps = {
   stories?: IStories;

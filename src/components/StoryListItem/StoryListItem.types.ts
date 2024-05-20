@@ -1,15 +1,9 @@
+import { IStories } from '../Story/Story.types';
+
 export type StoriesProps = {
   title?: string;
   stories?: IStories[];
 };
-
-export interface IStories {
-  id: number;
-  name?: string;
-  author?: string;
-  thumbnail?: string;
-  // borderColor?: string;
-}
 
 export const storiesData: StoriesProps = {
   title: 'Trending Manga',
@@ -72,11 +66,13 @@ export const following: StoriesProps = {
       name: 'Sousou No Frieren',
       author: 'Tác giả 1',
       thumbnail: 'https://cdnnvd.com/nettruyen/thumb/sousou-no-frieren.jpg',
+      chapter: 23,
+      views: 121212,
     },
 
     {
       id: 2,
-      name: 'Bậc Thầy Thiết Kế Điền Trang',
+      name: 'Bậc Thầy Thiết Kế Điền Trang asa sấ',
       author: 'Tác giả 2',
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/bac-thay-thiet-ke-dien-trang.jpg',
@@ -103,4 +99,9 @@ export const following: StoriesProps = {
         'https://cdnnvd.com/nettruyen/thumb/trieu-hoi-den-the-gioi-fantasy.jpg',
     },
   ],
+};
+
+export const emptyList: StoriesProps = {
+  title: 'bookcase',
+  stories: [],
 };

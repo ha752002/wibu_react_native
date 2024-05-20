@@ -1,4 +1,4 @@
-import { StyleCreator } from '../../hooks/useThemeStyles.ts';
+import { StyleCreator } from '~/hooks/useThemeStyles.ts';
 // import {  } from './StoryList.types.ts';
 import { StyleSheet } from 'react-native';
 
@@ -7,14 +7,12 @@ export const styleCreator: StyleCreator = theme => {
 
   return StyleSheet.create({
     storyListContainer: {
-      marginTop: 24,
+      // marginTop: 24,
     },
 
     storyListStyleGroup: {
-      flexDirection: 'row',
+      // flexDirection: 'row',
     },
-
-    storyListStyle: {},
 
     storyList: {
       height: 300,

@@ -1,8 +1,12 @@
 import * as React from 'react';
-import { ScrollView } from 'react-native';
+// import { ScrollView } from 'react-native';
+import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 
 import StoryList from '~/components/StoryList/StoryList';
-import { following } from '~/components/StoryListItem/StoryListItem.types';
+import {
+  following,
+  emptyList,
+} from '~/components/StoryListItem/StoryListItem.types';
 
 import UserInformation from '~/components/userInformation/UserInformation';
 import { userData } from '~/components/userInformation/UserInformation.types';
@@ -17,11 +21,14 @@ const MySelf = (props: MySelfProps) => {
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (
-    <ScrollView style={styles.container}>
-      <UserInformation {...userData} />
-      <Otherinformation {...userData} />
-      <StoryList {...following} />
-    </ScrollView>
+    <WibuView>
+      <WibuView style={styles.container}>
+        <UserInformation {...userData} />
+        <Otherinformation {...userData} />
+        <StoryList {...following} viewType="grid" />
+        <StoryList {...emptyList} />
+      </WibuView>
+    </WibuView>
   );
 };
 

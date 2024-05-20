@@ -20,7 +20,7 @@ const StoryListItem = (props: StoriesProps) => {
 
   return (
     <WibuView style={styles.storyListItemContainer}>
-      <WibuView style={styles.titleGroup}>
+      <WibuView style={[styles.contentBetween, styles.titleGroup]}>
         <WibuText fontSize={ESize.XL}>{title}</WibuText>
         <WibuIcon name={EIconName.MORE_HORIZONTAL} size={ESize.XL} />
       </WibuView>

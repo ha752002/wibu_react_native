@@ -1,12 +1,9 @@
+import { IStories } from '../Story/Story.types';
+
 export type StoriesProps = {
   title?: string;
   stories?: IStories[];
+  viewType?: viewType;
 };
 
-export interface IStories {
-  id: number;
-  name?: string;
-  author?: string;
-  thumbnail?: string;
-  // borderColor?: string;
-}
+export type viewType = 'column' | 'grid';
