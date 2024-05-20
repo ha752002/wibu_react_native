@@ -15,7 +15,7 @@ import { ESize } from '~/enums/size.enums.ts';
 // import { ESize } from '~/assets/imgs/imgsFake/AvatarUserFake';
 
 const ColumnList = (props: StoriesProps) => {
-  const { stories } = props;
+  const { stories, title } = props;
   const styles = useThemeStyles(styleCreator, props, []);
 
   const EmptyListMessage = () => (
@@ -42,6 +42,11 @@ const ColumnList = (props: StoriesProps) => {
 
   return (
     <WibuView style={[styles.center, styles.storyListContainer]}>
+      <WibuView style={[styles.titleGroup]}>
+        <WibuText fontSize={ESize.XL} color="fgColorGray700">
+          {title}
+        </WibuText>
+      </WibuView>
       {ColumnForm()}
     </WibuView>
   );

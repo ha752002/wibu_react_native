@@ -39,7 +39,7 @@ const Story = (props: StoriesProps) => {
           <WibuText>{stories?.author}</WibuText>
         </WibuView>
         <WibuView style={styles.otherInformation}>
-          <WibuText>Chapter: {stories?.chapter}</WibuText>
+          <WibuText>Chapter : {stories?.chapter || 0}</WibuText>
           <WibuText>{formatViews(stories?.views || 0)} Views</WibuText>
         </WibuView>
       </WibuView>

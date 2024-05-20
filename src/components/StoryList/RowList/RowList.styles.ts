@@ -1,4 +1,4 @@
-import { StyleCreator } from '../../hooks/useThemeStyles.ts';
+import { StyleCreator } from '~/hooks/useThemeStyles.ts';
 // import {  } from './StoryListItem.types.ts';
 import { StyleSheet } from 'react-native';
 

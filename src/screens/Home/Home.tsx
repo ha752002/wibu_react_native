@@ -7,11 +7,11 @@ import { View } from 'react-native';
 import SearchForm from '~/components/SearchForm/SearchForm';
 import UserInformation from '~/components/userInformation/UserInformation';
 import { userData } from '~/components/userInformation/UserInformation.types';
-import StoryListItem from '~/components/StoryListItem/StoryListItem';
+import StoryList from '~/components/StoryList/StoryList.tsx';
 import {
   storiesData,
   storiesData2,
-} from '~/components/StoryListItem/StoryListItem.types';
+} from '~/components/StoryList/StoryList.types.ts';
 
 import { HomeProps } from './Home.types.ts';
 
@@ -29,8 +29,8 @@ const Home = (props: HomeProps) => {
     <View style={styles.container}>
       <UserInformation {...userData} />
       <SearchForm />
-      <StoryListItem {...storiesData} />
-      <StoryListItem {...storiesData2} />
+      <StoryList {...storiesData} viewType="row" />
+      <StoryList {...storiesData2} viewType="row" />
 
       {/* <WibuIcon name={EIconName.HOME} size={ESize.S} />
       <WibuButton

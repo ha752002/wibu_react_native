@@ -1,11 +1,11 @@
 import * as React from 'react';
 import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
-import { StoriesProps } from './StoryListItem.types.ts';
+import { StoriesProps } from './RowList.types.ts';
 import { ScrollView } from 'react-native';
-import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
-import { styleCreator } from './StoryListItem.styles.ts';
-import ItemStories from '../ItemStories/ItemStories.tsx';
+import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
+import { styleCreator } from './RowList.styles.ts';
+import ItemStories from '../../ItemStories/ItemStories.tsx';
 
 import WibuIcon from '~/wibu-ui/WibuIcon/WibuIcon.tsx';
 
@@ -14,7 +14,7 @@ import { ESize } from '~/enums/size.enums.ts';
 
 // import { ESize } from '~/assets/imgs/imgsFake/AvatarUserFake';
 
-const StoryListItem = (props: StoriesProps) => {
+const RowList = (props: StoriesProps) => {
   const { stories, title } = props;
   const styles = useThemeStyles(styleCreator, props, []);
 
@@ -24,6 +24,7 @@ const StoryListItem = (props: StoriesProps) => {
         <WibuText fontSize={ESize.XL}>{title}</WibuText>
         <WibuIcon name={EIconName.MORE_HORIZONTAL} size={ESize.XL} />
       </WibuView>
+
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
@@ -36,9 +37,8 @@ const StoryListItem = (props: StoriesProps) => {
             </WibuView>
           ))}
       </ScrollView>
-      {/* <WibuText>sáasas</WibuText> */}
     </WibuView>
   );
 };
 
-export default StoryListItem;
+export default RowList;
