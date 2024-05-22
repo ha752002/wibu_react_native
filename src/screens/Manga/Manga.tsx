@@ -1,10 +1,24 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
-const Manga = () => {
+import { MangaProps } from './Manga.types';
+import { story } from './Manga.types';
+
+import PageTitle from '~/components/PageTitle/PageTitle.tsx';
+import StoryDetails from './StoryDetails/StoryDetails.tsx';
+
+import { styleCreator } from './Manga.styles';
+import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
+
+const Manga = (props: MangaProps) => {
+  // const { story } = props;
+
+  const styles = useThemeStyles(styleCreator, props, []);
+
   return (
-    <View>
-      <Text>Manga</Text>
+    <View style={styles.container}>
+      <PageTitle title="Manga" />
+      <StoryDetails {...story} />
     </View>
   );
 };

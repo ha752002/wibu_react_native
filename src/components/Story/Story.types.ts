@@ -10,5 +10,8 @@ export interface IStories {
   thumbnail?: string;
   views?: number;
   chapter?: number;
+  introduce?: string;
+  genres?: string[];
+  chapters?: string[];
   // borderColor?: string;
 }
