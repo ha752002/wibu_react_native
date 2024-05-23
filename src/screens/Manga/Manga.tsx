@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 
 import { MangaProps } from './Manga.types';
 import { story } from './Manga.types';
@@ -16,10 +16,10 @@ const Manga = (props: MangaProps) => {
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <PageTitle title="Manga" />
       <StoryDetails {...story} />
-    </View>
+    </ScrollView>
   );
 };
 

@@ -9,22 +9,17 @@ export const styleCreator: StyleCreator = theme => {
     container: {
       // paddingHorizontal: 36,
       color: Colors.fgColorGray700,
-      // marginTop: 24,
     },
 
     thumbnail: {
       width: '100%',
       alignItems: 'center',
-      borderRadius: 12,
-    },
-
-    content: {
-      paddingHorizontal: 36,
+      borderRadius: 14,
     },
 
     img: {
-      width: 180,
-      height: 280,
+      width: '100%',
+      height: 240,
       borderRadius: 12,
     },
   });
