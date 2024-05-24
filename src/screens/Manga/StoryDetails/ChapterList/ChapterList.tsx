@@ -4,6 +4,7 @@ import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
 import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 
 import { ChaptersProps } from './ChapterList.types.ts';
+import ItemChapter from './ItemChapter/ItemChapter.tsx';
 
 // import PageTitle from '~/components/PageTitle/PageTitle.tsx';
 
@@ -30,15 +31,11 @@ const ChapterList = (props: ChaptersProps) => {
 
         <WibuIcon name={EIconName.FILTER} size={ESize.S} />
       </WibuView>
+
       <WibuView style={styles.chapters}>
         <ScrollView>
           {chapters &&
-            chapters.map((chapter, index) => (
-              <WibuView key={index} style={styles.chapter}>
-                <WibuIcon name={EIconName.BOOK} size={ESize.S} />
-                <WibuText numberOfLines={1}>{chapter}</WibuText>
-              </WibuView>
-            ))}
+            chapters.map(chapter => <ItemChapter chapter={chapter} />)}
         </ScrollView>
       </WibuView>
     </WibuView>

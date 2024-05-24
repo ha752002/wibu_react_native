@@ -7,8 +7,8 @@ export const styleCreator: StyleCreator = theme => {
 
   return StyleSheet.create({
     container: {
-      paddingHorizontal: 36,
       color: Colors.fgColorGray700,
+      paddingHorizontal: 36,
     },
   });
 };

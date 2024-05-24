@@ -13,7 +13,7 @@ export const styleCreator: StyleCreator = theme => {
     groupSearchFormStyle: {
       flexDirection: 'row',
       alignItems: 'center',
-      width: 320,
+      // width: 320,
       height: 45,
       paddingHorizontal: 12,
       backgroundColor: Colors.bgWhite,

@@ -8,23 +8,25 @@ export const styleCreator: StyleCreator = theme => {
   return StyleSheet.create({
     container: {
       color: Colors.fgColorGray700,
-      marginTop: 24,
-      borderWidth: 1,
-      borderRadius: 12,
-      // height: 290,
+      // height: 400,
+
+      padding: 4,
     },
 
-    title: {
-      padding: 8,
-      borderBottomWidth: 1,
-      borderBottomColor: Colors.fgColorGray700,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
+    genreList: {
+      borderWidth: 0.5,
+      borderColor: Colors.bgPrimary,
+    },
+
+    item: {
+      flex: 1,
       alignItems: 'center',
-    },
-
-    chapters: {
-      paddingHorizontal: 12,
+      justifyContent: 'center',
+      aspectRatio: 1,
+      borderWidth: 0.5,
+      borderColor: Colors.bgPrimary,
+      // borderRadius: 4,
+      // margin:3,
     },
   });
 };

@@ -8,23 +8,17 @@ export const styleCreator: StyleCreator = theme => {
   return StyleSheet.create({
     container: {
       color: Colors.fgColorGray700,
-      marginTop: 24,
-      borderWidth: 1,
-      borderRadius: 12,
       // height: 290,
     },
 
-    title: {
-      padding: 8,
+    chapter: {
+      paddingHorizontal: 8,
+      paddingVertical: 8,
       borderBottomWidth: 1,
       borderBottomColor: Colors.fgColorGray700,
       flexDirection: 'row',
-      justifyContent: 'space-between',
+      width: '100%',
       alignItems: 'center',
-    },
-
-    chapters: {
-      paddingHorizontal: 12,
     },
   });
 };
