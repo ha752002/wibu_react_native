@@ -11,15 +11,17 @@ import { InformationProps } from './Thumbnail.types.ts';
 // import { ESize } from '~/enums/size.enums.ts';
 import { styleCreator } from './Thumbnail.styles.ts';
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
+import { useTheme } from '~/hooks/useTheme.ts';
 
 const Thumbnail = (props: InformationProps) => {
   const { thumbnail } = props;
+  const { Layout } = useTheme();
 
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (
     <WibuView style={styles.container}>
-      <WibuView style={styles.thumbnail}>
+      <WibuView style={[styles.thumbnail, Layout.alignItemsCenter]}>
         <Image source={{ uri: thumbnail }} style={styles.img} />
       </WibuView>
     </WibuView>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-// import { ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 
 import StoryList from '~/components/StoryList/StoryList';
@@ -22,7 +22,7 @@ const MySelf = (props: MySelfProps) => {
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (
-    <WibuView>
+    <ScrollView>
       <WibuView style={styles.container}>
         <PageTitle title="My Profile" />
         <UserInformation {...userData} />
@@ -30,7 +30,7 @@ const MySelf = (props: MySelfProps) => {
         <StoryList {...following} viewType="column" />
         <StoryList {...emptyList} />
       </WibuView>
-    </WibuView>
+    </ScrollView>
   );
 };
 

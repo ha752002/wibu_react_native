@@ -1,24 +1,26 @@
 import * as React from 'react';
 import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
+
 import { UserInformationProps } from './UserInformation.types.ts';
 import { Image } from 'react-native';
+
+import { useTheme } from '../../hooks/useTheme.ts';
 import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
 import { styleCreator } from './UserInformation.styles.ts';
-// import WibuIcon from '~/wibu-ui/WibuIcon/WibuIcon.tsx';
 
+// import WibuIcon from '~/wibu-ui/WibuIcon/WibuIcon.tsx';
 // import { EIconName } from '~/enums/icon.enum.ts';
 import { ESize } from '~/enums/size.enums.ts';
 
-// import { ESize } from '~/assets/imgs/imgsFake/AvatarUserFake';
-
 const UserInformation = (props: UserInformationProps) => {
   const { name, avatar, introduce } = props;
+  const { Layout } = useTheme();
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (
-    <WibuView style={styles.userInformationContainer}>
-      <WibuView style={styles.userInformationStyleGroup}>
+    <WibuView style={[styles.container, Layout.center]}>
+      <WibuView style={[styles.userInformationGroup, Layout.rowHCenter]}>
         <Image
           style={styles.userInformationStyle}
           source={{

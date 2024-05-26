@@ -11,17 +11,20 @@ import WibuIcon from '~/wibu-ui/WibuIcon/WibuIcon.tsx';
 // import { Layout } from '~/themes/Layout.ts';
 import { EIconName } from '~/enums/icon.enum.ts';
 import { ESize } from '~/enums/size.enums.ts';
+
 import { styleCreator } from './ItemChapter.styles.ts';
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
+import { useTheme } from '~/hooks/useTheme.ts';
 
 const ItemChapter = (props: ItemChapterProps) => {
   const { chapter } = props;
+  const { Layout } = useTheme();
 
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (
     <WibuView style={styles.container}>
-      <WibuView style={styles.chapter}>
+      <WibuView style={[styles.chapter, Layout.rowHCenter]}>
         <WibuIcon name={EIconName.BOOK} size={ESize.S} />
         <WibuText numberOfLines={1}>{chapter}</WibuText>
       </WibuView>

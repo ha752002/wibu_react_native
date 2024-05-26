@@ -12,17 +12,20 @@ import WibuIcon from '~/wibu-ui/WibuIcon/WibuIcon.tsx';
 // import { Layout } from '~/themes/Layout.ts';
 import { EIconName } from '~/enums/icon.enum.ts';
 import { ESize } from '~/enums/size.enums.ts';
+
 import { styleCreator } from './ChapterList.styles.ts';
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
+import { useTheme } from '~/hooks/useTheme.ts';
 
 const ChapterList = (props: ChaptersProps) => {
   const { chapters } = props;
+  const { Layout } = useTheme();
 
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (
     <WibuView style={styles.container}>
-      <WibuView style={styles.title}>
+      <WibuView style={[styles.title, Layout.contentBetween]}>
         <WibuIcon name={EIconName.LIST} size={ESize.S} />
 
         <WibuText fontSize={ESize.L} color="fgColorGray700">
@@ -35,7 +38,9 @@ const ChapterList = (props: ChaptersProps) => {
       <WibuView style={styles.chapters}>
         <ScrollView>
           {chapters &&
-            chapters.map(chapter => <ItemChapter chapter={chapter} />)}
+            chapters.map((chapter, index) => (
+              <ItemChapter chapter={chapter} key={index} />
+            ))}
         </ScrollView>
       </WibuView>
     </WibuView>

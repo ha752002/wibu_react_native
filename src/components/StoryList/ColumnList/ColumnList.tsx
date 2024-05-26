@@ -5,8 +5,10 @@ import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
 
 import { StoriesProps } from './ColumnList.types.ts';
 
+// import { FlatList ,SectionList } from 'react-native';
 import { FlatList } from 'react-native';
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
+// import { useTheme } from '~/hooks/useTheme.ts';
 import { styleCreator } from './ColumnList.styles.ts';
 
 import Story from '../../Story/Story.tsx';
@@ -19,6 +21,7 @@ import { ESize } from '~/enums/size.enums.ts';
 
 const ColumnList = (props: StoriesProps) => {
   const { stories, title } = props;
+  // const {Colors ,Layout } = useTheme()
   const styles = useThemeStyles(styleCreator, props, []);
 
   // const EmptyListMessage = () => (

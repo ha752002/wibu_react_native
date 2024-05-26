@@ -28,10 +28,10 @@ export const styleCreator: StyleCreator = theme => {
       flex: 1,
     },
 
-    otherInformation: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-    },
+    // otherInformation: {
+    //   flexDirection: 'row',
+    //   justifyContent: 'space-between',
+    // },
 
     img: {
       width: 60,

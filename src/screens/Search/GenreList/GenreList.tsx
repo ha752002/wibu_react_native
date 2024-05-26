@@ -10,9 +10,11 @@ import { genresProps } from './GenreList.types.ts';
 
 import { styleCreator } from './GenreList.styles.ts';
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
+import { useTheme } from '~/hooks/useTheme.ts';
 
 const GenreList = (props: genresProps) => {
   const { genres } = props;
+  const { Layout } = useTheme();
 
   const styles = useThemeStyles(styleCreator, props, []);
 
@@ -24,7 +26,7 @@ const GenreList = (props: genresProps) => {
         <FlatList
           data={genres}
           renderItem={({ item }) => (
-            <WibuView style={styles.item}>
+            <WibuView style={[styles.item, Layout.center]}>
               <WibuText color="fgColorGray700">{item}</WibuText>
             </WibuView>
           )}

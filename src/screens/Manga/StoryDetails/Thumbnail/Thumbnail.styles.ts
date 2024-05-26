@@ -13,7 +13,6 @@ export const styleCreator: StyleCreator = theme => {
 
     thumbnail: {
       width: '100%',
-      alignItems: 'center',
       borderRadius: 14,
     },
 

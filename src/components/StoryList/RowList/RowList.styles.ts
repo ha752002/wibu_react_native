@@ -17,12 +17,9 @@ export const styleCreator: StyleCreator = theme => {
     storyListItemStyle: {},
 
     titleGroup: {
-      width: 320,
+      width: '100%',
       paddingHorizontal: 10,
       fontSize: FontSize.large,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
     },
 
     title: {

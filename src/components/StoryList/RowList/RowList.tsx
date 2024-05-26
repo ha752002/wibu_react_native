@@ -3,12 +3,14 @@ import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
 import { StoriesProps } from './RowList.types.ts';
 import { ScrollView } from 'react-native';
+
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
+import { useTheme } from '~/hooks/useTheme.ts';
 import { styleCreator } from './RowList.styles.ts';
+
 import ItemStories from '../../ItemStories/ItemStories.tsx';
 
 import WibuIcon from '~/wibu-ui/WibuIcon/WibuIcon.tsx';
-
 import { EIconName } from '~/enums/icon.enum.ts';
 import { ESize } from '~/enums/size.enums.ts';
 
@@ -16,11 +18,12 @@ import { ESize } from '~/enums/size.enums.ts';
 
 const RowList = (props: StoriesProps) => {
   const { stories, title } = props;
+  const { Layout } = useTheme();
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (
     <WibuView style={styles.storyListItemContainer}>
-      <WibuView style={[styles.contentBetween, styles.titleGroup]}>
+      <WibuView style={[styles.titleGroup, Layout.contentBetween]}>
         <WibuText fontSize={ESize.XL}>{title}</WibuText>
         <WibuIcon name={EIconName.MORE_HORIZONTAL} size={ESize.XL} />
       </WibuView>

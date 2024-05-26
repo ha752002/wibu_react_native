@@ -6,17 +6,12 @@ export const styleCreator: StyleCreator = theme => {
   const { Colors } = theme;
 
   return StyleSheet.create({
-    userInformationContainer: {
+    container: {
       marginTop: 24,
-      // flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
     },
 
-    userInformationStyleGroup: {
-      alignItems: 'center',
-      width: 320,
-      flexDirection: 'row',
+    userInformationGroup: {
+      width: '100%',
     },
 
     userInformationStyle: {

@@ -7,14 +7,11 @@ export const styleCreator: StyleCreator = theme => {
 
   return StyleSheet.create({
     container: {
-      // paddingHorizontal: 36,
       color: Colors.fgColorGray700,
-      // marginTop: 24,
     },
 
     thumbnail: {
       width: '100%',
-      alignItems: 'center',
       borderRadius: 12,
     },
 

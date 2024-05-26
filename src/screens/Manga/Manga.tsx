@@ -12,6 +12,7 @@ import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
 
 const Manga = (props: MangaProps) => {
   // const { story } = props;
+  console.log(121111);
 
   const styles = useThemeStyles(styleCreator, props, []);
 

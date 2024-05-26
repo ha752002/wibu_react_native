@@ -7,9 +7,6 @@ export const styleCreator: StyleCreator = theme => {
 
   return StyleSheet.create({
     titleContainer: {
-      // width: 120,
-      flexDirection: 'row',
-      alignItems: 'center',
       backgroundColor: Colors.transparent,
     },
 

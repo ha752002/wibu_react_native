@@ -40,6 +40,7 @@ const BottomTabNavigator = () => {
       screenOptions={{
         tabBarActiveBackgroundColor: Colors.bgPrimary,
         tabBarActiveTintColor: Colors.bgWhite,
+        headerShown: false,
       }}
     >
       {ListBottomTab &&

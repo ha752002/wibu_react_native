@@ -11,14 +11,16 @@ import { GenresProps } from './Genres.types.ts';
 // import { ESize } from '~/enums/size.enums.ts';
 import { styleCreator } from './Genres.styles.ts';
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
+import { useTheme } from '~/hooks/useTheme.ts';
 
 const Genres = (props: GenresProps) => {
   const { genres } = props;
+  const { Layout } = useTheme();
 
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (
-    <WibuView style={styles.container}>
+    <WibuView style={[styles.container, Layout.rowHCenter]}>
       <WibuView>
         <WibuText>genre :</WibuText>
       </WibuView>

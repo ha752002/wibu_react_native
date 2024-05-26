@@ -10,8 +10,6 @@ export const styleCreator: StyleCreator = theme => {
       // paddingHorizontal: 36,
       color: Colors.fgColorGray700,
       marginTop: 24,
-      flexDirection: 'row',
-      alignItems: 'center',
       flexWrap: 'wrap',
     },
 

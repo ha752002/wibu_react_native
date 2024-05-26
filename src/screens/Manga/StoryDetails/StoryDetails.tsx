@@ -15,9 +15,11 @@ import Introduce from './Introduce/Introduce.tsx';
 // import { ESize } from '~/enums/size.enums.ts';
 import { styleCreator } from './StoryDetails.styles.ts';
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
+// import { useTheme } from '~/hooks/useTheme.ts';
 
 const StoryDetails = (props: StoryDetailsProps) => {
   const { story } = props;
+  // const { Layout } = useTheme();
 
   const styles = useThemeStyles(styleCreator, props, []);
 

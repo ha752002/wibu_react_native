@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 // import { WibuButton } from '~/wibu-ui/WibuButton/WibuButton.tsx';
 // import { useNavigation } from '@react-navigation/native';
 // import { ScreenNames } from '~/enums/screenNames.enum.ts';
@@ -26,7 +26,7 @@ const Home = (props: HomeProps) => {
   const styles = useThemeStyles(styleCreator, props, []);
   // const navigation = useNavigation<ApplicationNavigationProps>();
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <UserInformation {...userData} />
       <SearchForm />
       <StoryList {...storiesData} viewType="row" />
@@ -42,7 +42,7 @@ const Home = (props: HomeProps) => {
       >
         Home
       </WibuButton> */}
-    </View>
+    </ScrollView>
   );
 };
 

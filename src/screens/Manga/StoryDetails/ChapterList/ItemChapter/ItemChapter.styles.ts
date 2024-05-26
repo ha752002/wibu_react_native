@@ -16,9 +16,7 @@ export const styleCreator: StyleCreator = theme => {
       paddingVertical: 8,
       borderBottomWidth: 1,
       borderBottomColor: Colors.fgColorGray700,
-      flexDirection: 'row',
       width: '100%',
-      alignItems: 'center',
     },
   });
 };

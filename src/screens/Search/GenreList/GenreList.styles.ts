@@ -20,11 +20,10 @@ export const styleCreator: StyleCreator = theme => {
 
     item: {
       flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
-      aspectRatio: 1,
+      height: 40,
       borderWidth: 0.5,
       borderColor: Colors.bgPrimary,
+      // aspectRatio: 1,
       // borderRadius: 4,
       // margin:3,
     },
