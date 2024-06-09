@@ -27,6 +27,7 @@ const MySelf = (props: MySelfProps) => {
         <PageTitle title="My Profile" />
         <UserInformation {...userData} />
         <Otherinformation {...userData} />
+        <StoryList {...following} viewType="grid" />
         <StoryList {...following} viewType="column" />
         <StoryList {...emptyList} />
       </WibuView>

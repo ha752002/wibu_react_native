@@ -35,7 +35,7 @@ const RowList = (props: StoriesProps) => {
       >
         {stories &&
           stories.map((story, index) => (
-            <WibuView key={index} style={[index !== 0 && { marginLeft: 24 }]}>
+            <WibuView key={index} style={styles.storyListItemStyle}>
               <ItemStories stories={story} />
             </WibuView>
           ))}

@@ -31,6 +31,8 @@ const Home = (props: HomeProps) => {
       <SearchForm />
       <StoryList {...storiesData} viewType="row" />
       <StoryList {...storiesData2} viewType="row" />
+      <StoryList {...storiesData2} viewType="row" />
+      <StoryList {...storiesData2} viewType="row" />
 
       {/* <WibuIcon name={EIconName.HOME} size={ESize.S} />
       <WibuButton

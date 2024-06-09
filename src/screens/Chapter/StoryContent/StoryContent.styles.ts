@@ -1,4 +1,4 @@
-import { StyleCreator } from '../../hooks/useThemeStyles.ts';
+import { StyleCreator } from '~/hooks/useThemeStyles.ts';
 // import {  } from './StoryListItem.types.ts';
 import { StyleSheet } from 'react-native';
 
@@ -7,11 +7,19 @@ export const styleCreator: StyleCreator = theme => {
 
   return StyleSheet.create({
     container: {
+      flex: 1,
       color: Colors.fgColorGray700,
     },
 
-    item: {
-      paddingHorizontal: 36,
+    content: {
+      flex: 1,
+    },
+
+    img: {
+      width: '100%',
+      height: undefined,
+      aspectRatio: 0.4,
+      resizeMode: 'contain',
     },
   });
 };

@@ -19,21 +19,6 @@ const GridList = (props: StoriesProps) => {
   const { stories, title } = props;
   const styles = useThemeStyles(styleCreator, props, []);
 
-  const GridForm = () => (
-    <FlatList
-      data={stories}
-      renderItem={({ item }) => (
-        <WibuView style={styles.item}>
-          <ItemStories stories={item} size="large" />
-        </WibuView>
-      )}
-      keyExtractor={item => item.id.toString()}
-      numColumns={2}
-      ListEmptyComponent={EmptyList}
-      contentContainerStyle={styles.storyList}
-    />
-  );
-
   return (
     <WibuView style={[styles.center, styles.storyListContainer]}>
       <WibuView style={[styles.titleGroup]}>
@@ -41,7 +26,18 @@ const GridList = (props: StoriesProps) => {
           {title}
         </WibuText>
       </WibuView>
-      {GridForm()}
+      <FlatList
+        data={stories}
+        renderItem={({ item }) => (
+          <WibuView style={styles.item}>
+            <ItemStories stories={item} size="large" />
+          </WibuView>
+        )}
+        keyExtractor={item => item.id.toString()}
+        numColumns={2}
+        ListEmptyComponent={EmptyList}
+        contentContainerStyle={styles.storyList}
+      />
     </WibuView>
   );
 };

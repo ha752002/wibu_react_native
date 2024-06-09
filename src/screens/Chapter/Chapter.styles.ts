@@ -7,11 +7,11 @@ export const styleCreator: StyleCreator = theme => {
 
   return StyleSheet.create({
     container: {
+      flex: 1,
       color: Colors.fgColorGray700,
     },
-
-    item: {
-      paddingHorizontal: 36,
+    content: {
+      flex: 1,
     },
   });
 };

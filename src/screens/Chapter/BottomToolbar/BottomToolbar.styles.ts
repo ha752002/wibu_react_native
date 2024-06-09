@@ -3,28 +3,22 @@ import { StyleCreator } from '~/hooks/useThemeStyles.ts';
 import { StyleSheet } from 'react-native';
 
 export const styleCreator: StyleCreator = theme => {
-  const { FontSize } = theme;
+  const { Colors } = theme;
 
   return StyleSheet.create({
-    storyListItemContainer: {
-      // marginTop: 24,
-    },
-
-    storyListItemStyleGroup: {
+    container: {
       flexDirection: 'row',
-    },
-
-    storyListItemStyle: {
-      marginRight: 24,
-    },
-
-    titleGroup: {
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      position: 'absolute',
+      bottom: 0,
       width: '100%',
-      paddingHorizontal: 10,
-      fontSize: FontSize.large,
+      height: 64,
+      backgroundColor: Colors.bgWhite,
+      borderTopWidth: 0.4,
+      borderTopColor: Colors.fgColorGray700,
     },
-
-    title: {
+    content: {
       flex: 1,
     },
   });

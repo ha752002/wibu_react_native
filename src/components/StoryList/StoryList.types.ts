@@ -31,6 +31,13 @@ export const storiesData: StoriesProps = {
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/bac-thay-thiet-ke-dien-trang.jpg',
     },
+    {
+      id: 4,
+      name: 'Bậc Thầy Thiết Kế Điền Trang',
+      author: 'Tác giả 2',
+      thumbnail:
+        'https://cdnnvd.com/nettruyen/thumb/bac-thay-thiet-ke-dien-trang.jpg',
+    },
   ],
 };
 

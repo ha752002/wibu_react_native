@@ -24,28 +24,6 @@ const ColumnList = (props: StoriesProps) => {
   // const {Colors ,Layout } = useTheme()
   const styles = useThemeStyles(styleCreator, props, []);
 
-  // const EmptyListMessage = () => (
-  //   <WibuView style={styles.emptyList}>
-  //     <WibuIcon name={EIconName.BOOK} size={ESize.M} />
-  //     <WibuText fontSize={ESize.XL}>No stories available</WibuText>
-  //   </WibuView>
-  // );
-
-  const ColumnForm = () => (
-    <FlatList
-      data={stories}
-      renderItem={({ item }) => (
-        <WibuView style={styles.item}>
-          <Story stories={item} />
-        </WibuView>
-      )}
-      keyExtractor={item => item.id.toString()}
-      numColumns={1}
-      ListEmptyComponent={EmptyList}
-      contentContainerStyle={styles.storyList}
-    />
-  );
-
   return (
     <WibuView style={[styles.center, styles.storyListContainer]}>
       <WibuView style={[styles.titleGroup]}>
@@ -53,7 +31,18 @@ const ColumnList = (props: StoriesProps) => {
           {title}
         </WibuText>
       </WibuView>
-      {ColumnForm()}
+      <FlatList
+        data={stories}
+        renderItem={({ item }) => (
+          <WibuView style={styles.item}>
+            <Story stories={item} />
+          </WibuView>
+        )}
+        keyExtractor={item => item.id.toString()}
+        numColumns={1}
+        ListEmptyComponent={EmptyList}
+        contentContainerStyle={styles.storyList}
+      />
     </WibuView>
   );
 };

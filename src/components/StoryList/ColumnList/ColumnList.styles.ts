@@ -3,7 +3,7 @@ import { StyleCreator } from '~/hooks/useThemeStyles.ts';
 import { StyleSheet } from 'react-native';
 
 export const styleCreator: StyleCreator = theme => {
-  const { Colors, FontSize } = theme;
+  const { FontSize } = theme;
 
   return StyleSheet.create({
     storyListContainer: {
@@ -15,7 +15,7 @@ export const styleCreator: StyleCreator = theme => {
     },
 
     storyList: {
-      height: 300,
+      // height: 300,
     },
 
     titleGroup: {
@@ -30,16 +30,6 @@ export const styleCreator: StyleCreator = theme => {
 
     item: {
       margin: 12,
-    },
-
-    emptyList: {
-      alignItems: 'center',
-      width: '100%',
-      padding: 20,
-      borderWidth: 1,
-      borderRadius: 15,
-      marginTop: 15,
-      borderColor: Colors.bgFocus,
     },
   });
 };
