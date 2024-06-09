@@ -37,7 +37,7 @@ const Story = (props: StoriesProps) => {
           >
             {stories?.name}
           </WibuText>
-          <WibuText>{stories?.author}</WibuText>
+          <WibuText>{stories?.author || 'Updating...'}</WibuText>
         </WibuView>
         <WibuView style={[Layout.contentBetween]}>
           <WibuText>Chapter : {stories?.chapter || 0}</WibuText>

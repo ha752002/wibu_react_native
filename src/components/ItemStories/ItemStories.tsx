@@ -57,7 +57,7 @@ const ItemStories = (props: StoriesProps) => {
           </WibuText>
         </View>
       </TouchableWithoutFeedback>
-      <WibuText>{stories?.author}</WibuText>
+      <WibuText>{stories?.author || 'Updating...'}</WibuText>
     </WibuView>
   );
 };

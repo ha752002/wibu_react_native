@@ -13,14 +13,19 @@ import { styleCreator } from './Introduce.styles.ts';
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
 
 const Information = (props: IntroduceProps) => {
-  const { introduce } = props;
+  const { introduce, name } = props;
 
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (
     <WibuView style={styles.container}>
       <WibuView style={styles.introduce}>
-        <WibuText>{introduce}</WibuText>
+        <WibuText>
+          {introduce ||
+            'Welcome readers of wibu app, wish you a happy experience reading the ' +
+              name +
+              ' series that we bring to you.'}
+        </WibuText>
       </WibuView>
     </WibuView>
   );

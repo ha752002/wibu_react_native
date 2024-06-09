@@ -1,17 +1,17 @@
 export type StoriesProps = {
-  title?: string;
   stories?: IStories;
 };
 
 export interface IStories {
   id: number;
-  name?: string;
+  name: string;
   author?: string;
+  translator?: string;
   thumbnail?: string;
   views?: number;
   chapter?: number;
   introduce?: string;
-  genres?: string[];
+  genres: string[];
   chapters?: string[];
   // borderColor?: string;
 }

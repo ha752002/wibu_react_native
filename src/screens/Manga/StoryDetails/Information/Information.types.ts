@@ -3,6 +3,7 @@
 export type InformationProps = {
   name?: string;
   author?: string;
+  translator?: string;
   views?: number;
   chapter?: number;
 };
