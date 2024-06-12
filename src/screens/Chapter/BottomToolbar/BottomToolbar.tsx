@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { useRef } from 'react';
+// import { useRef } from 'react';
 
 import { View, TouchableWithoutFeedback } from 'react-native';
-import BottomSheet from 'reanimated-bottom-sheet';
 
 import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 // import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
@@ -26,7 +25,6 @@ import { ScreenNames } from '~/enums/screenNames.enum.ts';
 const BottomToolbar = (props: BottomToolbarProps) => {
   const styles = useThemeStyles(styleCreator, props, []);
   const navigation = useNavigation<ApplicationNavigationProps>();
-  const sheetRef = useRef<BottomSheet>(null);
 
   return (
     <View>
@@ -42,9 +40,9 @@ const BottomToolbar = (props: BottomToolbarProps) => {
         <TouchableWithoutFeedback
           style={styles.openButton}
           onPress={() => {
-            if (sheetRef.current) {
-              sheetRef.current.snapTo(1);
-            }
+            // if (sheetRef.current) {
+            //   sheetRef.current.snapTo(1);
+            // }
           }}
         >
           <WibuIcon name={EIconName.LIST} size={ESize.L} />

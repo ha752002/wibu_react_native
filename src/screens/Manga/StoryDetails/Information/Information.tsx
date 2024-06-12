@@ -34,5 +34,4 @@ const Information = (props: InformationProps) => {
     </WibuView>
   );
 };
-
 export default Information;

@@ -17,7 +17,7 @@ export const styleCreator: StyleCreator = theme => {
 
     img: {
       width: '100%',
-      height: undefined,
+      height: 'auto',
       aspectRatio: 0.4,
       resizeMode: 'contain',
     },

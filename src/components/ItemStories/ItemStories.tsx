@@ -43,7 +43,7 @@ const ItemStories = (props: StoriesProps) => {
     <WibuView style={containerStyle}>
       <TouchableWithoutFeedback
         onPress={() => {
-          navigation.navigate(ScreenNames.MANGA);
+          navigation.navigate(ScreenNames.MANGA, { id: 1 });
         }}
       >
         <View>

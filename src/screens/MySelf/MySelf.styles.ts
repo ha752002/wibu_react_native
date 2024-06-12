@@ -9,6 +9,8 @@ export const styleCreator: StyleCreator = theme => {
     container: {
       paddingHorizontal: 36,
       color: Colors.fgColorGray700,
+      overflow: 'scroll',
+      height: '100%',
     },
   });
 };

@@ -8,6 +8,7 @@ export const styleCreator: StyleCreator = theme => {
   return StyleSheet.create({
     container: {
       color: Colors.fgColorGray700,
+      overflow: 'scroll',
     },
 
     item: {

@@ -13,7 +13,7 @@ import React from 'react';
 export type ApplicationStackParams = {
   [ScreenNames.LOGIN]: undefined;
   [ScreenNames.REGISTER]: undefined;
-  [ScreenNames.MANGA]: undefined;
+  [ScreenNames.MANGA]: IMangaParams;
   [ScreenNames.CHAPTER]: undefined;
   [ScreenNames.MAIN_BOTTOM_TAB_NAVIGATOR]: NavigatorScreenParams<BottomTabParams>;
 };
@@ -55,3 +55,7 @@ export const ListBottomTab: IBottomTabItem[] = [
     screenName: ScreenNames.MY_SELF,
   },
 ];
+
+export interface IMangaParams {
+  id: number;
+}

@@ -18,5 +18,9 @@ export const styleCreator: StyleCreator = theme => {
       borderBottomColor: Colors.fgColorGray700,
       width: '100%',
     },
+
+    content: {
+      flex: 1,
+    },
   });
 };

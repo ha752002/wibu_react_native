@@ -25,17 +25,20 @@ const StoryDetails = (props: StoryDetailsProps) => {
 
   return (
     <View style={styles.container}>
-      <Thumbnail thumbnail={story.thumbnail} />
+      <Thumbnail thumbnail={story?.story?.thumbnail} />
       <WibuView style={styles.content}>
         <Information
-          name={story?.name}
-          author={story?.author}
-          translator={story?.translator}
+          name={story?.story?.name}
+          author={story?.story?.author}
+          translator={story?.story?.translator}
         />
-        <Genres genres={story.genres} />
+        <Genres genres={story?.Genre} />
 
-        <Introduce introduce={story?.introduce} name={story?.name} />
-        <ChapterList chapters={story.chapters} />
+        <Introduce
+          introduce={story?.story?.introduce}
+          name={story?.story?.name}
+        />
+        <ChapterList chapters={story?.chapters} />
       </WibuView>
     </View>
   );

@@ -1,5 +1,5 @@
-// import { IStories } from '~/components/Story/Story.types';
+import { IChapters } from '../ChapterList.types';
 
 export type ItemChapterProps = {
-  chapter?: string;
+  chapter: IChapters;
 };

@@ -22,6 +22,8 @@ import { useNavigation } from '@react-navigation/native';
 import { ApplicationNavigationProps } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types.ts';
 import { ScreenNames } from '~/enums/screenNames.enum.ts';
 
+import { commonUtils } from '~/utils/common.utils.ts';
+
 const ItemChapter = (props: ItemChapterProps) => {
   const { chapter } = props;
   const { Layout } = useTheme();
@@ -37,8 +39,11 @@ const ItemChapter = (props: ItemChapterProps) => {
         }}
       >
         <View style={[styles.chapter, Layout.rowHCenter]}>
-          <WibuIcon name={EIconName.BOOK} size={ESize.S} />
-          <WibuText numberOfLines={1}>{chapter}</WibuText>
+          <WibuView style={[styles.content, Layout.rowHCenter]}>
+            <WibuIcon name={EIconName.BOOK} size={ESize.S} />
+            <WibuText numberOfLines={1}>{chapter?.chapter}</WibuText>
+          </WibuView>
+          <WibuText>{commonUtils.formattedDate(chapter?.UpdateTime)}</WibuText>
         </View>
       </TouchableWithoutFeedback>
     </WibuView>

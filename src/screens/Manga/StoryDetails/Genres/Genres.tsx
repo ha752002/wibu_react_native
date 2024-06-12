@@ -27,7 +27,7 @@ const Genres = (props: GenresProps) => {
       {genres &&
         genres.map((genre, index) => (
           <WibuView key={index} style={styles.genre}>
-            <WibuText color="bgWhite">{genre}</WibuText>
+            <WibuText color="bgWhite">{genre.genre}</WibuText>
           </WibuView>
         ))}
     </WibuView>

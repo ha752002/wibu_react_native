@@ -1,5 +1,5 @@
-import { IStories } from '~/components/Story/Story.types';
+import { Istory } from '../Manga.types';
 
 export type StoryDetailsProps = {
-  story: IStories;
+  story?: Istory;
 };

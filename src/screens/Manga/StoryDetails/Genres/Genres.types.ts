@@ -1,5 +1,11 @@
 // import { IStories } from '~/components/Story/Story.types';
 
 export type GenresProps = {
-  genres: string[];
+  genres?: IGenre[];
 };
+
+export interface IGenre {
+  id?: number;
+  genre?: string;
+  AgeWarning?: string;
+}

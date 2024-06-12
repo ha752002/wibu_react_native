@@ -11,6 +11,8 @@ export const styleCreator: StyleCreator = theme => {
       marginTop: 24,
       borderWidth: 1,
       borderRadius: 12,
+      position: 'relative',
+      overflow: 'hidden',
       // height: 290,
     },
 
@@ -20,8 +22,31 @@ export const styleCreator: StyleCreator = theme => {
       borderBottomColor: Colors.fgColorGray700,
     },
 
+    filter: {
+      borderRadius: 100,
+    },
+
     chapters: {
       paddingHorizontal: 12,
+      marginBottom: 28,
+    },
+
+    seeMoreButton: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: 8,
+      backgroundColor: Colors.bgFocus,
+      position: 'absolute',
+      bottom: 0,
+      width: '100%',
+    },
+
+    collapse: {
+      height: 400,
+    },
+
+    extend: {
+      height: 'auto',
     },
   });
 };

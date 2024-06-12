@@ -7,6 +7,9 @@ import { Image } from 'react-native';
 import { useTheme } from '../../hooks/useTheme.ts';
 import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
 import { styleCreator } from './Story.styles.ts';
+
+import { commonUtils } from '../../utils/common.utils.ts';
+
 // import WibuIcon from '~/wibu-ui/WibuIcon/WibuIcon.tsx';
 // import { EIconName } from '~/enums/icon.enum.ts';
 import { ESize } from '~/enums/size.enums.ts';
@@ -15,15 +18,6 @@ const Story = (props: StoriesProps) => {
   const { stories } = props;
   const { Layout } = useTheme();
   const styles = useThemeStyles(styleCreator, props, []);
-
-  const formatViews = (views: number) => {
-    if (views >= 1000000) {
-      return (views / 1000000).toFixed(1) + 'm';
-    } else if (views >= 1000) {
-      return (views / 1000).toFixed(1) + 'k';
-    }
-    return views.toString();
-  };
 
   return (
     <WibuView style={styles.storyContainer}>
@@ -40,8 +34,10 @@ const Story = (props: StoriesProps) => {
           <WibuText>{stories?.author || 'Updating...'}</WibuText>
         </WibuView>
         <WibuView style={[Layout.contentBetween]}>
-          <WibuText>Chapter : {stories?.chapter || 0}</WibuText>
-          <WibuText>{formatViews(stories?.views || 0)} Views</WibuText>
+          <WibuText>Chapter : {stories?.chapters?.length || 0}</WibuText>
+          <WibuText>
+            {commonUtils.formatViews(stories?.views || 0)} Views
+          </WibuText>
         </WibuView>
       </WibuView>
     </WibuView>

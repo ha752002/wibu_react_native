@@ -16,6 +16,7 @@ export const storiesData: StoriesProps = {
       name: 'Sousou No Frieren',
       author: 'Tác giả 1',
       thumbnail: 'https://cdnnvd.com/nettruyen/thumb/sousou-no-frieren.jpg',
+      genres: [''],
     },
     {
       id: 2,
@@ -23,6 +24,7 @@ export const storiesData: StoriesProps = {
       author: 'Tác giả 2',
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/trieu-hoi-den-the-gioi-fantasy.jpg',
+      genres: [''],
     },
     {
       id: 3,
@@ -30,6 +32,7 @@ export const storiesData: StoriesProps = {
       author: 'Tác giả 2',
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/bac-thay-thiet-ke-dien-trang.jpg',
+      genres: [''],
     },
     {
       id: 4,
@@ -37,6 +40,7 @@ export const storiesData: StoriesProps = {
       author: 'Tác giả 2',
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/bac-thay-thiet-ke-dien-trang.jpg',
+      genres: [''],
     },
   ],
 };
@@ -49,6 +53,7 @@ export const storiesData2: StoriesProps = {
       name: 'Sousou No Frieren',
       author: 'Tác giả 1',
       thumbnail: 'https://cdnnvd.com/nettruyen/thumb/sousou-no-frieren.jpg',
+      genres: [''],
     },
 
     {
@@ -57,6 +62,7 @@ export const storiesData2: StoriesProps = {
       author: 'Tác giả 2',
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/ton-tai-nhu-mot-nu-hau.jpg',
+      genres: [''],
     },
     {
       id: 3,
@@ -64,6 +70,7 @@ export const storiesData2: StoriesProps = {
       author: 'Tác giả 2',
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/trieu-hoi-den-the-gioi-fantasy.jpg',
+      genres: [''],
     },
   ],
 };
@@ -78,6 +85,7 @@ export const following: StoriesProps = {
       thumbnail: 'https://cdnnvd.com/nettruyen/thumb/sousou-no-frieren.jpg',
       chapter: 23,
       views: 121212,
+      genres: [''],
     },
 
     {
@@ -86,6 +94,7 @@ export const following: StoriesProps = {
       author: 'Tác giả 2',
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/bac-thay-thiet-ke-dien-trang.jpg',
+      genres: [''],
     },
     {
       id: 3,
@@ -93,6 +102,7 @@ export const following: StoriesProps = {
       author: 'Tác giả 2',
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/trieu-hoi-den-the-gioi-fantasy.jpg',
+      genres: [''],
     },
     {
       id: 4,
@@ -100,6 +110,7 @@ export const following: StoriesProps = {
       author: 'Tác giả 2',
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/ton-tai-nhu-mot-nu-hau.jpg',
+      genres: [''],
     },
     {
       id: 5,
@@ -107,6 +118,7 @@ export const following: StoriesProps = {
       author: 'Tác giả 2',
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/trieu-hoi-den-the-gioi-fantasy.jpg',
+      genres: [''],
     },
   ],
 };
