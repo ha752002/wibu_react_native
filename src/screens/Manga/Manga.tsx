@@ -26,7 +26,7 @@ const Manga = (props: MangaProps) => {
   return (
     <ScrollView>
       <WibuView style={styles.container}>
-        <PageTitle title={story.story.story?.name} />
+        <PageTitle title={story.story.storyInformation?.name} />
         <StoryDetails {...story} />
         <WibuView style={styles.item}>
           <StoryList {...storiesData} viewType="row" />

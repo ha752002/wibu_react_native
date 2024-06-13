@@ -9,6 +9,8 @@ import {
   View,
 } from 'react-native';
 
+import Banners from '../Banners/Banners.tsx';
+
 import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
 // import { useTheme  } from '../../hooks/useTheme.ts';
 import { styleCreator } from './ItemStories.styles.ts';
@@ -19,8 +21,6 @@ import { ESize } from '~/enums/size.enums.ts';
 import { useNavigation } from '@react-navigation/native';
 import { ApplicationNavigationProps } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types.ts';
 import { ScreenNames } from '~/enums/screenNames.enum.ts';
-
-// import { ESize } from '~/assets/imgs/imgsFake/AvatarUserFake';
 
 const ItemStories = (props: StoriesProps) => {
   const { stories, size } = props;
@@ -58,6 +58,7 @@ const ItemStories = (props: StoriesProps) => {
         </View>
       </TouchableWithoutFeedback>
       <WibuText>{stories?.author || 'Updating...'}</WibuText>
+      <Banners storyInformation={stories} />
     </WibuView>
   );
 };

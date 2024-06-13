@@ -35,7 +35,7 @@ const ColumnList = (props: StoriesProps) => {
         data={stories}
         renderItem={({ item }) => (
           <WibuView style={styles.item}>
-            <Story stories={item} />
+            <Story series={item} />
           </WibuView>
         )}
         keyExtractor={item => item.id.toString()}

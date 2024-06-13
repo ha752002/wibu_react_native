@@ -13,6 +13,7 @@ export const styleCreator: StyleCreator = theme => {
       elevation: 5,
       borderRadius: 20,
       backgroundColor: Colors.bgWhite,
+      overflow: 'hidden',
     },
 
     groupItemStoriesStyle: {

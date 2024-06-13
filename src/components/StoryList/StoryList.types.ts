@@ -1,8 +1,8 @@
-import { IStories } from '../Story/Story.types';
+import { IStoryInformation } from '../../screens/Manga/StoryDetails/Information/Information.types';
 
 export type StoriesProps = {
   title?: string;
-  stories?: IStories[];
+  stories?: IStoryInformation[];
   viewType?: viewType;
 };
 
@@ -14,33 +14,32 @@ export const storiesData: StoriesProps = {
     {
       id: 1,
       name: 'Sousou No Frieren',
-      author: 'Tác giả 1',
       thumbnail: 'https://cdnnvd.com/nettruyen/thumb/sousou-no-frieren.jpg',
-      genres: [''],
+      author: 'Tác giả 1',
+      created: new Date(),
     },
     {
       id: 2,
       name: 'Triệu Hồi Đến Thế Giới Fantasy',
-      author: 'Tác giả 2',
+
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/trieu-hoi-den-the-gioi-fantasy.jpg',
-      genres: [''],
+      author: 'Tác giả 2',
+      status: 'Full',
     },
     {
       id: 3,
       name: 'Bậc Thầy Thiết Kế Điền Trang',
-      author: 'Tác giả 2',
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/bac-thay-thiet-ke-dien-trang.jpg',
-      genres: [''],
+      author: 'Tác giả 3',
     },
     {
       id: 4,
       name: 'Bậc Thầy Thiết Kế Điền Trang',
-      author: 'Tác giả 2',
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/bac-thay-thiet-ke-dien-trang.jpg',
-      genres: [''],
+      author: 'Tác giả 3',
     },
   ],
 };
@@ -51,26 +50,24 @@ export const storiesData2: StoriesProps = {
     {
       id: 1,
       name: 'Sousou No Frieren',
-      author: 'Tác giả 1',
       thumbnail: 'https://cdnnvd.com/nettruyen/thumb/sousou-no-frieren.jpg',
-      genres: [''],
+      author: 'Tác giả 1',
+      views: 100000,
     },
-
     {
       id: 2,
-      name: 'Tồn Tại Như Một Nữ Hầu',
-      author: 'Tác giả 2',
+      name: 'Triệu Hồi Đến Thế Giới Fantasy',
+
       thumbnail:
-        'https://cdnnvd.com/nettruyen/thumb/ton-tai-nhu-mot-nu-hau.jpg',
-      genres: [''],
+        'https://cdnnvd.com/nettruyen/thumb/trieu-hoi-den-the-gioi-fantasy.jpg',
+      author: 'Tác giả 2',
     },
     {
       id: 3,
-      name: 'Triệu Hồi Đến Thế Giới Fantasy',
-      author: 'Tác giả 2',
+      name: 'Bậc Thầy Thiết Kế Điền Trang',
       thumbnail:
-        'https://cdnnvd.com/nettruyen/thumb/trieu-hoi-den-the-gioi-fantasy.jpg',
-      genres: [''],
+        'https://cdnnvd.com/nettruyen/thumb/bac-thay-thiet-ke-dien-trang.jpg',
+      author: 'Tác giả 3',
     },
   ],
 };
@@ -81,44 +78,60 @@ export const following: StoriesProps = {
     {
       id: 1,
       name: 'Sousou No Frieren',
-      author: 'Tác giả 1',
       thumbnail: 'https://cdnnvd.com/nettruyen/thumb/sousou-no-frieren.jpg',
+
+      author: 'Tác giả 3',
       chapter: 23,
-      views: 121212,
-      genres: [''],
+      views: 0,
+      created: new Date(),
+      status: 'Updating',
     },
 
     {
       id: 2,
       name: 'Bậc Thầy Thiết Kế Điền Trang asa sấ',
-      author: 'Tác giả 2',
+
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/bac-thay-thiet-ke-dien-trang.jpg',
-      genres: [''],
+      author: 'Tác giả 3',
+      chapter: 23,
+      views: 0,
+      created: new Date(-40),
+      status: 'Halt',
     },
     {
       id: 3,
       name: 'Triệu Hồi Đến Thế Giới Fantasy',
-      author: 'Tác giả 2',
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/trieu-hoi-den-the-gioi-fantasy.jpg',
-      genres: [''],
+      author: 'Tác giả 3',
+      chapter: 23,
+      views: 121212,
+      created: new Date(),
+      status: 'Updating',
     },
     {
       id: 4,
       name: 'Tồn Tại Như Một Nữ Hầu',
-      author: 'Tác giả 2',
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/ton-tai-nhu-mot-nu-hau.jpg',
-      genres: [''],
+      author: 'Tác giả 3',
+      chapter: 23,
+      views: 0,
+      created: new Date(),
+      status: 'Halt',
     },
     {
       id: 5,
       name: 'Triệu Hồi Đến Thế Giới Fantasy',
-      author: 'Tác giả 2',
+
       thumbnail:
         'https://cdnnvd.com/nettruyen/thumb/trieu-hoi-den-the-gioi-fantasy.jpg',
-      genres: [''],
+      author: 'Tác giả 3',
+      chapter: 23,
+      views: 121212,
+      created: new Date(),
+      status: 'Full',
     },
   ],
 };

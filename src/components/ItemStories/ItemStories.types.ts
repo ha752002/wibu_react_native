@@ -1,8 +1,8 @@
-import { IStories } from '../Story/Story.types';
+import { IStoryInformation } from '../../screens/Manga/StoryDetails/Information/Information.types';
 
 export type StoriesProps = {
   // onPress: () => void;
-  stories?: IStories;
+  stories: IStoryInformation;
   size?: SizeStories;
 };
 

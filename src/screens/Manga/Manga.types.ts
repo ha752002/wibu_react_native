@@ -1,4 +1,4 @@
-import { IStories } from '../../components/Story/Story.types';
+import { IStoryInformation } from '../Manga/StoryDetails/Information/Information.types';
 import { IChapters } from './StoryDetails/ChapterList/ChapterList.types';
 import { IGenre } from './StoryDetails/Genres/Genres.types';
 
@@ -7,20 +7,23 @@ export type MangaProps = {
 };
 
 export interface Istory {
-  story?: IStories;
+  storyInformation?: IStoryInformation;
   chapters?: IChapters[];
   Genre?: IGenre[];
 }
 
 export const story: MangaProps = {
   story: {
-    story: {
+    storyInformation: {
       id: 1,
-      name: 'Sousou No Frieren',
-      author: 'Tác giả 1',
+
       thumbnail: 'https://cdnnvd.com/nettruyen/thumb/sousou-no-frieren.jpg',
-      introduce: '',
-      genres: ['Fiction', 'Fantasy', 'Magic', 'Fiction', 'Fantasy', 'Magic'],
+      name: 'Sousou No Frieren',
+      author: 'Tác giả 3',
+      chapter: 23,
+      views: 121212,
+      created: new Date(),
+      status: 'Updating',
     },
 
     Genre: [

@@ -1,17 +1,5 @@
-export type StoriesProps = {
-  stories?: IStories;
-};
+import { IStoryInformation } from '../../screens/Manga/StoryDetails/Information/Information.types';
 
-export interface IStories {
-  id: number;
-  name: string;
-  author?: string;
-  translator?: string;
-  thumbnail?: string;
-  views?: number;
-  chapter?: number;
-  introduce?: string;
-  genres: string[];
-  chapters?: string[];
-  // borderColor?: string;
-}
+export type seriesProps = {
+  series: IStoryInformation;
+};

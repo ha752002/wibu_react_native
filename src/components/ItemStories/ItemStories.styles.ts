@@ -8,6 +8,7 @@ export const styleCreator: StyleCreator = theme => {
   return StyleSheet.create({
     itemStoriesContainer: {
       width: 120,
+      overflow: 'hidden',
     },
 
     largeContainer: {

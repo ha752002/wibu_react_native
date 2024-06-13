@@ -13,7 +13,7 @@ import { styleCreator } from './Information.styles.ts';
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
 
 const Information = (props: InformationProps) => {
-  const { author, name, views, translator } = props;
+  const { storyInformation } = props;
 
   const styles = useThemeStyles(styleCreator, props, []);
 
@@ -25,11 +25,15 @@ const Information = (props: InformationProps) => {
           numberOfLines={1}
           color={'fgColorGray700'}
         >
-          {name}
+          {storyInformation?.name}
         </WibuText>
-        <WibuText>Author : {author || 'Updating...'}</WibuText>
-        <WibuText>Translated bys : {translator || 'Updating...'}</WibuText>
-        <WibuText>View : {views || 0} </WibuText>
+        <WibuText>
+          Author : {storyInformation?.author || 'Updating...'}
+        </WibuText>
+        <WibuText>
+          Translated bys : {storyInformation?.translator || 'Updating...'}
+        </WibuText>
+        <WibuText>View : {storyInformation?.views || 0} </WibuText>
       </WibuView>
     </WibuView>
   );

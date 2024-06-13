@@ -1,6 +1,6 @@
-import { IStories } from '../../Story/Story.types';
+import { IStoryInformation } from '../../../screens/Manga/StoryDetails/Information/Information.types';
 
 export type StoriesProps = {
   title?: string;
-  stories?: IStories[];
+  stories?: IStoryInformation[];
 };
