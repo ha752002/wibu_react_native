@@ -15,12 +15,12 @@ import { storiesData } from '~/components/StoryList/StoryList.types.ts';
 import { styleCreator } from './Manga.styles';
 import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
 import { useRoute, RouteProp } from '@react-navigation/native';
-import { IMangaParams } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types.ts';
+import { IParams } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types.ts';
 
 const Manga = (props: MangaProps) => {
   // const { story } = props;
   console.log(121111);
-  const { params } = useRoute<RouteProp<{ params: IMangaParams }, 'params'>>();
+  const { params } = useRoute<RouteProp<{ params: IParams }, 'params'>>();
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (

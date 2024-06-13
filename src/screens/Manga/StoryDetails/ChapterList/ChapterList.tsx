@@ -55,10 +55,7 @@ const ChapterList = (props: ChaptersProps) => {
       </WibuView>
 
       <WibuView
-        style={[
-          styles.chapters,
-          { height: isExpanded ? styles.extend : styles.collapse },
-        ]}
+        style={[styles.chapters, isExpanded ? styles.extend : styles.collapse]}
       >
         <ScrollView>
           {chapterList &&

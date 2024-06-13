@@ -35,7 +35,7 @@ const ItemChapter = (props: ItemChapterProps) => {
     <WibuView style={styles.container}>
       <TouchableWithoutFeedback
         onPress={() => {
-          navigation.navigate(ScreenNames.CHAPTER);
+          navigation.navigate(ScreenNames.CHAPTER, { id: chapter?.id });
         }}
       >
         <View style={[styles.chapter, Layout.rowHCenter]}>
