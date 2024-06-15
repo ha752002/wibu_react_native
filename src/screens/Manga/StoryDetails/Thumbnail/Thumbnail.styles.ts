@@ -13,13 +13,37 @@ export const styleCreator: StyleCreator = theme => {
 
     thumbnail: {
       width: '100%',
-      borderRadius: 14,
+      borderRadius: 24,
     },
 
     img: {
       width: '100%',
       height: 240,
-      borderRadius: 12,
+      borderRadius: 24,
     },
+
+    groupIcon: {
+      top: 10,
+      right: 10,
+      position: 'absolute',
+      flexDirection: 'row',
+    },
+
+    // icon: {
+    //   padding: 4,
+    //   borderRadius: 100,
+    //   marginRight: 6,
+    //   aspectRatio: 1,
+    //   width: 42,
+    // },
+
+    // default: {
+    //   borderWidth: 2,
+    //   borderColor: Colors.bgPrimary,
+    // },
+
+    // followed: {
+    //   backgroundColor: Colors.bgPrimary,
+    // },
   });
 };

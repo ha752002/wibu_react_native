@@ -7,9 +7,28 @@ export const styleCreator: StyleCreator = theme => {
 
   return StyleSheet.create({
     container: {
-      // paddingHorizontal: 36,
       color: Colors.fgColorGray700,
-      marginTop: 24,
+      marginTop: -160,
+      // backgroundColor:'rgb(242,242,242)',
+      borderRadius: 8,
+    },
+
+    thumbnail: {
+      flex: 1,
+      borderRadius: 16,
+      overflow: 'hidden',
+    },
+
+    img: {
+      width: 'auto',
+      height: 240,
+      resizeMode: 'contain',
+      borderRadius: 16,
+    },
+
+    information: {
+      alignItems: 'center',
+      // marginLeft: 12,
     },
   });
 };

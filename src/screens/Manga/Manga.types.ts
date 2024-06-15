@@ -7,7 +7,7 @@ export type MangaProps = {
 };
 
 export interface Istory {
-  storyInformation?: IStoryInformation;
+  storyInformation: IStoryInformation;
   chapters?: IChapters[];
   Genre?: IGenre[];
 }

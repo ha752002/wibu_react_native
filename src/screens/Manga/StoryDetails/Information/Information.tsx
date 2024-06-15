@@ -1,5 +1,5 @@
 import * as React from 'react';
-// import { View, Image, ScrollView } from 'react-native';
+import { Image } from 'react-native';
 import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
 import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 // import { WibuButton } from '~/wibu-ui/WibuButton/WibuButton.tsx';
@@ -11,15 +11,25 @@ import { InformationProps } from './Information.types.ts';
 import { ESize } from '~/enums/size.enums.ts';
 import { styleCreator } from './Information.styles.ts';
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
+import { useTheme } from '~/hooks/useTheme.ts';
+
+import { commonUtils } from '~/utils/common.utils.ts';
 
 const Information = (props: InformationProps) => {
   const { storyInformation } = props;
+  const { Layout } = useTheme();
 
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (
     <WibuView style={styles.container}>
-      <WibuView>
+      <WibuView style={styles.thumbnail}>
+        <Image
+          source={{ uri: storyInformation?.thumbnail }}
+          style={styles.img}
+        />
+      </WibuView>
+      <WibuView style={styles.information}>
         <WibuText
           fontSize={ESize.XL}
           numberOfLines={1}
@@ -27,13 +37,20 @@ const Information = (props: InformationProps) => {
         >
           {storyInformation?.name}
         </WibuText>
-        <WibuText>
-          Author : {storyInformation?.author || 'Updating...'}
-        </WibuText>
-        <WibuText>
-          Translated bys : {storyInformation?.translator || 'Updating...'}
-        </WibuText>
-        <WibuText>View : {storyInformation?.views || 0} </WibuText>
+        <WibuView style={Layout.rowHCenter}>
+          <WibuText color="bgPrimary">Author :</WibuText>
+          <WibuText>{storyInformation?.author || 'Updating...'}</WibuText>
+        </WibuView>
+        <WibuView style={Layout.rowHCenter}>
+          <WibuText color="bgPrimary">Translated bys : </WibuText>
+          <WibuText>{storyInformation?.translator || 'Updating...'}</WibuText>
+        </WibuView>
+        <WibuView style={Layout.rowHCenter}>
+          <WibuText color="bgPrimary">View : </WibuText>
+          <WibuText>
+            {commonUtils.formatViews(storyInformation?.views || 0)}{' '}
+          </WibuText>
+        </WibuView>
       </WibuView>
     </WibuView>
   );

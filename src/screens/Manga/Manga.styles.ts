@@ -9,6 +9,7 @@ export const styleCreator: StyleCreator = theme => {
     container: {
       color: Colors.fgColorGray700,
       overflow: 'scroll',
+      alignItems: 'center',
     },
 
     item: {

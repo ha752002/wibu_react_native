@@ -22,7 +22,7 @@ export const styleCreator: StyleCreator = (theme, props: ButtonProps) => {
     },
     outline: {
       primary: {
-        backgroundColor: Colors.fgPrimaryNeutralFocus,
+        backgroundColor: Colors.transparent,
         borderColor: Colors.fgPrimaryNeutralFocus,
         color: Colors.bgPrimary,
         underlayColor: Colors.fgPrimaryNeutral,
@@ -70,6 +70,7 @@ export const styleCreator: StyleCreator = (theme, props: ButtonProps) => {
       paddingVertical: 8,
       paddingHorizontal: 16,
       borderRadius: 4,
+      borderWidth: 1,
       flexGrow: 0,
       color: Colors.bgPrimary,
       ...buttonStyle,
