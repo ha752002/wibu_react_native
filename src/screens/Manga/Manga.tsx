@@ -19,7 +19,7 @@ import { IParams } from '~/navigators/ApplicationcNavigator/ApplicationNavigator
 
 const Manga = (props: MangaProps) => {
   // const { story } = props;
-  console.log(121111);
+  // console.log(121111);
   const { params } = useRoute<RouteProp<{ params: IParams }, 'params'>>();
   const styles = useThemeStyles(styleCreator, props, []);
 
@@ -30,8 +30,8 @@ const Manga = (props: MangaProps) => {
         <StoryDetails {...story} />
         <WibuView style={styles.item}>
           <StoryList {...storiesData} viewType="row" />
-          <WibuText>{params?.id}</WibuText>
         </WibuView>
+        <WibuText>{params?.id}</WibuText>
       </WibuView>
     </ScrollView>
   );

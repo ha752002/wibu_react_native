@@ -9,7 +9,7 @@ export type MangaProps = {
 export interface Istory {
   storyInformation: IStoryInformation;
   chapters?: IChapters[];
-  Genre?: IGenre[];
+  Genre: IGenre[];
 }
 
 export const story: MangaProps = {
@@ -32,7 +32,7 @@ export const story: MangaProps = {
       { genre: 'Magic' },
       { genre: 'Fiction' },
       { genre: 'Fantasy' },
-      { genre: 'Magic' },
+      { genre: 'Magic', AgeWarning: true },
     ],
     chapters: [
       { id: 1, chapter: 'chapter 1', UpdateTime: new Date() },

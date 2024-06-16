@@ -8,6 +8,7 @@ import { StoryDetailsProps } from './StoryDetails.types.ts';
 
 // import PageTitle from '~/components/PageTitle/PageTitle.tsx';
 import ChapterList from './ChapterList/ChapterList.tsx';
+import AgeWarning from '../../../components/AgeWarning/AgeWarning.tsx';
 import Genres from './Genres/Genres.tsx';
 import Information from './Information/Information.tsx';
 import Thumbnail from './Thumbnail/Thumbnail.tsx';
@@ -32,6 +33,10 @@ const StoryDetails = (props: StoryDetailsProps) => {
   const navigation = useNavigation<ApplicationNavigationProps>();
 
   const styles = useThemeStyles(styleCreator, props, []);
+
+  const hasAgeWarning: boolean = story.Genre.some(
+    genre => genre.AgeWarning === true,
+  );
 
   return (
     <View style={styles.container}>
@@ -70,6 +75,7 @@ const StoryDetails = (props: StoryDetailsProps) => {
         </WibuView>
 
         <Genres genres={story?.Genre} />
+        <AgeWarning ageWarning={hasAgeWarning} />
         <Introduce
           introduce={story?.storyInformation?.introduce}
           name={story?.storyInformation?.name}

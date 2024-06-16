@@ -14,14 +14,15 @@ export const styleCreator: StyleCreator = theme => {
     },
 
     genreList: {
-      borderWidth: 0.5,
-      borderColor: Colors.bgPrimary,
+      // borderWidth: 0.5,
+      // borderColor: Colors.bgPrimary,
+      // flexDirection:
     },
 
     item: {
       flex: 1,
       height: 40,
-      borderWidth: 0.5,
+      // borderWidth: 0.5,
       borderColor: Colors.bgPrimary,
       // aspectRatio: 1,
       // borderRadius: 4,

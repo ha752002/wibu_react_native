@@ -1,7 +1,13 @@
 import * as React from 'react';
-// import { useRef } from 'react';
+// import { useRef, useMemo } from 'react';
 
-import { View, TouchableWithoutFeedback } from 'react-native';
+import {
+  View,
+  TouchableWithoutFeedback,
+  // Text,
+  TouchableHighlight,
+} from 'react-native';
+// import BottomSheet from '@gorhom/bottom-sheet';
 
 import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 // import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
@@ -21,36 +27,45 @@ import { ESize } from '~/enums/size.enums.ts';
 import { useNavigation } from '@react-navigation/native';
 import { ApplicationNavigationProps } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types.ts';
 import { ScreenNames } from '~/enums/screenNames.enum.ts';
+// import { log } from 'console';
 
 const BottomToolbar = (props: BottomToolbarProps) => {
   const styles = useThemeStyles(styleCreator, props, []);
   const navigation = useNavigation<ApplicationNavigationProps>();
+
+  // const bottomSheetRef = useRef<BottomSheet>(null);
+
+  // Define bottom sheet snap points
+  // const snapPoints = useMemo(() => ['25%', '50%', '90%'], []);
+
+  // Handle button press
+  // const handlePresentPress = () => {
+  //   bottomSheetRef.current?.expand();
+  //   console.log(11);
+
+  // };
 
   return (
     <View>
       <WibuView style={styles.container}>
         <TouchableWithoutFeedback
           onPress={() => {
-            navigation.navigate(ScreenNames.CHAPTER);
+            // navigation.navigate(ScreenNames.CHAPTER );
           }}
         >
           <WibuIcon name={EIconName.ARROW_LEFT} size={ESize.L} />
         </TouchableWithoutFeedback>
 
-        <TouchableWithoutFeedback
+        <TouchableHighlight
           style={styles.openButton}
-          onPress={() => {
-            // if (sheetRef.current) {
-            //   sheetRef.current.snapTo(1);
-            // }
-          }}
+          // onPress={handlePresentPress}
         >
           <WibuIcon name={EIconName.LIST} size={ESize.L} />
-        </TouchableWithoutFeedback>
+        </TouchableHighlight>
 
         <TouchableWithoutFeedback
           onPress={() => {
-            navigation.navigate(ScreenNames.CHAPTER);
+            navigation.navigate(ScreenNames.LOGIN);
           }}
         >
           <WibuIcon name={EIconName.BOOK} size={ESize.L} />
@@ -58,7 +73,7 @@ const BottomToolbar = (props: BottomToolbarProps) => {
 
         <TouchableWithoutFeedback
           onPress={() => {
-            navigation.navigate(ScreenNames.CHAPTER);
+            // navigation.navigate(ScreenNames.CHAPTER);
           }}
         >
           <WibuIcon name={EIconName.SETTINGS} size={ESize.L} />
@@ -66,18 +81,25 @@ const BottomToolbar = (props: BottomToolbarProps) => {
 
         <TouchableWithoutFeedback
           onPress={() => {
-            navigation.navigate(ScreenNames.CHAPTER);
+            // navigation.navigate(ScreenNames.CHAPTER);
           }}
         >
           <WibuIcon name={EIconName.ARROW_RIGHT} size={ESize.L} />
         </TouchableWithoutFeedback>
       </WibuView>
       {/* <BottomSheet
-        ref={sheetRef}
-        snapPoints={[300, 0]}
-        borderRadius={10}
-        renderContent={() => <ChapterList />}
-      /> */}
+        // ref={bottomSheetRef}
+        index={1}
+        snapPoints={snapPoints}
+      >
+        <View style={styles.contentContainer}>
+          <Text>Awesome </Text>
+          <Text>Awesome </Text>
+          <Text>Awesome </Text>
+          <Text>Awesome </Text>
+          <Text>Awesome </Text>
+        </View>
+      </BottomSheet> */}
     </View>
   );
 };

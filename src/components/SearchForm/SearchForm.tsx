@@ -2,7 +2,7 @@ import * as React from 'react';
 import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 // import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
 import { SearchFormProps } from './SearchForm.types.ts';
-import { TextInput } from 'react-native';
+import { TextInput, TouchableHighlight } from 'react-native';
 
 import { useTheme } from '../../hooks/useTheme.ts';
 import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
@@ -12,9 +12,14 @@ import WibuIcon from '~/wibu-ui/WibuIcon/WibuIcon.tsx';
 import { EIconName } from '~/enums/icon.enum.ts';
 import { ESize } from '~/enums/size.enums.ts';
 
+import { useNavigation } from '@react-navigation/native';
+import { ApplicationNavigationProps } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types.ts';
+import { ScreenNames } from '~/enums/screenNames.enum.ts';
+
 const SearchForm = (props: SearchFormProps) => {
   const { Layout } = useTheme();
   const styles = useThemeStyles(styleCreator, props, []);
+  const navigation = useNavigation<ApplicationNavigationProps>();
 
   return (
     <WibuView style={[styles.searchFormContainer]}>
@@ -24,7 +29,13 @@ const SearchForm = (props: SearchFormProps) => {
           style={[styles.searchFormStyle]}
           placeholder="Search manga"
         />
-        <WibuIcon name={EIconName.SLIDERS} size={ESize.M} />
+        <TouchableHighlight
+          onPress={() => {
+            navigation.navigate(ScreenNames.REGISTER);
+          }}
+        >
+          <WibuIcon name={EIconName.SLIDERS} size={ESize.M} />
+        </TouchableHighlight>
       </WibuView>
     </WibuView>
   );

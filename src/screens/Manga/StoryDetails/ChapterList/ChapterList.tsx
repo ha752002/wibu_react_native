@@ -9,10 +9,13 @@ import {
 import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
 import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 import { ChaptersProps } from './ChapterList.types.ts';
+
 import ItemChapter from './ItemChapter/ItemChapter.tsx';
+
 import WibuIcon from '~/wibu-ui/WibuIcon/WibuIcon.tsx';
 import { EIconName } from '~/enums/icon.enum.ts';
 import { ESize } from '~/enums/size.enums.ts';
+
 import { styleCreator } from './ChapterList.styles.ts';
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
 import { useTheme } from '~/hooks/useTheme.ts';

@@ -2,7 +2,7 @@
 import { IStoryInformation } from '../../screens/Manga/StoryDetails/Information/Information.types';
 
 export type BannersProps = {
-  titleBanners: BannersType;
+  // titleBanners: BannersType;
   storyInformation: IStoryInformation;
 };
 

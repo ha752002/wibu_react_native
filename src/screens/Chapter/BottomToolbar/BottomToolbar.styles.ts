@@ -21,5 +21,10 @@ export const styleCreator: StyleCreator = theme => {
     content: {
       flex: 1,
     },
+
+    contentContainer: {
+      flex: 1,
+      alignItems: 'center',
+    },
   });
 };

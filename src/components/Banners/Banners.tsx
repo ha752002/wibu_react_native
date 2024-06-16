@@ -28,7 +28,7 @@ const Banners = (props: BannersProps) => {
   } else if (
     storyInformation.created &&
     new Date().getTime() - new Date(storyInformation.created).getTime() <
-      30 * 24 * 60 * 60 * 1000
+      15 * 24 * 60 * 60 * 1000
   ) {
     titleBanners = 'New';
     bannerStyle = styles.new;

@@ -20,8 +20,6 @@ const GenreList = (props: genresProps) => {
 
   return (
     <WibuView style={styles.container}>
-      <WibuText>trending keywords!</WibuText>
-
       <WibuView style={styles.genreList}>
         <FlatList
           data={genres}
@@ -33,7 +31,7 @@ const GenreList = (props: genresProps) => {
           // keyExtractor={item => item.id.toString()}
           numColumns={3}
           ListEmptyComponent={EmptyList}
-          contentContainerStyle={styles.storyList}
+          contentContainerStyle={styles.genreList}
         />
       </WibuView>
     </WibuView>
