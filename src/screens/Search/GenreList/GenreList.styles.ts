@@ -25,7 +25,7 @@ export const styleCreator: StyleCreator = theme => {
       // borderWidth: 0.5,
       borderColor: Colors.bgPrimary,
       // aspectRatio: 1,
-      // borderRadius: 4,
+      borderRadius: 4,
       // margin:3,
     },
   });

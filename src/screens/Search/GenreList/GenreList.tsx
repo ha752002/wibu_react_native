@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, TouchableHighlight } from 'react-native';
 import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
 
@@ -12,11 +12,16 @@ import { styleCreator } from './GenreList.styles.ts';
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
 import { useTheme } from '~/hooks/useTheme.ts';
 
+import { useNavigation } from '@react-navigation/native';
+import { ApplicationNavigationProps } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types.ts';
+import { ScreenNames } from '~/enums/screenNames.enum.ts';
+
 const GenreList = (props: genresProps) => {
   const { genres } = props;
-  const { Layout } = useTheme();
+  const { Layout, Colors } = useTheme();
 
   const styles = useThemeStyles(styleCreator, props, []);
+  const navigation = useNavigation<ApplicationNavigationProps>();
 
   return (
     <WibuView style={styles.container}>
@@ -24,9 +29,16 @@ const GenreList = (props: genresProps) => {
         <FlatList
           data={genres}
           renderItem={({ item }) => (
-            <WibuView style={[styles.item, Layout.center]}>
-              <WibuText color="fgColorGray700">{item}</WibuText>
-            </WibuView>
+            <TouchableHighlight
+              underlayColor={Colors.bgPrimary}
+              key={item.id}
+              style={[styles.item, Layout.center]}
+              onPress={() => {
+                navigation.navigate(ScreenNames.GENRE, { id: item.id });
+              }}
+            >
+              <WibuText color="fgColorGray700">{item.genre}</WibuText>
+            </TouchableHighlight>
           )}
           // keyExtractor={item => item.id.toString()}
           numColumns={3}

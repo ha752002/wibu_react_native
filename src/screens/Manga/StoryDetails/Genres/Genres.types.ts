@@ -5,7 +5,8 @@ export type GenresProps = {
 };
 
 export interface IGenre {
-  id?: number;
-  genre?: string;
+  id: number;
+  genre: string;
   AgeWarning?: boolean;
+  describe?: string;
 }

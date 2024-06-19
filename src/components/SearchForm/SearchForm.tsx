@@ -17,7 +17,7 @@ import { ApplicationNavigationProps } from '~/navigators/ApplicationcNavigator/A
 import { ScreenNames } from '~/enums/screenNames.enum.ts';
 
 const SearchForm = (props: SearchFormProps) => {
-  const { Layout } = useTheme();
+  const { Layout, Colors } = useTheme();
   const styles = useThemeStyles(styleCreator, props, []);
   const navigation = useNavigation<ApplicationNavigationProps>();
 
@@ -30,8 +30,10 @@ const SearchForm = (props: SearchFormProps) => {
           placeholder="Search manga"
         />
         <TouchableHighlight
+          style={[styles.advanced]}
+          underlayColor={Colors.bgPrimary}
           onPress={() => {
-            navigation.navigate(ScreenNames.REGISTER);
+            navigation.navigate(ScreenNames.SEARCH);
           }}
         >
           <WibuIcon name={EIconName.SLIDERS} size={ESize.M} />

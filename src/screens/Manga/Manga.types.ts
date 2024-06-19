@@ -27,12 +27,12 @@ export const story: MangaProps = {
     },
 
     Genre: [
-      { genre: 'Fiction' },
-      { genre: 'Fantasy' },
-      { genre: 'Magic' },
-      { genre: 'Fiction' },
-      { genre: 'Fantasy' },
-      { genre: 'Magic', AgeWarning: true },
+      { id: 1, genre: 'Fiction' },
+      { id: 2, genre: 'Fantasy' },
+      { id: 3, genre: 'Magic' },
+      { id: 4, genre: 'Fiction' },
+      { id: 5, genre: 'Fantasy' },
+      { id: 6, genre: 'Magic', AgeWarning: true },
     ],
     chapters: [
       { id: 1, chapter: 'chapter 1', UpdateTime: new Date() },

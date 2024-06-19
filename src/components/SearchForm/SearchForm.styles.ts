@@ -25,5 +25,9 @@ export const styleCreator: StyleCreator = theme => {
       fontSize: FontSize.large,
       color: 'black',
     },
+
+    advanced: {
+      borderRadius: 100,
+    },
   });
 };

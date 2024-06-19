@@ -15,6 +15,9 @@ export type ApplicationStackParams = {
   [ScreenNames.REGISTER]: undefined;
   [ScreenNames.MANGA]: IParams;
   [ScreenNames.CHAPTER]: IParams;
+  [ScreenNames.GENRE]: IGenresParams;
+  [ScreenNames.SEARCH]: undefined;
+  [ScreenNames.HOME]: undefined;
   [ScreenNames.MAIN_BOTTOM_TAB_NAVIGATOR]: NavigatorScreenParams<BottomTabParams>;
 };
 
@@ -59,3 +62,18 @@ export const ListBottomTab: IBottomTabItem[] = [
 export interface IParams {
   id: number;
 }
+
+export interface IGenresParams {
+  id: number;
+  Sort?: SortType;
+}
+
+export type SortType =
+  | 'new'
+  | 'hot'
+  | 'full'
+  | 'chapters'
+  | 'followers'
+  | 'likes'
+  | 'view'
+  | 'update';
