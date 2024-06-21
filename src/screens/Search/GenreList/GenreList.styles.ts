@@ -8,25 +8,16 @@ export const styleCreator: StyleCreator = theme => {
   return StyleSheet.create({
     container: {
       color: Colors.fgColorGray700,
-      // height: 400,
-
       padding: 4,
     },
 
-    genreList: {
-      // borderWidth: 0.5,
-      // borderColor: Colors.bgPrimary,
-      // flexDirection:
-    },
+    genreList: {},
 
     item: {
       flex: 1,
       height: 40,
-      // borderWidth: 0.5,
       borderColor: Colors.bgPrimary,
-      // aspectRatio: 1,
       borderRadius: 4,
-      // margin:3,
     },
   });
 };

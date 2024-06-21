@@ -2,7 +2,6 @@ import * as React from 'react';
 import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
 import { UserInformationProps } from './Otherinformation.types.ts';
-// import { Text, TextInput, TouchableHighlight, View, Image } from 'react-native';
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
 import { useTheme } from '~/hooks/useTheme.ts';
 import { styleCreator } from './Otherinformation.styles.ts';

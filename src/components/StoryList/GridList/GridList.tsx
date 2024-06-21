@@ -2,7 +2,7 @@ import * as React from 'react';
 import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
 
-import { StoriesProps } from './GridList.types.ts';
+import { GridListProps } from './GridList.types.ts';
 import { FlatList } from 'react-native';
 
 import { useTheme } from '~/hooks/useTheme.ts';
@@ -18,7 +18,7 @@ import { ESize } from '~/enums/size.enums.ts';
 
 // import { ESize } from '~/assets/imgs/imgsFake/AvatarUserFake';
 
-const GridList = (props: StoriesProps) => {
+const GridList = (props: GridListProps) => {
   const { stories, title } = props;
   const { Layout } = useTheme();
 

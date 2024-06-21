@@ -1,5 +1,4 @@
 import { StyleCreator } from '~/hooks/useThemeStyles.ts';
-// import {  } from './StoryListItem.types.ts';
 import { StyleSheet } from 'react-native';
 
 export const styleCreator: StyleCreator = theme => {
@@ -24,8 +23,6 @@ export const styleCreator: StyleCreator = theme => {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-evenly',
-
-      // width: '100%'
     },
 
     img: {

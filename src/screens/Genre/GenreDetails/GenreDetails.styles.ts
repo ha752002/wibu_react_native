@@ -10,8 +10,5 @@ export const styleCreator: StyleCreator = theme => {
       marginTop: 16,
       color: Colors.fgColorGray700,
     },
-    // content: {
-    //   flex: 1,
-    // },
   });
 };

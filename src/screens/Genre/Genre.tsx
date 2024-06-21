@@ -39,7 +39,7 @@ const Genre = (props: GenreProps) => {
       </WibuView>
       <GenreDetails Genre={GenreData.Genre} />
       <StoryList
-        title={GenreData.Genre.genre + ' comics'}
+        title={GenreData?.Genre?.genre + ' comics'}
         stories={GenreData.Story}
       />
       <WibuText>{params.id}</WibuText>

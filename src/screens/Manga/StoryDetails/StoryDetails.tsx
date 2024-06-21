@@ -29,6 +29,8 @@ import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
 
 const StoryDetails = (props: StoryDetailsProps) => {
   const { story } = props;
+  console.log(1, story?.storyInformation?.thumbnail);
+
   // const { Colors } = useTheme();
   const navigation = useNavigation<ApplicationNavigationProps>();
 
@@ -48,7 +50,7 @@ const StoryDetails = (props: StoryDetailsProps) => {
           <WibuButton
             onPress={() => {
               navigation.navigate(ScreenNames.CHAPTER, {
-                id: story?.storyInformation.id,
+                id: story?.storyInformation?.id,
               });
             }}
             appearance={'filled'}
@@ -60,7 +62,7 @@ const StoryDetails = (props: StoryDetailsProps) => {
           <WibuButton
             onPress={() => {
               navigation.navigate(ScreenNames.CHAPTER, {
-                id: story?.storyInformation.id,
+                id: story?.storyInformation?.id,
               });
             }}
             appearance={'outline'}

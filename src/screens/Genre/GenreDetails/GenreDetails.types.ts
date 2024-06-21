@@ -3,5 +3,5 @@ import { IStoryInformation } from '../../../screens/Manga/StoryDetails/Informati
 
 export type GenreDetailsProps = {
   Story?: IStoryInformation[];
-  Genre: IGenre;
+  Genre?: IGenre;
 };

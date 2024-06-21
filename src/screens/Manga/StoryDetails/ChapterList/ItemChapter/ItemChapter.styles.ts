@@ -8,7 +8,6 @@ export const styleCreator: StyleCreator = theme => {
   return StyleSheet.create({
     container: {
       color: Colors.fgColorGray700,
-      // height: 290,
     },
 
     chapter: {

@@ -1,9 +1,16 @@
-export type ChapterProps = {
-  nameChapter: string;
-  urlImg?: string[];
-};
+import { StackScreenProps } from '@react-navigation/stack';
+import { ScreenNames } from '~/enums/screenNames.enum';
+import {
+  ApplicationStackParams,
+  IChapter,
+} from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types';
 
-export const storyContentData: ChapterProps = {
+export type ChapterProps = StackScreenProps<
+  ApplicationStackParams,
+  ScreenNames.CHAPTER
+>;
+
+export const storyContentData: IChapter = {
   nameChapter: 'chapter 1',
   urlImg: [
     'https://comic.s3.cloudfly.vn/trieu-hoi-den-the-gioi-fantasy/chapter-1/trieu-hoi-den-the-gioi-fantasy-1.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=F6TN2ZFMA7PG6VXGM28G%2F20240603%2Fhn%2Fs3%2Faws4_request&X-Amz-Date=20240603T081807Z&X-Amz-Expires=300&X-Amz-Signature=bb5a23fce684c61c861d922f2ce400219acdd9526fbfe477abbdf234bd2d110c&X-Amz-SignedHeaders=host&x-id=GetObject',

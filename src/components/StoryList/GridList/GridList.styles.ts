@@ -10,14 +10,6 @@ export const styleCreator: StyleCreator = theme => {
       // marginTop: 24,
     },
 
-    storyListStyleGroup: {
-      // flexDirection: 'row',
-    },
-
-    storyList: {
-      // height: 300,
-    },
-
     titleGroup: {
       flex: 1,
       paddingHorizontal: 10,

@@ -19,9 +19,3 @@ export const SortList: ISort[] = [
   { Sort: 'view' },
   { Sort: 'update' },
 ];
-//   {
-
-//   Sort: [
-//     'new','hot','full','chapters','followers','likes','view','update'
-//   ]
-// }

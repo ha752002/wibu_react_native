@@ -3,7 +3,7 @@ import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
 // import WibuIcon from '~/wibu-ui/WibuIcon/WibuIcon.tsx';
 
-import { StoriesProps } from './ColumnList.types.ts';
+import { ColumnListProps } from './ColumnList.types.ts';
 
 // import { FlatList ,SectionList } from 'react-native';
 import { FlatList } from 'react-native';
@@ -21,7 +21,7 @@ import { ESize } from '~/enums/size.enums.ts';
 
 // import { ESize } from '~/assets/imgs/imgsFake/AvatarUserFake';
 
-const ColumnList = (props: StoriesProps) => {
+const ColumnList = (props: ColumnListProps) => {
   const { stories, title } = props;
   const { Layout } = useTheme();
   const styles = useThemeStyles(styleCreator, props, []);

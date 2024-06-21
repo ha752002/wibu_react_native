@@ -27,7 +27,9 @@ const RowList = (props: StoriesProps) => {
   return (
     <WibuView style={styles.storyListItemContainer}>
       <WibuView style={[styles.titleGroup, Layout.contentBetween]}>
-        <WibuText fontSize={ESize.XL}>{title}</WibuText>
+        <WibuText fontSize={ESize.XL} color="fgColorGray700">
+          {title}
+        </WibuText>
         <TouchableHighlight
           onPress={() => {
             navigation.navigate(ScreenNames.GENRE, { id: 1 });

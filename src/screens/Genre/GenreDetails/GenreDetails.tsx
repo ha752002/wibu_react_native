@@ -21,9 +21,9 @@ const GenreDetails = (props: GenreDetailsProps) => {
 
   return (
     <WibuView style={styles.container}>
-      <WibuText fontSize={ESize.XL}>{Genre.genre}</WibuText>
-      <WibuText>{Genre.describe}</WibuText>
-      <AgeWarning ageWarning={Genre.AgeWarning} />
+      <WibuText fontSize={ESize.XL}>{Genre?.genre}</WibuText>
+      <WibuText>{Genre?.describe}</WibuText>
+      <AgeWarning ageWarning={Genre?.AgeWarning} />
     </WibuView>
   );
 };

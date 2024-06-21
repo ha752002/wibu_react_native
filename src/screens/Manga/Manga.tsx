@@ -15,19 +15,19 @@ import { storiesData } from '~/components/StoryList/StoryList.types.ts';
 import { styleCreator } from './Manga.styles';
 import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
 import { useRoute, RouteProp } from '@react-navigation/native';
-import { IParams } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types.ts';
+import { Istory } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types.ts';
 
 const Manga = (props: MangaProps) => {
   // const { story } = props;
   // console.log(121111);
-  const { params } = useRoute<RouteProp<{ params: IParams }, 'params'>>();
+  const { params } = useRoute<RouteProp<{ params: Istory }, 'params'>>();
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (
     <ScrollView>
       <WibuView style={styles.container}>
-        <PageTitle title={story.story.storyInformation?.name} />
-        <StoryDetails {...story} />
+        <PageTitle title={story.storyInformation?.name} />
+        <StoryDetails story={story} />
         <WibuView style={styles.item}>
           <StoryList {...storiesData} viewType="row" />
         </WibuView>

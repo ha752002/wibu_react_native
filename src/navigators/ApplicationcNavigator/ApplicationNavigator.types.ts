@@ -9,12 +9,15 @@ import Trending from '~/screens/Trending/Trending.tsx';
 import MySelf from '~/screens/MySelf/MySelf.tsx';
 import Search from '~/screens/Search/Search.tsx';
 import React from 'react';
+import { IStoryInformation } from '~/screens/Manga/StoryDetails/Information/Information.types';
+// import { IChapters } from '~/screens/Manga/StoryDetails/ChapterList/ChapterList.types';
+import { IGenre } from '~/screens/Manga/StoryDetails/Genres/Genres.types';
 
 export type ApplicationStackParams = {
   [ScreenNames.LOGIN]: undefined;
   [ScreenNames.REGISTER]: undefined;
-  [ScreenNames.MANGA]: IParams;
-  [ScreenNames.CHAPTER]: IParams;
+  [ScreenNames.MANGA]: IstoryParams;
+  [ScreenNames.CHAPTER]: IChapter;
   [ScreenNames.GENRE]: IGenresParams;
   [ScreenNames.SEARCH]: undefined;
   [ScreenNames.HOME]: undefined;
@@ -58,14 +61,25 @@ export const ListBottomTab: IBottomTabItem[] = [
     screenName: ScreenNames.MY_SELF,
   },
 ];
-
 export interface IParams {
-  id: number;
+  id?: number;
+}
+
+export interface IstoryParams {
+  id?: number;
+}
+
+export interface IChapter {
+  id?: number;
+  nameChapter?: string;
+  urlImg?: string[];
 }
 
 export interface IGenresParams {
   id: number;
   Sort?: SortType;
+  Story?: IStoryInformation[];
+  Genre?: IGenre;
 }
 
 export type SortType =

@@ -1,13 +1,18 @@
-import { IGenre } from '../../screens/Manga/StoryDetails/Genres/Genres.types';
-import { IStoryInformation } from '../../screens/Manga/StoryDetails/Information/Information.types';
 import { storiesData } from '../../components/StoryList/StoryList.types';
+import { StackScreenProps } from '@react-navigation/stack';
+import {
+  ApplicationStackParams,
+  IGenresParams,
+} from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types';
+import { ScreenNames } from '~/enums/screenNames.enum';
 
-export type GenreProps = {
-  Story?: IStoryInformation[];
-  Genre: IGenre;
-};
+export type GenreProps = StackScreenProps<
+  ApplicationStackParams,
+  ScreenNames.GENRE
+>;
 
-export const GenreData: GenreProps = {
+export const GenreData: IGenresParams = {
+  id: 1,
   Genre: {
     id: 6,
     genre: 'Horror',

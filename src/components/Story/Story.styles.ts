@@ -29,11 +29,6 @@ export const styleCreator: StyleCreator = theme => {
       flex: 1,
     },
 
-    // otherInformation: {
-    //   flexDirection: 'row',
-    //   justifyContent: 'space-between',
-    // },
-
     img: {
       width: 60,
       height: 90,

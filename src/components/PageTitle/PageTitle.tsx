@@ -1,7 +1,7 @@
 import * as React from 'react';
 import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
-import { StoriesProps } from './PageTitle.types.ts';
+import { PageTitleProps } from './PageTitle.types.ts';
 import { TouchableOpacity } from 'react-native';
 
 import { useTheme } from '../../hooks/useTheme.ts';
@@ -17,7 +17,7 @@ import { ApplicationNavigationProps } from '~/navigators/ApplicationcNavigator/A
 // import { ScreenNames } from '~/enums/screenNames.enum.ts';
 // import { ESize } from '~/assets/imgs/imgsFake/AvatarUserFake';
 
-const PageTitle = (props: StoriesProps) => {
+const PageTitle = (props: PageTitleProps) => {
   const { title } = props;
   const { Layout } = useTheme();
   const styles = useThemeStyles(styleCreator, props, []);

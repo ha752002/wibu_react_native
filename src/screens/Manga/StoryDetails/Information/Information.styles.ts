@@ -1,5 +1,4 @@
 import { StyleCreator } from '~/hooks/useThemeStyles.ts';
-// import {  } from './StoryListItem.types.ts';
 import { StyleSheet } from 'react-native';
 
 export const styleCreator: StyleCreator = theme => {
@@ -9,7 +8,6 @@ export const styleCreator: StyleCreator = theme => {
     container: {
       color: Colors.fgColorGray700,
       marginTop: -160,
-      // backgroundColor:'rgb(242,242,242)',
       borderRadius: 8,
     },
 
@@ -28,7 +26,6 @@ export const styleCreator: StyleCreator = theme => {
 
     information: {
       alignItems: 'center',
-      // marginLeft: 12,
     },
   });
 };

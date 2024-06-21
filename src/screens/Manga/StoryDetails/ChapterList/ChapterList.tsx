@@ -37,10 +37,6 @@ const ChapterList = (props: ChaptersProps) => {
     setChapterList(sortedChapters);
   };
 
-  // const toggleExpand = () => {
-  //   setIsExpanded(!isExpanded);
-  // };
-
   return (
     <WibuView style={styles.container}>
       <WibuView style={[styles.title, Layout.contentBetween]}>

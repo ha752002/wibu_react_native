@@ -19,10 +19,6 @@ export const styleCreator: StyleCreator = theme => {
       justifyContent: 'space-evenly',
     },
 
-    // userInformationStyle: {
-    //   alignItems: 'center',
-    // },
-
     user: {
       marginLeft: 24,
     },

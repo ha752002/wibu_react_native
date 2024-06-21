@@ -13,9 +13,7 @@ export const styleCreator: StyleCreator = theme => {
       flex: 1,
     },
     picker: {
-      // height: 50,
       justifyContent: 'center',
-      // alignItems: 'center',
       padding: 12,
       borderWidth: 1,
       borderColor: '#ccc',
@@ -35,7 +33,6 @@ export const styleCreator: StyleCreator = theme => {
       width: '80%',
       backgroundColor: '#fff',
       borderRadius: 12,
-      // padding: 16,
       height: 600,
       overflow: 'hidden',
     },

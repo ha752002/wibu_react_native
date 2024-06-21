@@ -1,4 +1,4 @@
-export type StoriesProps = {
+export type PageTitleProps = {
   title?: string;
   Backlinks?: string;
 };

@@ -13,9 +13,7 @@ export const styleCreator: StyleCreator = theme => {
       marginRight: 20,
     },
     picker: {
-      // height: 50,
       justifyContent: 'center',
-      // alignItems: 'center',
       padding: 12,
       borderWidth: 1,
       borderColor: '#ccc',
