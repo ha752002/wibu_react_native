@@ -15,6 +15,7 @@ import Manga from '~/screens/Manga/Manga.tsx';
 import Chapter from '~/screens/Chapter/Chapter.tsx';
 import Login from '~/screens/Login/Login.tsx';
 import Register from '~/screens/Register/Register.tsx';
+import Genre from '~/screens/Genre/Genre.tsx';
 import { createStackNavigator } from '@react-navigation/stack';
 import WibuIcon from '~/wibu-ui/WibuIcon/WibuIcon.tsx';
 import { EIconName } from '~/enums/icon.enum.ts';
@@ -40,6 +41,7 @@ const BottomTabNavigator = () => {
       screenOptions={{
         tabBarActiveBackgroundColor: Colors.bgPrimary,
         tabBarActiveTintColor: Colors.bgWhite,
+        headerShown: false,
       }}
     >
       {ListBottomTab &&
@@ -73,11 +75,12 @@ const BottomTabNavigator = () => {
 const ApplicationNativeStackNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName={ScreenNames.LOGIN}
+      initialRouteName={ScreenNames.MAIN_BOTTOM_TAB_NAVIGATOR}
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name={ScreenNames.MANGA} component={Manga} />
       <Stack.Screen name={ScreenNames.CHAPTER} component={Chapter} />
+      <Stack.Screen name={ScreenNames.GENRE} component={Genre} />
       <Stack.Screen name={ScreenNames.LOGIN} component={Login} />
       <Stack.Screen name={ScreenNames.REGISTER} component={Register} />
       <Stack.Screen

@@ -1,0 +1,58 @@
+import * as React from 'react';
+import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
+import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
+import { StoriesProps } from './RowList.types.ts';
+import { ScrollView, TouchableHighlight } from 'react-native';
+
+import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
+import { useTheme } from '~/hooks/useTheme.ts';
+import { styleCreator } from './RowList.styles.ts';
+
+import ItemStories from '../../ItemStories/ItemStories.tsx';
+
+import WibuIcon from '~/wibu-ui/WibuIcon/WibuIcon.tsx';
+import { EIconName } from '~/enums/icon.enum.ts';
+import { ESize } from '~/enums/size.enums.ts';
+
+import { useNavigation } from '@react-navigation/native';
+import { ApplicationNavigationProps } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types.ts';
+import { ScreenNames } from '~/enums/screenNames.enum.ts';
+
+const RowList = (props: StoriesProps) => {
+  const { stories, title } = props;
+  const { Layout } = useTheme();
+  const styles = useThemeStyles(styleCreator, props, []);
+  const navigation = useNavigation<ApplicationNavigationProps>();
+
+  return (
+    <WibuView style={styles.storyListItemContainer}>
+      <WibuView style={[styles.titleGroup, Layout.contentBetween]}>
+        <WibuText fontSize={ESize.XL} color="fgColorGray700">
+          {title}
+        </WibuText>
+        <TouchableHighlight
+          onPress={() => {
+            navigation.navigate(ScreenNames.GENRE, { id: 1 });
+          }}
+        >
+          <WibuIcon name={EIconName.MORE_HORIZONTAL} size={ESize.XL} />
+        </TouchableHighlight>
+      </WibuView>
+
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={styles.storyListItemStyleGroup}
+      >
+        {stories &&
+          stories.map((story, index) => (
+            <WibuView key={index} style={styles.storyListItemStyle}>
+              <ItemStories stories={story} />
+            </WibuView>
+          ))}
+      </ScrollView>
+    </WibuView>
+  );
+};
+
+export default RowList;

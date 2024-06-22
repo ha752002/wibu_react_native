@@ -9,4 +9,5 @@ export enum ScreenNames {
   MY_SELF = 'MY_SELF',
   MANGA = 'MANGA',
   CHAPTER = 'CHAPTER',
+  GENRE = 'GENRE',
 }
