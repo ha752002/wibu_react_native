@@ -21,6 +21,7 @@ export type ApplicationStackParams = {
   [ScreenNames.GENRE]: IGenresParams;
   [ScreenNames.SEARCH]: undefined;
   [ScreenNames.HOME]: undefined;
+  [ScreenNames.TRENDING]: ITrendingParams;
   [ScreenNames.MAIN_BOTTOM_TAB_NAVIGATOR]: NavigatorScreenParams<BottomTabParams>;
 };
 
@@ -73,6 +74,12 @@ export interface IChapter {
   id?: number;
   nameChapter?: string;
   urlImg?: string[];
+}
+
+export interface ITrendingParams {
+  id?: number;
+  Sort?: SortType;
+  trendingKeywords?: string;
 }
 
 export interface IGenresParams {
