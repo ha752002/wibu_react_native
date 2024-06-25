@@ -1,9 +1,12 @@
+import { SortType } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types';
 import { IStoryInformation } from '../../screens/Manga/StoryDetails/Information/Information.types';
 
 export type StoriesProps = {
   title?: string;
   stories?: IStoryInformation[];
   viewType?: viewType;
+  more?: number;
+  Sort?: SortType;
 };
 
 export type viewType = 'column' | 'grid' | 'row';

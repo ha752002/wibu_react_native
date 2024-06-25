@@ -49,15 +49,15 @@ const ItemStories = (props: StoriesProps) => {
         <View>
           <Image source={{ uri: stories?.thumbnail }} style={imgStyle} />
           <WibuText
-            fontSize={ESize.XL}
-            numberOfLines={1}
+            fontSize={ESize.M}
+            numberOfLines={2}
             color={'fgColorGray700'}
           >
             {stories?.name}
           </WibuText>
         </View>
       </TouchableWithoutFeedback>
-      <WibuText>{stories?.author || 'Updating...'}</WibuText>
+      <WibuText fontSize={ESize.S}>{stories?.author || 'Updating...'}</WibuText>
       <Banners storyInformation={stories} />
     </WibuView>
   );

@@ -20,7 +20,7 @@ import { ESize } from '~/enums/size.enums';
 
 const KeywordList = (props: KeywordListProps) => {
   const { trendingKeywords, selectedKeyword } = props;
-  const { Layout } = useTheme();
+  const { Layout, Colors } = useTheme();
   const styles = useThemeStyles(styleCreator, props, []);
   const navigation = useNavigation<ApplicationNavigationProps>();
 
@@ -30,6 +30,7 @@ const KeywordList = (props: KeywordListProps) => {
         {trendingKeywords &&
           trendingKeywords.map((trendingKeyword, index) => (
             <TouchableHighlight
+              underlayColor={Colors.bgPrimary}
               key={index}
               style={[
                 styles.Keyword,
@@ -57,6 +58,7 @@ const KeywordList = (props: KeywordListProps) => {
             </TouchableHighlight>
           ))}
         <TouchableHighlight
+          underlayColor={Colors.bgPrimary}
           style={[styles.Keyword, Layout.center]}
           onPress={() => {
             navigation.navigate(ScreenNames.GENRE, { id: 1 });

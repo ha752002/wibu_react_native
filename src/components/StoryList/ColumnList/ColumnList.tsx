@@ -3,7 +3,7 @@ import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 
 import { ColumnListProps } from './ColumnList.types.ts';
 
-import { FlatList } from 'react-native';
+// import { FlatList } from 'react-native';
 
 import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
 import { styleCreator } from './ColumnList.styles.ts';
@@ -17,7 +17,7 @@ const ColumnList = (props: ColumnListProps) => {
 
   return (
     <WibuView style={[styles.center, styles.storyListContainer]}>
-      <FlatList
+      {/* <FlatList
         data={stories}
         renderItem={({ item }) => (
           <WibuView style={styles.item}>
@@ -28,7 +28,17 @@ const ColumnList = (props: ColumnListProps) => {
         numColumns={1}
         ListEmptyComponent={EmptyList}
         contentContainerStyle={styles.storyList}
-      />
+      /> */}
+
+      {stories && stories.length > 0 ? (
+        stories.map((item, index) => (
+          <WibuView key={index} style={styles.item}>
+            <Story series={item} />
+          </WibuView>
+        ))
+      ) : (
+        <EmptyList />
+      )}
     </WibuView>
   );
 };

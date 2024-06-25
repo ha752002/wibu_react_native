@@ -19,5 +19,9 @@ export const styleCreator: StyleCreator = theme => {
     title: {
       flex: 1,
     },
+
+    more: {
+      borderRadius: 120,
+    },
   });
 };

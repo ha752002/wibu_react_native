@@ -29,8 +29,8 @@ const Home = (props: HomeProps) => {
     <ScrollView style={styles.container}>
       <UserInformation {...userData} />
       <SearchForm />
-      <StoryList {...storiesData} viewType="row" />
-      <StoryList {...storiesData2} viewType="row" />
+      <StoryList {...storiesData} more={1} Sort="view" viewType="row" />
+      {/* <StoryList {...storiesData2} more={1} Sort='view' viewType="column" /> */}
       <StoryList {...storiesData2} viewType="row" />
       <StoryList {...storiesData2} viewType="row" />
 

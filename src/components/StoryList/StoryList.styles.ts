@@ -8,6 +8,7 @@ export const styleCreator: StyleCreator = theme => {
   return StyleSheet.create({
     storyListContainer: {
       marginTop: 24,
+      marginBottom: 12,
       color: Colors.fgColorGray700,
     },
   });

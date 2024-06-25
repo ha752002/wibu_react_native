@@ -15,6 +15,7 @@ import { useThemeStyles } from '~/hooks/useThemeStyles';
 import { styleCreator } from './Trending.styles';
 import { RouteProp, useRoute } from '@react-navigation/native';
 import { ITrendingParams } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types';
+import WibuText from '~/wibu-ui/WibuText/WibuText';
 
 const Trending = (props: TrendingProps) => {
   const styles = useThemeStyles(styleCreator, props, []);
@@ -29,6 +30,7 @@ const Trending = (props: TrendingProps) => {
           {...KeywordData}
           selectedKeyword={params?.trendingKeywords}
         />
+        <WibuText>{params?.id}</WibuText>
         <StoryList stories={storiesData.stories} />
       </View>
     </ScrollView>

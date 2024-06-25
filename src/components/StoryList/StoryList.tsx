@@ -17,7 +17,7 @@ import TitleStoryList from './TitleStoryList/TitleStoryList.tsx';
 // import { ESize } from '~/assets/imgs/imgsFake/AvatarUserFake';
 
 const StoryList = (props: StoriesProps) => {
-  const { viewType, title } = props;
+  const { viewType, title, Sort, more } = props;
   const styles = useThemeStyles(styleCreator, props, []);
 
   // const EmptyListMessage = () => (
@@ -41,7 +41,7 @@ const StoryList = (props: StoriesProps) => {
   };
   return (
     <WibuView style={[styles.center, styles.storyListContainer]}>
-      <TitleStoryList title={title} />
+      <TitleStoryList title={title} Sort={Sort} more={more} />
       {renderList()}
     </WibuView>
   );

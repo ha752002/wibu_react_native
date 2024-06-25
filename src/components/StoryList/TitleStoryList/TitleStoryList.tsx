@@ -21,7 +21,7 @@ import { ScreenNames } from '~/enums/screenNames.enum.ts';
 
 const TitleStoryList = (props: TitleStoryListProps) => {
   const { title, more, Sort } = props;
-  const { Layout } = useTheme();
+  const { Layout, Colors } = useTheme();
   const styles = useThemeStyles(styleCreator, props, []);
   const navigation = useNavigation<ApplicationNavigationProps>();
 
@@ -35,6 +35,8 @@ const TitleStoryList = (props: TitleStoryListProps) => {
             </WibuText>
             {more && (
               <TouchableHighlight
+                style={[styles.more]}
+                underlayColor={Colors.bgPrimary}
                 onPress={() => {
                   navigation.navigate(ScreenNames.TRENDING, {
                     id: more,
