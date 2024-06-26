@@ -41,7 +41,7 @@ const KeywordList = (props: KeywordListProps) => {
               onPress={() => {
                 navigation.navigate(ScreenNames.TRENDING, {
                   id: trendingKeyword.id,
-                  Sort: trendingKeyword.SortType,
+                  sort: trendingKeyword.SortType,
                   trendingKeywords: trendingKeyword.trendingKeywords,
                 });
               }}

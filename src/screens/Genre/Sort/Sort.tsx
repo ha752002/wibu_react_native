@@ -28,7 +28,7 @@ import { ScreenNames } from '~/enums/screenNames.enum.ts';
 import { SortType } from '../../../navigators/ApplicationcNavigator/ApplicationNavigator.types';
 
 const Sort = (props: SortProps) => {
-  const { SelectedGenreId, SelectedSort } = props;
+  const { selectedGenreId, SelectedSort, searchContent } = props;
 
   const styles = useThemeStyles(styleCreator, props, []);
   const navigation = useNavigation<ApplicationNavigationProps>();
@@ -45,7 +45,11 @@ const Sort = (props: SortProps) => {
     setSelectedSort(sort);
     setModalVisible(false);
     console.log(id);
-    navigation.navigate(ScreenNames.GENRE, { id: id, Sort: sort });
+    navigation.navigate(ScreenNames.GENRE, {
+      id: id,
+      sort: sort,
+      searchKeywords: searchContent,
+    });
   };
 
   return (
@@ -74,7 +78,7 @@ const Sort = (props: SortProps) => {
                     styles.modalItem,
                     SelectedSort === item.Sort && styles.selected,
                   ]}
-                  onPress={() => handleSelect(item.Sort, SelectedGenreId)}
+                  onPress={() => handleSelect(item.Sort, selectedGenreId)}
                 >
                   <Text
                     style={[

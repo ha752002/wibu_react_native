@@ -78,15 +78,16 @@ export interface IChapter {
 
 export interface ITrendingParams {
   id?: number;
-  Sort?: SortType;
+  sort?: SortType;
   trendingKeywords?: string;
 }
 
 export interface IGenresParams {
   id: number;
-  Sort?: SortType;
-  Story?: IStoryInformation[];
-  Genre?: IGenre;
+  sort?: SortType;
+  story?: IStoryInformation[];
+  genre?: IGenre;
+  searchKeywords?: string;
 }
 
 export type SortType =

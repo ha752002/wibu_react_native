@@ -1,10 +1,9 @@
+import { SortType } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types';
+import { IGenre } from '~/screens/Manga/StoryDetails/Genres/Genres.types';
+
 export type SearchFormProps = {
   searchContent?: string;
-  name?: string;
-  author?: string;
-  updates?: Date;
-  size?: number;
-  type?: string;
-  // thumbnail?: string;
-  // borderColor?: string;
+  SelectedGenreId?: number;
+  genre?: IGenre[];
+  sort?: SortType;
 };

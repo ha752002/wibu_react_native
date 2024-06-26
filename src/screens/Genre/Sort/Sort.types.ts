@@ -1,8 +1,9 @@
 import { SortType } from '../../../navigators/ApplicationcNavigator/ApplicationNavigator.types';
 
 export type SortProps = {
-  SelectedGenreId: number;
+  selectedGenreId: number;
   SelectedSort?: SortType;
+  searchContent?: string;
 };
 
 export interface ISort {

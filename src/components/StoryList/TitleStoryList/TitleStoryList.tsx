@@ -40,7 +40,7 @@ const TitleStoryList = (props: TitleStoryListProps) => {
                 onPress={() => {
                   navigation.navigate(ScreenNames.TRENDING, {
                     id: more,
-                    Sort: Sort,
+                    sort: Sort,
                   });
                 }}
               >
