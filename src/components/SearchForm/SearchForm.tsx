@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useState } from 'react';
+
 import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 // import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
 import { SearchFormProps } from './SearchForm.types.ts';
@@ -17,9 +19,19 @@ import { ApplicationNavigationProps } from '~/navigators/ApplicationcNavigator/A
 import { ScreenNames } from '~/enums/screenNames.enum.ts';
 
 const SearchForm = (props: SearchFormProps) => {
+  const { searchContent, SelectedGenreId, sort } = props;
   const { Layout, Colors } = useTheme();
   const styles = useThemeStyles(styleCreator, props, []);
   const navigation = useNavigation<ApplicationNavigationProps>();
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const handleSearchSubmit = () => {
+    navigation.navigate(ScreenNames.GENRE, {
+      id: SelectedGenreId || 1,
+      searchKeywords: searchQuery,
+      sort: sort,
+    });
+  };
 
   return (
     <WibuView style={[styles.searchFormContainer]}>
@@ -27,7 +39,9 @@ const SearchForm = (props: SearchFormProps) => {
         <WibuIcon name={EIconName.SEARCH} size={ESize.M} />
         <TextInput
           style={[styles.searchFormStyle]}
-          placeholder="Search manga"
+          placeholder={searchContent || 'Search manga'}
+          onChangeText={setSearchQuery}
+          onSubmitEditing={handleSearchSubmit}
         />
         <TouchableHighlight
           style={[styles.advanced]}

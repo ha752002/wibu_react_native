@@ -13,12 +13,12 @@ export type GenreProps = StackScreenProps<
 
 export const GenreData: IGenresParams = {
   id: 1,
-  Genre: {
+  genre: {
     id: 6,
     genre: 'Horror',
-    AgeWarning: true,
+    ageWarning: true,
     describe:
       'Nhằm tạo ra cảm giác sợ hãi và kinh dị, horror chứa đựng các yếu tố ma quái và rùng rợn.',
   },
-  Story: storiesData.stories,
+  story: storiesData.stories,
 };

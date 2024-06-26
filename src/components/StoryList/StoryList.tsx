@@ -8,6 +8,7 @@ import { styleCreator } from './StoryList.styles.ts';
 import ColumnList from './ColumnList/ColumnList.tsx';
 import RowList from './RowList/RowList.tsx';
 import GridList from './GridList/GridList.tsx';
+import TitleStoryList from './TitleStoryList/TitleStoryList.tsx';
 
 // import WibuIcon from '~/wibu-ui/WibuIcon/WibuIcon.tsx';
 // import { EIconName } from '~/enums/icon.enum.ts';
@@ -16,7 +17,7 @@ import GridList from './GridList/GridList.tsx';
 // import { ESize } from '~/assets/imgs/imgsFake/AvatarUserFake';
 
 const StoryList = (props: StoriesProps) => {
-  const { viewType } = props;
+  const { viewType, title, Sort, more } = props;
   const styles = useThemeStyles(styleCreator, props, []);
 
   // const EmptyListMessage = () => (
@@ -40,6 +41,7 @@ const StoryList = (props: StoriesProps) => {
   };
   return (
     <WibuView style={[styles.center, styles.storyListContainer]}>
+      <TitleStoryList title={title} Sort={Sort} more={more} />
       {renderList()}
     </WibuView>
   );

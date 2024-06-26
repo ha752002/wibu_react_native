@@ -21,6 +21,7 @@ export type ApplicationStackParams = {
   [ScreenNames.GENRE]: IGenresParams;
   [ScreenNames.SEARCH]: undefined;
   [ScreenNames.HOME]: undefined;
+  [ScreenNames.TRENDING]: ITrendingParams;
   [ScreenNames.MAIN_BOTTOM_TAB_NAVIGATOR]: NavigatorScreenParams<BottomTabParams>;
 };
 
@@ -75,11 +76,18 @@ export interface IChapter {
   urlImg?: string[];
 }
 
+export interface ITrendingParams {
+  id?: number;
+  sort?: SortType;
+  trendingKeywords?: string;
+}
+
 export interface IGenresParams {
   id: number;
-  Sort?: SortType;
-  Story?: IStoryInformation[];
-  Genre?: IGenre;
+  sort?: SortType;
+  story?: IStoryInformation[];
+  genre?: IGenre;
+  searchKeywords?: string;
 }
 
 export type SortType =
