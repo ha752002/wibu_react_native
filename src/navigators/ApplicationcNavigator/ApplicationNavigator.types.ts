@@ -22,6 +22,7 @@ export type ApplicationStackParams = {
   [ScreenNames.SEARCH]: undefined;
   [ScreenNames.HOME]: undefined;
   [ScreenNames.TRENDING]: ITrendingParams;
+  [ScreenNames.STORYFILTER]: IStoryFilterParams;
   [ScreenNames.MAIN_BOTTOM_TAB_NAVIGATOR]: NavigatorScreenParams<BottomTabParams>;
 };
 
@@ -80,6 +81,13 @@ export interface ITrendingParams {
   id?: number;
   sort?: SortType;
   trendingKeywords?: string;
+}
+
+export interface IStoryFilterParams {
+  id: number[];
+  sort?: SortType;
+  // story?: IStoryInformation[];
+  searchKeywords?: string;
 }
 
 export interface IGenresParams {

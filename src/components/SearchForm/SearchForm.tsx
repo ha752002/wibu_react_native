@@ -19,18 +19,32 @@ import { ApplicationNavigationProps } from '~/navigators/ApplicationcNavigator/A
 import { ScreenNames } from '~/enums/screenNames.enum.ts';
 
 const SearchForm = (props: SearchFormProps) => {
-  const { searchContent, SelectedGenreId, sort } = props;
+  const {
+    searchContent,
+    selectedGenreId,
+    sort,
+    nextScreen,
+    multiSelectedGenreId,
+  } = props;
   const { Layout, Colors } = useTheme();
   const styles = useThemeStyles(styleCreator, props, []);
   const navigation = useNavigation<ApplicationNavigationProps>();
 
   const [searchQuery, setSearchQuery] = useState('');
   const handleSearchSubmit = () => {
-    navigation.navigate(ScreenNames.GENRE, {
-      id: SelectedGenreId || 1,
-      searchKeywords: searchQuery,
-      sort: sort,
-    });
+    if (nextScreen) {
+      navigation.navigate(ScreenNames.STORYFILTER, {
+        id: multiSelectedGenreId || [1],
+        searchKeywords: searchQuery,
+        sort: sort,
+      });
+    } else {
+      navigation.navigate(ScreenNames.GENRE, {
+        id: selectedGenreId || 1,
+        searchKeywords: searchQuery,
+        sort: sort,
+      });
+    }
   };
 
   return (

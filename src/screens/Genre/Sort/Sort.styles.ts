@@ -9,7 +9,7 @@ export const styleCreator: StyleCreator = theme => {
     container: {
       marginTop: 16,
       color: Colors.fgColorGray700,
-      marginRight: 20,
+      // marginRight: 20,
       flex: 1,
     },
     picker: {
