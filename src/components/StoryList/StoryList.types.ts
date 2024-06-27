@@ -8,6 +8,7 @@ export type StoriesProps = {
   more?: number;
   Sort?: SortType;
   ratings?: number;
+  fullScreen?: boolean;
 };
 
 export type viewType = 'column' | 'grid' | 'row' | 'ratings';
@@ -18,7 +19,8 @@ export const storiesData: StoriesProps = {
     {
       id: 1,
       name: 'Sousou No Frieren',
-      thumbnail: 'https://cdnnvd.com/nettruyen/thumb/sousou-no-frieren.jpg',
+      thumbnail:
+        'https://i.pinimg.com/564x/b0/2e/66/b02e668dc3f8a9ed5847b13c97678fc0.jpg',
       author: 'Tác giả 1',
       created: new Date(),
     },
@@ -27,7 +29,7 @@ export const storiesData: StoriesProps = {
       name: 'Triệu Hồi Đến Thế Giới Fantasy',
 
       thumbnail:
-        'https://cdnnvd.com/nettruyen/thumb/trieu-hoi-den-the-gioi-fantasy.jpg',
+        'https://i.pinimg.com/564x/f9/3f/e7/f93fe796a286813003c114ca3411c972.jpg',
       author: 'Tác giả 2',
       status: 'Full',
     },
@@ -35,14 +37,14 @@ export const storiesData: StoriesProps = {
       id: 3,
       name: 'Bậc Thầy Thiết Kế Điền Trang',
       thumbnail:
-        'https://cdnnvd.com/nettruyen/thumb/bac-thay-thiet-ke-dien-trang.jpg',
+        'https://i.pinimg.com/564x/b6/6c/69/b66c69a0d44065230b206237a33b0a9a.jpg',
       author: 'Tác giả 3',
     },
     {
       id: 4,
       name: 'Bậc Thầy Thiết Kế Điền Trang',
       thumbnail:
-        'https://cdnnvd.com/nettruyen/thumb/bac-thay-thiet-ke-dien-trang.jpg',
+        'https://i.pinimg.com/564x/b6/6c/69/b66c69a0d44065230b206237a33b0a9a.jpg',
       author: 'Tác giả 3',
     },
   ],
@@ -54,7 +56,8 @@ export const storiesData2: StoriesProps = {
     {
       id: 1,
       name: 'Sousou No Frieren',
-      thumbnail: 'https://cdnnvd.com/nettruyen/thumb/sousou-no-frieren.jpg',
+      thumbnail:
+        'https://i.pinimg.com/564x/b0/2e/66/b02e668dc3f8a9ed5847b13c97678fc0.jpg',
       author: 'Tác giả 1',
       views: 100000,
     },
@@ -63,14 +66,14 @@ export const storiesData2: StoriesProps = {
       name: 'Triệu Hồi Đến Thế Giới Fantasy',
 
       thumbnail:
-        'https://cdnnvd.com/nettruyen/thumb/trieu-hoi-den-the-gioi-fantasy.jpg',
+        'https://i.pinimg.com/564x/f9/3f/e7/f93fe796a286813003c114ca3411c972.jpg',
       author: 'Tác giả 2',
     },
     {
       id: 3,
       name: 'Bậc Thầy Thiết Kế Điền Trang',
       thumbnail:
-        'https://cdnnvd.com/nettruyen/thumb/bac-thay-thiet-ke-dien-trang.jpg',
+        'https://i.pinimg.com/564x/b6/6c/69/b66c69a0d44065230b206237a33b0a9a.jpg',
       author: 'Tác giả 3',
     },
   ],
@@ -82,7 +85,8 @@ export const following: StoriesProps = {
     {
       id: 1,
       name: 'Sousou No Frieren',
-      thumbnail: 'https://cdnnvd.com/nettruyen/thumb/sousou-no-frieren.jpg',
+      thumbnail:
+        'https://i.pinimg.com/564x/b0/2e/66/b02e668dc3f8a9ed5847b13c97678fc0.jpg',
 
       author: 'Tác giả 3',
       chapter: 23,
@@ -96,7 +100,7 @@ export const following: StoriesProps = {
       name: 'Bậc Thầy Thiết Kế Điền Trang asa sấ',
 
       thumbnail:
-        'https://cdnnvd.com/nettruyen/thumb/bac-thay-thiet-ke-dien-trang.jpg',
+        'https://i.pinimg.com/564x/b6/6c/69/b66c69a0d44065230b206237a33b0a9a.jpg',
       author: 'Tác giả 3',
       chapter: 23,
       views: 0,
@@ -107,7 +111,7 @@ export const following: StoriesProps = {
       id: 3,
       name: 'Triệu Hồi Đến Thế Giới Fantasy',
       thumbnail:
-        'https://cdnnvd.com/nettruyen/thumb/trieu-hoi-den-the-gioi-fantasy.jpg',
+        'https://i.pinimg.com/564x/f9/3f/e7/f93fe796a286813003c114ca3411c972.jpg',
       author: 'Tác giả 3',
       chapter: 23,
       views: 121212,
@@ -130,7 +134,7 @@ export const following: StoriesProps = {
       name: 'Triệu Hồi Đến Thế Giới Fantasy',
 
       thumbnail:
-        'https://cdnnvd.com/nettruyen/thumb/trieu-hoi-den-the-gioi-fantasy.jpg',
+        'https://i.pinimg.com/564x/f9/3f/e7/f93fe796a286813003c114ca3411c972.jpg',
       author: 'Tác giả 3',
       chapter: 23,
       views: 121212,

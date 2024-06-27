@@ -20,7 +20,8 @@ export interface Istory {
 export const story: Istory = {
   storyInformation: {
     id: 1,
-    thumbnail: 'https://cdnnvd.com/nettruyen/thumb/sousou-no-frieren.jpg',
+    thumbnail:
+      'https://i.pinimg.com/564x/b0/2e/66/b02e668dc3f8a9ed5847b13c97678fc0.jpg',
     name: 'Sousou No Frieren',
     author: 'Tác giả 3',
     chapter: 23,
