@@ -7,9 +7,10 @@ export type StoriesProps = {
   viewType?: viewType;
   more?: number;
   Sort?: SortType;
+  ratings?: number;
 };
 
-export type viewType = 'column' | 'grid' | 'row';
+export type viewType = 'column' | 'grid' | 'row' | 'ratings';
 
 export const storiesData: StoriesProps = {
   title: 'Trending Manga',
