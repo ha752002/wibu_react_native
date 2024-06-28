@@ -16,6 +16,7 @@ import { IGenre } from '~/screens/Manga/StoryDetails/Genres/Genres.types';
 export type ApplicationStackParams = {
   [ScreenNames.LOGIN]: undefined;
   [ScreenNames.REGISTER]: undefined;
+  [ScreenNames.MY_SELF]: undefined;
   [ScreenNames.MANGA]: IstoryParams;
   [ScreenNames.CHAPTER]: IChapter;
   [ScreenNames.GENRE]: IGenresParams;

@@ -22,6 +22,7 @@ import { EIconName } from '~/enums/icon.enum.ts';
 import { ESize } from '~/enums/size.enums.ts';
 import { useTheme } from '~/hooks/useTheme.ts';
 import StoryFilter from '~/screens/StoryFilter/StoryFilter.tsx';
+import MySelf from '~/screens/MySelf/MySelf.tsx';
 
 const navigationRef = createNavigationContainerRef<ApplicationStackParams>();
 const BottomTab = createBottomTabNavigator<BottomTabParams>();
@@ -84,6 +85,7 @@ const ApplicationNativeStackNavigator = () => {
       <Stack.Screen name={ScreenNames.GENRE} component={Genre} />
       <Stack.Screen name={ScreenNames.LOGIN} component={Login} />
       <Stack.Screen name={ScreenNames.REGISTER} component={Register} />
+      <Stack.Screen name={ScreenNames.MY_SELF} component={MySelf} />
       <Stack.Screen name={ScreenNames.STORYFILTER} component={StoryFilter} />
 
       <Stack.Screen
