@@ -16,19 +16,23 @@ import PageTitle from '~/components/PageTitle/PageTitle.tsx';
 import { MySelfProps } from './MySelf.types.ts';
 
 import { styleCreator } from './MySelf.styles.ts';
+
 import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
+import { RouteProp, useRoute } from '@react-navigation/native';
+import { IMyselfParams } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types.ts';
 
 const MySelf = (props: MySelfProps) => {
   const styles = useThemeStyles(styleCreator, props, []);
+  const { params } = useRoute<RouteProp<{ params: IMyselfParams }, 'params'>>();
+  const selectedContent = params?.selectedContent || 'bookcase';
 
   return (
     <ScrollView>
       <WibuView style={styles.container}>
         <PageTitle title="My Profile" />
         <UserInformation {...userData} />
-        <Otherinformation {...userData} />
-        {/* <StoryList {...following} viewType="grid" /> */}
-        <StoryList {...following} viewType="column" />
+        <Otherinformation {...userData} selectedContent={selectedContent} />
+        <StoryList {...following} viewType="column" title="" />
         <StoryList {...emptyList} />
       </WibuView>
     </ScrollView>

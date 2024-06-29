@@ -15,4 +15,31 @@ const formattedDate = (date: Date): string => {
   return `${day}/${month}/${year}`;
 };
 
-export const commonUtils = { formatViews, formattedDate };
+function formatTimeAgo(inputDate: Date) {
+  const now = new Date();
+  const date = new Date(inputDate);
+
+  const diff = now.getTime() - date.getTime(); // milliseconds
+  const diffInSeconds = Math.floor(diff / 1000);
+  const diffInMinutes = Math.floor(diffInSeconds / 60);
+  const diffInHours = Math.floor(diffInMinutes / 60);
+  const diffInDays = Math.floor(diffInHours / 24);
+  const diffInMonths = Math.floor(diffInDays / 30);
+  const diffInYears = Math.floor(diffInMonths / 12);
+
+  if (diffInSeconds < 60) {
+    return 'mới';
+  } else if (diffInMinutes < 60) {
+    return `${diffInMinutes} minute ago`;
+  } else if (diffInHours < 24) {
+    return `${diffInHours} hour ago`;
+  } else if (diffInDays < 30) {
+    return `${diffInDays} day ago`;
+  } else if (diffInMonths < 12) {
+    return `${diffInMonths} month ago`;
+  } else {
+    return `${diffInYears} year ago`;
+  }
+}
+
+export const commonUtils = { formatViews, formattedDate, formatTimeAgo };

@@ -12,11 +12,12 @@ import React from 'react';
 import { IStoryInformation } from '~/screens/Manga/StoryDetails/Information/Information.types';
 // import { IChapters } from '~/screens/Manga/StoryDetails/ChapterList/ChapterList.types';
 import { IGenre } from '~/screens/Manga/StoryDetails/Genres/Genres.types';
+import { selectedContentType } from '~/screens/MySelf/Otherinformation/Otherinformation.types';
 
 export type ApplicationStackParams = {
   [ScreenNames.LOGIN]: undefined;
   [ScreenNames.REGISTER]: undefined;
-  [ScreenNames.MY_SELF]: undefined;
+  [ScreenNames.MY_SELF]: IMyselfParams;
   [ScreenNames.MANGA]: IstoryParams;
   [ScreenNames.CHAPTER]: IChapter;
   [ScreenNames.GENRE]: IGenresParams;
@@ -70,6 +71,11 @@ export interface IParams {
 
 export interface IstoryParams {
   id?: number;
+}
+
+export interface IMyselfParams {
+  id?: number;
+  selectedContent?: selectedContentType;
 }
 
 export interface IChapter {
