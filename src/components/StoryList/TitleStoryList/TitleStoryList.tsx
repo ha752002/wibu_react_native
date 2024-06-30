@@ -18,6 +18,7 @@ import { ESize } from '~/enums/size.enums.ts';
 import { useNavigation } from '@react-navigation/native';
 import { ApplicationNavigationProps } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types.ts';
 import { ScreenNames } from '~/enums/screenNames.enum.ts';
+import { EFontsWeight } from '~/enums/font.enum.ts';
 
 const TitleStoryList = (props: TitleStoryListProps) => {
   const { title, more, Sort } = props;
@@ -30,7 +31,11 @@ const TitleStoryList = (props: TitleStoryListProps) => {
       {title && (
         <WibuView style={[styles.center, styles.storyListContainer]}>
           <WibuView style={[styles.titleGroup, Layout.contentBetween]}>
-            <WibuText fontSize={ESize.XL} color="fgColorGray700">
+            <WibuText
+              fontWeight={EFontsWeight.Bold}
+              fontSize={ESize.XL}
+              color="fgColorGray700"
+            >
               {title}
             </WibuText>
             {more && (

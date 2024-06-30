@@ -10,5 +10,11 @@ export const styleCreator: StyleCreator = theme => {
       marginTop: 16,
       color: Colors.fgColorGray700,
     },
+
+    groupTitle: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      paddingRight: 12,
+    },
   });
 };

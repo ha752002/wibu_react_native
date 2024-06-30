@@ -19,8 +19,16 @@ export const styleCreator: StyleCreator = theme => {
       justifyContent: 'space-evenly',
     },
 
-    user: {
-      marginLeft: 24,
+    item: {
+      // marginLeft: 24,
+      flex: 1,
+      // backgroundColor: Colors.bgPrimary,
+      paddingBottom: 6,
+    },
+
+    selected: {
+      borderBottomWidth: 2,
+      borderColor: Colors.bgPrimary,
     },
   });
 };

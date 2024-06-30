@@ -21,14 +21,20 @@ import { commonUtils } from '../../utils/common.utils.ts';
 import { ESize } from '~/enums/size.enums.ts';
 
 const Story = (props: seriesProps) => {
-  const { series } = props;
+  const { series, shadow, ratings } = props;
   const { Layout } = useTheme();
 
   const styles = useThemeStyles(styleCreator, props, []);
   const navigation = useNavigation<ApplicationNavigationProps>();
 
   return (
-    <WibuView style={styles.storyContainer}>
+    <WibuView style={[styles.storyContainer, shadow ? styles.shadow : null]}>
+      {shadow ? null : (
+        <WibuView style={styles.ratings}>
+          <WibuText fontSize={ESize.XXL}>{ratings}</WibuText>
+        </WibuView>
+      )}
+
       <Image source={{ uri: series?.thumbnail }} style={styles.img} />
       <TouchableWithoutFeedback
         onPress={() => {
@@ -38,7 +44,7 @@ const Story = (props: seriesProps) => {
         <View style={styles.storyInformation}>
           <WibuView style={styles.basicInformation}>
             <WibuText
-              fontSize={ESize.L}
+              fontSize={ESize.M}
               numberOfLines={1}
               color={'fgColorGray700'}
             >
@@ -54,8 +60,7 @@ const Story = (props: seriesProps) => {
           </WibuView>
         </View>
       </TouchableWithoutFeedback>
-
-      <Banners storyInformation={series} />
+      {shadow ? <Banners storyInformation={series} /> : null}
     </WibuView>
   );
 };

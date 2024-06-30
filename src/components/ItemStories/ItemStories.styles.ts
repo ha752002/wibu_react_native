@@ -38,5 +38,13 @@ export const styleCreator: StyleCreator = theme => {
     smallImg: {
       height: 170,
     },
+
+    fullScreen: {
+      width: 260,
+    },
+
+    fullScreenImg: {
+      height: 140,
+    },
   });
 };

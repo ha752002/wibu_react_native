@@ -33,7 +33,7 @@ const ColumnList = (props: ColumnListProps) => {
       {stories && stories.length > 0 ? (
         stories.map((item, index) => (
           <WibuView key={index} style={styles.item}>
-            <Story series={item} />
+            <Story shadow series={item} />
           </WibuView>
         ))
       ) : (

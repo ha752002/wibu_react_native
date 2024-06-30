@@ -8,6 +8,7 @@ export const styleCreator: StyleCreator = theme => {
   return StyleSheet.create({
     searchFormContainer: {
       marginTop: 24,
+      marginHorizontal: 4,
     },
 
     groupSearchFormStyle: {

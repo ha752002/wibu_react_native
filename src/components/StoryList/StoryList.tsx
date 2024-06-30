@@ -8,6 +8,7 @@ import { styleCreator } from './StoryList.styles.ts';
 import ColumnList from './ColumnList/ColumnList.tsx';
 import RowList from './RowList/RowList.tsx';
 import GridList from './GridList/GridList.tsx';
+import RatingsList from './RatingsList/RatingsList.tsx';
 import TitleStoryList from './TitleStoryList/TitleStoryList.tsx';
 
 // import WibuIcon from '~/wibu-ui/WibuIcon/WibuIcon.tsx';
@@ -35,6 +36,8 @@ const StoryList = (props: StoriesProps) => {
         return <ColumnList {...props} />;
       case 'row':
         return <RowList {...props} />;
+      case 'ratings':
+        return <RatingsList {...props} />;
       default:
         return <ColumnList {...props} />;
     }

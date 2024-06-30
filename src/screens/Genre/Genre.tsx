@@ -31,7 +31,7 @@ const Genre = (props: GenreProps) => {
       <SearchForm
         searchContent={params.searchKeywords}
         sort={params.sort}
-        SelectedGenreId={params.id}
+        selectedGenreId={params.id}
       />
       <WibuView style={styles.groupFilter}>
         <Filter
@@ -46,7 +46,11 @@ const Genre = (props: GenreProps) => {
           searchContent={params.searchKeywords}
         />
       </WibuView>
-      <GenreDetails Genre={GenreData.genre} />
+      <GenreDetails
+        Genre={GenreData.genre}
+        selectedGenreId={params.id}
+        searchContent={params.searchKeywords}
+      />
       <StoryList
         title={GenreData?.genre?.genre + ' comics'}
         stories={GenreData.story}

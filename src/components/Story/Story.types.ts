@@ -2,4 +2,6 @@ import { IStoryInformation } from '../../screens/Manga/StoryDetails/Information/
 
 export type seriesProps = {
   series: IStoryInformation;
+  shadow: boolean;
+  ratings?: number;
 };

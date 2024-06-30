@@ -9,7 +9,7 @@ import { styleCreator } from './RowList.styles.ts';
 import ItemStories from '../../ItemStories/ItemStories.tsx';
 
 const RowList = (props: StoriesProps) => {
-  const { stories } = props;
+  const { stories, fullScreen } = props;
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (
@@ -35,7 +35,7 @@ const RowList = (props: StoriesProps) => {
         {stories &&
           stories.map((story, index) => (
             <WibuView key={index} style={styles.storyListItemStyle}>
-              <ItemStories stories={story} />
+              <ItemStories stories={story} fullScreen={fullScreen} />
             </WibuView>
           ))}
       </ScrollView>
