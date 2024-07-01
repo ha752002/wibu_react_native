@@ -53,14 +53,14 @@ const BottomToolbar = (props: BottomToolbarProps) => {
             // navigation.navigate(ScreenNames.CHAPTER );
           }}
         >
-          <WibuIcon name={EIconName.ARROW_LEFT} size={ESize.L} />
+          <WibuIcon name={EIconName.ARROW_LEFT} size={ESize.M} />
         </TouchableWithoutFeedback>
 
         <TouchableHighlight
           style={styles.openButton}
           // onPress={handlePresentPress}
         >
-          <WibuIcon name={EIconName.LIST} size={ESize.L} />
+          <WibuIcon name={EIconName.LIST} size={ESize.M} />
         </TouchableHighlight>
 
         <TouchableWithoutFeedback
@@ -68,7 +68,7 @@ const BottomToolbar = (props: BottomToolbarProps) => {
             navigation.navigate(ScreenNames.LOGIN);
           }}
         >
-          <WibuIcon name={EIconName.BOOK} size={ESize.L} />
+          <WibuIcon name={EIconName.BOOK} size={ESize.M} />
         </TouchableWithoutFeedback>
 
         <TouchableWithoutFeedback
@@ -76,7 +76,7 @@ const BottomToolbar = (props: BottomToolbarProps) => {
             // navigation.navigate(ScreenNames.CHAPTER);
           }}
         >
-          <WibuIcon name={EIconName.SETTINGS} size={ESize.L} />
+          <WibuIcon name={EIconName.SETTINGS} size={ESize.M} />
         </TouchableWithoutFeedback>
 
         <TouchableWithoutFeedback
