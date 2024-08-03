@@ -20,8 +20,9 @@ import { EIconName } from '~/enums/icon.enum.ts';
 // import { ESize } from '~/assets/imgs/imgsFake/AvatarUserFake';
 
 const InputField = (props: InputFieldProps) => {
-  const { label, onChangeText, placeholder, secureTextEntry, value, type } = props;
-  const { Layout , Colors} = useTheme();
+  const { label, onChangeText, placeholder, secureTextEntry, value, type } =
+    props;
+  const { Layout, Colors } = useTheme();
   const styles = useThemeStyles(styleCreator, props, []);
   const [isPasswordVisible, setPasswordVisible] = useState(false);
 
@@ -35,8 +36,8 @@ const InputField = (props: InputFieldProps) => {
         {/* <WibuIcon name={EIconName.BOOK} size={ESize.M} /> */}
         <WibuText fontSize={ESize.L}>{label}</WibuText>
         <WibuView style={[styles.groupInput, Layout.contentBetween]}>
-          <TextInput 
-          style={styles.input}
+          <TextInput
+            style={styles.input}
             value={value}
             onChangeText={onChangeText}
             placeholder={placeholder}
@@ -45,8 +46,14 @@ const InputField = (props: InputFieldProps) => {
             keyboardType={type === 'email' ? 'email-address' : 'default'}
           />
           {secureTextEntry && (
-            <TouchableHighlight onPress={togglePasswordVisibility} underlayColor={Colors.bgPrimary}>
-              <WibuIcon name={isPasswordVisible ? EIconName.EYE : EIconName.EYE_OFF} size={ESize.M}/>
+            <TouchableHighlight
+              onPress={togglePasswordVisibility}
+              underlayColor={Colors.bgPrimary}
+            >
+              <WibuIcon
+                name={isPasswordVisible ? EIconName.EYE : EIconName.EYE_OFF}
+                size={ESize.M}
+              />
             </TouchableHighlight>
           )}
         </WibuView>
