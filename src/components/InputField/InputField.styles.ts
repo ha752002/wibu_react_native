@@ -8,7 +8,18 @@ export const styleCreator: StyleCreator = theme => {
   return StyleSheet.create({
     container: {
       // marginTop: 24,
-      backgroundColor: Colors.bgWhite,
     },
+
+    groupInput:{
+      backgroundColor: Colors.bgWhite,
+      paddingHorizontal: 24,
+      borderRadius: 100,
+    },
+
+    input:{
+      
+      display: 'flex',
+      flex: 1,
+    }
   });
 };
