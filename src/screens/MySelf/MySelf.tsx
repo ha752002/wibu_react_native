@@ -32,8 +32,17 @@ const MySelf = (props: MySelfProps) => {
         <PageTitle title="My Profile" />
         <UserInformation {...userData} />
         <Otherinformation {...userData} selectedContent={selectedContent} />
-        <StoryList {...following} viewType="column" title="" />
-        <StoryList {...emptyList} />
+        {selectedContent === 'bookcase' ? (
+          <StoryList {...following} viewType="column" title="" />
+        ) : null}
+        {selectedContent === 'followers' ? (
+          <StoryList {...emptyList} title="" />
+        ) : null}
+        {selectedContent === 'storyPosted' ? (
+          <StoryList {...emptyList} title="" />
+        ) : null}
+        {/* <StoryList {...following} viewType="column" title="" /> */}
+        {/* <StoryList {...emptyList} /> */}
       </WibuView>
     </ScrollView>
   );

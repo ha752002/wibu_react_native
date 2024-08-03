@@ -6,4 +6,5 @@ export type InputFieldProps = {
   onChangeText?: (text: string) => void;
   placeholder?: string;
   secureTextEntry?: boolean;
+  type?: string;
 };
