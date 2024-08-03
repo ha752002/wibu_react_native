@@ -10,4 +10,5 @@ export enum ScreenNames {
   MANGA = 'MANGA',
   CHAPTER = 'CHAPTER',
   GENRE = 'GENRE',
+  STORYFILTER = 'STORYFILTER',
 }

@@ -13,6 +13,7 @@ export interface IStoryInformation {
   introduce?: string;
   status?: statusType;
   created?: Date;
+  update?: Date;
   // genres: string[];
 }
 

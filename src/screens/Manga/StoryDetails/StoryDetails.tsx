@@ -37,7 +37,7 @@ const StoryDetails = (props: StoryDetailsProps) => {
   const styles = useThemeStyles(styleCreator, props, []);
 
   const hasAgeWarning: boolean = story.Genre.some(
-    genre => genre.AgeWarning === true,
+    genre => genre.ageWarning === true,
   );
 
   return (

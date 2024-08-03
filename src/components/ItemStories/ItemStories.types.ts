@@ -4,6 +4,7 @@ export type StoriesProps = {
   // onPress: () => void;
   stories: IStoryInformation;
   size?: SizeStories;
+  fullScreen?: boolean;
 };
 
 export type SizeStories = 'large' | 'small';

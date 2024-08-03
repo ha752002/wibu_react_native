@@ -23,41 +23,44 @@ import { ApplicationNavigationProps } from '~/navigators/ApplicationcNavigator/A
 import { ScreenNames } from '~/enums/screenNames.enum.ts';
 
 const ItemStories = (props: StoriesProps) => {
-  const { stories, size } = props;
+  const { stories, size, fullScreen } = props;
   // const {Colors ,Layout } = useTheme()
 
   const styles = useThemeStyles(styleCreator, props, []);
   const navigation = useNavigation<ApplicationNavigationProps>();
 
-  const containerStyle = [
-    styles.itemStoriesContainer,
-    size === 'large' ? styles.largeContainer : styles.smallContainer,
-  ];
-
-  const imgStyle = [
-    styles.img,
-    size === 'large' ? styles.largeImg : styles.smallImg,
-  ];
-
   return (
-    <WibuView style={containerStyle}>
+    <WibuView
+      style={[
+        styles.itemStoriesContainer,
+        size === 'large' ? styles.largeContainer : styles.smallContainer,
+        fullScreen ? styles.fullScreen : null,
+      ]}
+    >
       <TouchableWithoutFeedback
         onPress={() => {
           navigation.navigate(ScreenNames.MANGA, { id: 1 });
         }}
       >
         <View>
-          <Image source={{ uri: stories?.thumbnail }} style={imgStyle} />
+          <Image
+            source={{ uri: stories?.thumbnail }}
+            style={[
+              styles.img,
+              size === 'large' ? styles.largeImg : styles.smallImg,
+              fullScreen ? [styles.fullScreen, styles.fullScreenImg] : null,
+            ]}
+          />
           <WibuText
-            fontSize={ESize.XL}
-            numberOfLines={1}
+            fontSize={ESize.M}
+            numberOfLines={2}
             color={'fgColorGray700'}
           >
             {stories?.name}
           </WibuText>
         </View>
       </TouchableWithoutFeedback>
-      <WibuText>{stories?.author || 'Updating...'}</WibuText>
+      <WibuText fontSize={ESize.S}>{stories?.author || 'Updating...'}</WibuText>
       <Banners storyInformation={stories} />
     </WibuView>
   );

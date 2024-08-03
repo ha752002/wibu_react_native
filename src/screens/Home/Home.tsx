@@ -11,6 +11,7 @@ import StoryList from '~/components/StoryList/StoryList.tsx';
 import {
   storiesData,
   storiesData2,
+  following,
 } from '~/components/StoryList/StoryList.types.ts';
 
 import { HomeProps } from './Home.types.ts';
@@ -29,10 +30,23 @@ const Home = (props: HomeProps) => {
     <ScrollView style={styles.container}>
       <UserInformation {...userData} />
       <SearchForm />
-      <StoryList {...storiesData} viewType="row" />
-      <StoryList {...storiesData2} viewType="row" />
-      <StoryList {...storiesData2} viewType="row" />
-      <StoryList {...storiesData2} viewType="row" />
+      <StoryList {...storiesData} more={1} Sort="view" viewType="row" />
+      <StoryList
+        {...storiesData2}
+        viewType="row"
+        more={1}
+        Sort="view"
+        fullScreen
+      />
+      {/* following */}
+      <StoryList
+        {...storiesData2}
+        viewType="ratings"
+        more={1}
+        Sort="view"
+        title="Top comics"
+      />
+      <StoryList {...following} more={1} Sort="view" viewType="row" />
 
       {/* <WibuIcon name={EIconName.HOME} size={ESize.S} />
       <WibuButton

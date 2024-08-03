@@ -27,23 +27,37 @@ const Genre = (props: GenreProps) => {
   const { params } = useRoute<RouteProp<{ params: IGenresParams }, 'params'>>();
   return (
     <ScrollView style={styles.container}>
-      <PageTitle title={GenreData.Genre?.genre} />
-      <SearchForm />
+      <PageTitle title={GenreData.genre?.genre} />
+      <SearchForm
+        searchContent={params.searchKeywords}
+        sort={params.sort}
+        selectedGenreId={params.id}
+      />
       <WibuView style={styles.groupFilter}>
         <Filter
-          Genre={SearchData.genres}
-          SelectedGenreId={params.id}
-          Sort={params.Sort}
+          genres={SearchData.genres}
+          selectedGenreId={params.id}
+          sort={params.sort}
+          searchContent={params.searchKeywords}
         />
-        <Sort SelectedGenreId={params.id} SelectedSort={params.Sort} />
+        <Sort
+          selectedGenreId={params.id}
+          SelectedSort={params.sort}
+          searchContent={params.searchKeywords}
+        />
       </WibuView>
-      <GenreDetails Genre={GenreData.Genre} />
+      <GenreDetails
+        Genre={GenreData.genre}
+        selectedGenreId={params.id}
+        searchContent={params.searchKeywords}
+      />
       <StoryList
-        title={GenreData?.Genre?.genre + ' comics'}
-        stories={GenreData.Story}
+        title={GenreData?.genre?.genre + ' comics'}
+        stories={GenreData.story}
       />
       <WibuText>{params.id}</WibuText>
-      <WibuText>{params.Sort}</WibuText>
+      <WibuText>{params.sort}</WibuText>
+      <WibuText>{params.searchKeywords}</WibuText>
     </ScrollView>
   );
 };

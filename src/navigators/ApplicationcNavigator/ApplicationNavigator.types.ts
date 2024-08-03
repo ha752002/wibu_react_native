@@ -12,15 +12,19 @@ import React from 'react';
 import { IStoryInformation } from '~/screens/Manga/StoryDetails/Information/Information.types';
 // import { IChapters } from '~/screens/Manga/StoryDetails/ChapterList/ChapterList.types';
 import { IGenre } from '~/screens/Manga/StoryDetails/Genres/Genres.types';
+import { selectedContentType } from '~/screens/MySelf/Otherinformation/Otherinformation.types';
 
 export type ApplicationStackParams = {
   [ScreenNames.LOGIN]: undefined;
   [ScreenNames.REGISTER]: undefined;
+  [ScreenNames.MY_SELF]: IMyselfParams;
   [ScreenNames.MANGA]: IstoryParams;
   [ScreenNames.CHAPTER]: IChapter;
   [ScreenNames.GENRE]: IGenresParams;
   [ScreenNames.SEARCH]: undefined;
   [ScreenNames.HOME]: undefined;
+  [ScreenNames.TRENDING]: ITrendingParams;
+  [ScreenNames.STORYFILTER]: IStoryFilterParams;
   [ScreenNames.MAIN_BOTTOM_TAB_NAVIGATOR]: NavigatorScreenParams<BottomTabParams>;
 };
 
@@ -69,17 +73,36 @@ export interface IstoryParams {
   id?: number;
 }
 
+export interface IMyselfParams {
+  id?: number;
+  selectedContent?: selectedContentType;
+}
+
 export interface IChapter {
   id?: number;
   nameChapter?: string;
   urlImg?: string[];
 }
 
+export interface ITrendingParams {
+  id?: number;
+  sort?: SortType;
+  trendingKeywords?: string;
+}
+
+export interface IStoryFilterParams {
+  id: number[];
+  sort?: SortType;
+  // story?: IStoryInformation[];
+  searchKeywords?: string;
+}
+
 export interface IGenresParams {
   id: number;
-  Sort?: SortType;
-  Story?: IStoryInformation[];
-  Genre?: IGenre;
+  sort?: SortType;
+  story?: IStoryInformation[];
+  genre?: IGenre;
+  searchKeywords?: string;
 }
 
 export type SortType =

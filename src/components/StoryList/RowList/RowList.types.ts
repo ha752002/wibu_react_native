@@ -3,4 +3,5 @@ import { IStoryInformation } from '../../../screens/Manga/StoryDetails/Informati
 export type StoriesProps = {
   title?: string;
   stories?: IStoryInformation[];
+  fullScreen?: boolean;
 };

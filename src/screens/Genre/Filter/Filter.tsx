@@ -19,13 +19,13 @@ import { ApplicationNavigationProps } from '~/navigators/ApplicationcNavigator/A
 import { ScreenNames } from '~/enums/screenNames.enum.ts';
 
 const Filter = (props: FilterProps) => {
-  const { Genre, SelectedGenreId, Sort } = props;
+  const { genres, selectedGenreId, sort, searchContent } = props;
 
   const styles = useThemeStyles(styleCreator, props, []);
   const navigation = useNavigation<ApplicationNavigationProps>();
 
   const findSelectedGenre = () => {
-    const selected = Genre.find(g => g.id === SelectedGenreId);
+    const selected = genres.find(g => g.id === selectedGenreId);
     return selected ? selected.genre : 'All genre';
   };
 
@@ -36,7 +36,11 @@ const Filter = (props: FilterProps) => {
     setSelectedGenre(genre);
     setModalVisible(false);
     console.log(id);
-    navigation.navigate(ScreenNames.GENRE, { id: id, Sort: Sort });
+    navigation.navigate(ScreenNames.GENRE, {
+      id: id,
+      sort: sort,
+      searchKeywords: searchContent,
+    });
   };
 
   return (
@@ -57,20 +61,20 @@ const Filter = (props: FilterProps) => {
         <View style={styles.modalOverlay}>
           <View style={styles.modalContent}>
             <FlatList
-              data={Genre}
+              data={genres}
               keyExtractor={(item, index) => index.toString()}
               renderItem={({ item }) => (
                 <TouchableOpacity
                   style={[
                     styles.modalItem,
-                    SelectedGenreId === item.id && styles.selected,
+                    selectedGenreId === item.id && styles.selected,
                   ]}
                   onPress={() => handleSelect(item.genre, item.id)}
                 >
                   <Text
                     style={[
                       styles.modalItemText,
-                      SelectedGenreId === item.id && styles.selectedContent,
+                      selectedGenreId === item.id && styles.selectedContent,
                     ]}
                   >
                     {item.genre}

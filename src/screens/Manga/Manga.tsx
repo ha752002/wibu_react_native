@@ -1,18 +1,26 @@
 import * as React from 'react';
 import { ScrollView } from 'react-native';
+// import { ScrollView } from 'react-native-virtualized-view';
 import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 import WibuText from '~/wibu-ui/WibuText/WibuText.tsx';
-import { Istory, MangaProps, story } from './Manga.types';
+
+import { MangaProps } from './Manga.types';
+import { story } from './Manga.types';
+
 import PageTitle from '~/components/PageTitle/PageTitle.tsx';
 import StoryDetails from './StoryDetails/StoryDetails.tsx';
 import StoryList from '~/components/StoryList/StoryList.tsx';
 import { storiesData } from '~/components/StoryList/StoryList.types.ts';
+
 import { styleCreator } from './Manga.styles';
-import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
-import { RouteProp, useRoute } from '@react-navigation/native';
+import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
+import { useRoute, RouteProp } from '@react-navigation/native';
+import { IstoryParams } from '~/navigators/ApplicationcNavigator/ApplicationNavigator.types.ts';
 
 const Manga = (props: MangaProps) => {
-  const { params } = useRoute<RouteProp<{ params: Istory }, 'params'>>();
+  // const { story } = props;
+  // console.log(121111);
+  const { params } = useRoute<RouteProp<{ params: IstoryParams }, 'params'>>();
   const styles = useThemeStyles(styleCreator, props, []);
 
   return (

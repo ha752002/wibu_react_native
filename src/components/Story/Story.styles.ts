@@ -7,13 +7,22 @@ export const styleCreator: StyleCreator = theme => {
 
   return StyleSheet.create({
     storyContainer: {
-      width: 320,
+      // width: 320,
       flexDirection: 'row',
-      padding: 16,
-      elevation: 5,
-      borderRadius: 20,
-      backgroundColor: Colors.bgWhite,
       overflow: 'hidden',
+    },
+
+    shadow: {
+      backgroundColor: Colors.bgWhite,
+      elevation: 5,
+      padding: 16,
+      borderRadius: 20,
+    },
+
+    ratings: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingRight: 16,
     },
 
     groupItemStoriesStyle: {
