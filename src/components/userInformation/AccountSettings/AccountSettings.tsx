@@ -32,7 +32,7 @@ const AccountSettings = (props: AccountSettingsProps) => {
           <TouchableOpacity
             style={[styles.itemSettings, Layout.rowHCenter]}
             onPress={() => {
-              navigation.navigate(ScreenNames.MY_SELF);
+              navigation.navigate(ScreenNames.MY_SELF, {});
             }}
           >
             <WibuView>
@@ -43,7 +43,7 @@ const AccountSettings = (props: AccountSettingsProps) => {
           <TouchableOpacity
             style={[styles.itemSettings, Layout.rowHCenter]}
             onPress={() => {
-              navigation.navigate(ScreenNames.MY_SELF);
+              navigation.navigate(ScreenNames.MY_SELF, {});
             }}
           >
             <WibuView>
@@ -54,7 +54,7 @@ const AccountSettings = (props: AccountSettingsProps) => {
           <TouchableOpacity
             style={[styles.itemSettings, Layout.rowHCenter]}
             onPress={() => {
-              navigation.navigate(ScreenNames.MY_SELF);
+              navigation.navigate(ScreenNames.MY_SELF, {});
             }}
           >
             <WibuView>
@@ -65,7 +65,7 @@ const AccountSettings = (props: AccountSettingsProps) => {
           <TouchableOpacity
             style={[styles.itemSettings, Layout.rowHCenter]}
             onPress={() => {
-              navigation.navigate(ScreenNames.MY_SELF);
+              navigation.navigate(ScreenNames.LOGIN);
             }}
           >
             <WibuView>
