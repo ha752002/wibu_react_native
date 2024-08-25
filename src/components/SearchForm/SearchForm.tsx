@@ -6,8 +6,8 @@ import WibuView from '~/wibu-ui/WibuView/WibuView.tsx';
 import { SearchFormProps } from './SearchForm.types.ts';
 import { TextInput, TouchableHighlight } from 'react-native';
 
-import { useTheme } from '../../hooks/useTheme.ts';
-import { useThemeStyles } from '../../hooks/useThemeStyles.ts';
+import { useTheme } from '~/hooks/useTheme.ts';
+import { useThemeStyles } from '~/hooks/useThemeStyles.ts';
 import { styleCreator } from './SearchForm.styles.ts';
 import WibuIcon from '~/wibu-ui/WibuIcon/WibuIcon.tsx';
 // import { Layout } from '~/themes/Layout.ts';
