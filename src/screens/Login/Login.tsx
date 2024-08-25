@@ -25,8 +25,7 @@ const Login = (props: LoginProps) => {
 
   const handleLogin = async () => {
     console.log(JSON.stringify({ email, password }));
-
-  }
+  };
   return (
     <WibuView style={styles.container}>
       <WibuView style={styles.content}>
@@ -36,38 +35,43 @@ const Login = (props: LoginProps) => {
         </WibuView>
 
         <InputField
-          placeholder='email'
-          type='mail'
+          placeholder="email"
+          type="mail"
           value={email}
-          onChangeText={setEmail} >
-
-        </InputField>
+          onChangeText={setEmail}
+        />
         <InputField
-          placeholder='password'
+          placeholder="password"
           secureTextEntry
           value={password}
-          onChangeText={setPassword} >
-
-        </InputField>
+          onChangeText={setPassword}
+        />
 
         <WibuView style={[styles.other, Layout.center]}>
-          <WibuText fontSize={ESize.L} >Haven`t account?</WibuText>
+          <WibuText fontSize={ESize.L}>Haven`t account?</WibuText>
           <TouchableHighlight
-          underlayColor={Colors.bgPrimary}
-          onPress={() => {
-            navigation.navigate(ScreenNames.REGISTER);
-          }}
+            underlayColor={Colors.bgPrimary}
+            onPress={() => {
+              navigation.navigate(ScreenNames.REGISTER);
+            }}
           >
             <View>
-              <WibuText fontSize={ESize.L} color='fgInProgress'> Sign up!</WibuText>
+              <WibuText fontSize={ESize.L} color="fgInProgress">
+                {' '}
+                Sign up!
+              </WibuText>
             </View>
           </TouchableHighlight>
         </WibuView>
-
-
       </WibuView>
-      <TouchableHighlight onPress={handleLogin} underlayColor={Colors.bgPrimary} style={[styles.button, Layout.center]}>
-        <WibuText color='bgWhite' fontSize={ESize.M}>login</WibuText>
+      <TouchableHighlight
+        onPress={handleLogin}
+        underlayColor={Colors.bgPrimary}
+        style={[styles.button, Layout.center]}
+      >
+        <WibuText color="bgWhite" fontSize={ESize.M}>
+          login
+        </WibuText>
       </TouchableHighlight>
     </WibuView>
   );

@@ -10,16 +10,15 @@ export const styleCreator: StyleCreator = theme => {
       // marginTop: 24,
     },
 
-    groupInput:{
+    groupInput: {
       backgroundColor: Colors.bgWhite,
       paddingHorizontal: 24,
       borderRadius: 100,
     },
 
-    input:{
-      
+    input: {
       display: 'flex',
       flex: 1,
-    }
+    },
   });
 };

@@ -25,9 +25,8 @@ const Register = (props: RegisterProps) => {
   const [ConfirmPassword, setConfirmPassword] = useState('');
 
   const handleLogin = async () => {
-    console.log(JSON.stringify({ email, password ,ConfirmPassword}));
-
-  }
+    console.log(JSON.stringify({ email, password, ConfirmPassword }));
+  };
   return (
     <WibuView style={styles.container}>
       <WibuView style={styles.content}>
@@ -37,29 +36,26 @@ const Register = (props: RegisterProps) => {
         </WibuView>
 
         <InputField
-          placeholder='email'
-          type='mail'
+          placeholder="email"
+          type="mail"
           value={email}
-          onChangeText={setEmail} >
-
-        </InputField>
+          onChangeText={setEmail}
+        />
         <InputField
-          placeholder='password'
+          placeholder="password"
           secureTextEntry
           value={password}
-          onChangeText={setPassword} >
-
-        </InputField>
+          onChangeText={setPassword}
+        />
         <InputField
-          placeholder='Confirm Password'
+          placeholder="Confirm Password"
           secureTextEntry
           value={ConfirmPassword}
-          onChangeText={setConfirmPassword} >
-
-        </InputField>
+          onChangeText={setConfirmPassword}
+        />
 
         <WibuView style={[styles.other, Layout.center]}>
-          <WibuText fontSize={ESize.L} >already have an account?</WibuText>
+          <WibuText fontSize={ESize.L}>already have an account?</WibuText>
           <TouchableHighlight
             underlayColor={Colors.bgPrimary}
             onPress={() => {
@@ -67,15 +63,22 @@ const Register = (props: RegisterProps) => {
             }}
           >
             <View>
-              <WibuText fontSize={ESize.L} color='fgInProgress'> Login!</WibuText>
+              <WibuText fontSize={ESize.L} color="fgInProgress">
+                {' '}
+                Login!
+              </WibuText>
             </View>
           </TouchableHighlight>
         </WibuView>
-
-
       </WibuView>
-      <TouchableHighlight onPress={handleLogin} underlayColor={Colors.bgPrimary} style={[styles.button, Layout.center]}>
-        <WibuText color='bgWhite' fontSize={ESize.M}>Register</WibuText>
+      <TouchableHighlight
+        onPress={handleLogin}
+        underlayColor={Colors.bgPrimary}
+        style={[styles.button, Layout.center]}
+      >
+        <WibuText color="bgWhite" fontSize={ESize.M}>
+          Register
+        </WibuText>
       </TouchableHighlight>
     </WibuView>
   );
