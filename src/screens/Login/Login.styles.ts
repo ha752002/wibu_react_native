@@ -33,6 +33,6 @@ export const styleCreator: StyleCreator = theme => {
       borderRadius: 100,
       position: 'absolute',
       bottom: 42,
-import { StyleSheet } from 'react-native';
+    },
   });
 };
